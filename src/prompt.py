@@ -22,15 +22,21 @@ SYSTEM = (
 )
 
 
-def build_prompt(step):
-    """User-turn text for a Step (the screenshot is attached separately)."""
-    hist = ", ".join(a.serialize() for a in step.history) if step.history else "(none)"
+def build_prompt_parts(goal, history=()):
+    """User-turn text from raw fields. Used by training, step eval, and grounding
+    eval so all three share one exact phrasing."""
+    hist = ", ".join(a.serialize() for a in history) if history else "(none)"
     return (
         f"{IMAGE_TOKEN}\n"
-        f"Goal: {step.goal}\n"
+        f"Goal: {goal}\n"
         f"Actions so far: {hist}\n"
         f"What is the next action?"
     )
+
+
+def build_prompt(step):
+    """User-turn text for a Step (the screenshot is attached separately)."""
+    return build_prompt_parts(step.goal, step.history)
 
 
 def build_target(step):
