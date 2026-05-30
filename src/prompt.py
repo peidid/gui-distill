@@ -16,8 +16,9 @@ SYSTEM = (
     "the actions taken so far, output the single next action.\n"
     "Coordinates are integers in a 0-1000 grid (x=left->right, y=top->bottom).\n"
     "Reply with an optional 'Thought:' line then exactly one 'Action:' line.\n"
-    "Allowed actions: click(x, y) | type(\"text\") | scroll(up|down|left|right) | "
-    "press_back() | open_app(\"name\") | wait() | done()"
+    "Allowed actions: click(x, y) | long_press(x, y) | type(\"text\") | "
+    "scroll(up|down|left|right) | press_back() | press_home() | "
+    "open_app(\"name\") | wait() | done()"
 )
 
 

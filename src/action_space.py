@@ -27,15 +27,24 @@ import re
 from dataclasses import dataclass, field
 
 # --- vocabulary ----------------------------------------------------------------
+# Chosen to map LOSSLESSLY onto AndroidControl's action types:
+#   click/long_press -> x,y ;  input_text -> type ;  navigate_back -> press_back ;
+#   navigate_home -> press_home ;  scroll/open_app/wait map directly.
+# `done` is ours: appended at episode end to teach the agent to terminate.
 CLICK = "click"
+LONG_PRESS = "long_press"
 TYPE = "type"
 SCROLL = "scroll"
 PRESS_BACK = "press_back"
+PRESS_HOME = "press_home"
 OPEN_APP = "open_app"
 WAIT = "wait"
 DONE = "done"
 
-ACTION_TYPES = {CLICK, TYPE, SCROLL, PRESS_BACK, OPEN_APP, WAIT, DONE}
+ACTION_TYPES = {CLICK, LONG_PRESS, TYPE, SCROLL, PRESS_BACK, PRESS_HOME,
+                OPEN_APP, WAIT, DONE}
+XY_ACTIONS = {CLICK, LONG_PRESS}          # actions carrying coordinates
+NOARG_ACTIONS = {PRESS_BACK, PRESS_HOME, WAIT, DONE}
 SCROLL_DIRS = {"up", "down", "left", "right"}
 
 
@@ -51,8 +60,8 @@ class Action:
     def __post_init__(self):
         if self.type not in ACTION_TYPES:
             raise ValueError(f"unknown action type: {self.type!r}")
-        if self.type == CLICK and (self.x is None or self.y is None):
-            raise ValueError("click requires x and y")
+        if self.type in XY_ACTIONS and (self.x is None or self.y is None):
+            raise ValueError(f"{self.type} requires x and y")
         if self.type == TYPE and self.text is None:
             raise ValueError("type requires text")
         if self.type == SCROLL and self.direction not in SCROLL_DIRS:
@@ -61,15 +70,15 @@ class Action:
             raise ValueError("open_app requires app name")
 
     def serialize(self):
-        if self.type == CLICK:
-            return f"click({self.x}, {self.y})"
+        if self.type in XY_ACTIONS:
+            return f"{self.type}({self.x}, {self.y})"
         if self.type == TYPE:
             return f'type({_q(self.text)})'
         if self.type == SCROLL:
             return f"scroll({self.direction})"
         if self.type == OPEN_APP:
             return f"open_app({_q(self.app)})"
-        return f"{self.type}()"  # press_back, wait, done
+        return f"{self.type}()"  # press_back, press_home, wait, done
 
 
 def _q(s):
@@ -99,16 +108,16 @@ def parse(text):
         raise ValueError(f"not an action call: {text!r}")
     name, args = m.group(1), m.group(2).strip()
 
-    if name == CLICK:
+    if name in XY_ACTIONS:
         x, y = _parse_xy(args)
-        return Action(CLICK, x=x, y=y)
+        return Action(name, x=x, y=y)
     if name == TYPE:
         return Action(TYPE, text=_unq(args))
     if name == SCROLL:
         return Action(SCROLL, direction=_unq(args).lower())
     if name == OPEN_APP:
         return Action(OPEN_APP, app=_unq(args))
-    if name in (PRESS_BACK, WAIT, DONE):
+    if name in NOARG_ACTIONS:
         return Action(name)
     raise ValueError(f"unknown action: {name!r}")
 
