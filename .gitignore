@@ -1,0 +1,23 @@
+# env
+.venv/
+__pycache__/
+*.pyc
+
+# data & outputs (big / regenerable — never commit)
+data/
+out/
+results/*.png
+*.tfrecord
+*.parquet
+
+# model weights / adapters
+*.safetensors
+*.bin
+
+# keep folder structure
+!data/.gitkeep
+!out/.gitkeep
+!results/.gitkeep
+
+# os
+.DS_Store

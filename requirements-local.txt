@@ -1,0 +1,7 @@
+# Lightweight deps for everything you do on the Mac:
+# data conversion, building ShareGPT, scoring eval outputs.
+# (No torch/transformers here — those live on the rented GPU box,
+#  see requirements-gpu.txt.)
+pillow>=10.0
+numpy>=1.26
+tqdm>=4.66

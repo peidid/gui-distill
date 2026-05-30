@@ -1,0 +1,10 @@
+# Install these ON THE RENTED GPU BOX (Linux + NVIDIA), not on the Mac.
+# Versions known to support Qwen2.5-VL. Pin if a fresh install breaks.
+torch
+transformers>=4.49
+accelerate
+peft
+qwen-vl-utils
+pillow
+# Training framework — install from source on the box:
+#   git clone https://github.com/hiyouga/LLaMA-Factory && cd LLaMA-Factory && pip install -e ".[torch,metrics]"
