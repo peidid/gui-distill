@@ -20,9 +20,11 @@ from prompt import SYSTEM, build_prompt
 from schema import load_steps
 
 
-def run(steps, model, out_path=None, coord_space="pixel"):
+def run(steps, model, out_path=None, coord_space="pixel", stream=True):
+    import sys
+    n_total = len(steps) if hasattr(steps, "__len__") else None
     results, by_type, preds = [], defaultdict(list), []
-    for s in steps:
+    for i, s in enumerate(steps, 1):
         raw = model.generate(s.image_path, SYSTEM, build_prompt(s))
         ok = step_correct(raw, s.action, gt_box=s.gt_box,
                           coord_space=coord_space,
@@ -31,6 +33,14 @@ def run(steps, model, out_path=None, coord_space="pixel"):
         by_type[s.action.type].append(ok)
         preds.append({"episode": s.episode_id, "step": s.step_idx,
                       "gt": s.action.serialize(), "raw": raw, "correct": ok})
+        if stream:
+            # running accuracy to stderr so it shows live even when stdout is
+            # piped to `tee`, and never pollutes the final summary on stdout.
+            run_acc = sum(results) / len(results)
+            denom = f"/{n_total}" if n_total else ""
+            mark = "OK " if ok else "miss"
+            print(f"[{i}{denom}] acc={run_acc:.3f} ({sum(results)}/{len(results)})"
+                  f"  {mark} {s.action.type}", file=sys.stderr, flush=True)
     if out_path:
         with open(out_path, "w") as f:
             for p in preds:
@@ -46,6 +56,8 @@ def main():
     ap.add_argument("--adapter", default=None)
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--out", default=None, help="write per-step predictions jsonl")
+    ap.add_argument("--no_stream", dest="stream", action="store_false",
+                    help="disable the live per-step running-accuracy line (stderr)")
     ap.add_argument("--coord_space", default="pixel", choices=["pixel", "norm"],
                     help="how to read the MODEL's click. 'pixel': absolute pixels "
                          "(base Qwen2.5-VL). 'norm': already 0-1000 (a student "
@@ -58,7 +70,7 @@ def main():
         steps = steps[:args.limit]
     model = load_model(args.backend, args.model_path, args.adapter)
 
-    results, by_type = run(steps, model, args.out, args.coord_space)
+    results, by_type = run(steps, model, args.out, args.coord_space, args.stream)
     s = summarize(results)
     print(f"\nAndroidControl-test step accuracy: {s['accuracy']:.3f}  "
           f"({s['correct']}/{s['n']})")
