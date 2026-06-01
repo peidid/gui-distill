@@ -48,6 +48,8 @@ warmup_ratio: 0.05
 bf16: true
 gradient_checkpointing: true
 
-### smoke test first: set these, confirm loss drops + actions parse, THEN comment out
+### smoke test first: uncomment max_samples (200 samples trains in minutes),
+### confirm loss drops + actions parse, THEN comment it back out for the full run.
+### Don't add a second num_train_epochs here — edit the one above (line ~45) if you
+### want fewer epochs; a duplicate key makes the YAML loader error.
 # max_samples: 200
-# num_train_epochs: 1.0
