@@ -214,17 +214,23 @@ A="--adapter out/qwen3b-trackA-lora"
 .venv/bin/python src/eval_androidcontrol.py $B \
   --steps data/androidcontrol/steps_test.jsonl --out results/base_ac_preds.jsonl
 
-# --- STUDENT (LoRA, trained on 0-1000 labels): emits NORMALIZED -> --coord_space norm ---
-.venv/bin/python src/eval_screenspot.py     $B $A --limit 400 --coord_space norm
-.venv/bin/python src/eval_androidcontrol.py $B $A --coord_space norm \
+# --- STUDENT (LoRA): we MEASURED that it KEPT the base's pixel convention
+#     (raw y>1000 on tall phone images) -> score pixel too (default, no flag). ---
+.venv/bin/python src/eval_screenspot.py     $B $A --limit 400
+.venv/bin/python src/eval_androidcontrol.py $B $A \
   --steps data/androidcontrol/steps_test.jsonl --out results/student_ac_preds.jsonl
 ```
 
-> ⚠️ **Coordinate space — don't get a false 0.** Qwen2.5-VL is pixel-native but
-> the student is fine-tuned on 0–1000 labels, so the **base** and **student** runs
-> need *different* `--coord_space` (`pixel` vs `norm`, as shown). **Both**
-> `eval_screenspot.py` and `eval_androidcontrol.py` now take this flag (default
-> `pixel`); get it backwards and a correct model reads ~0.
+> ⚠️ **Coordinate space — verify per model, never assume.** Qwen2.5-VL is
+> pixel-native. We trained the student on 0–1000 labels *expecting* it to emit
+> norm — but it **kept emitting pixels** (the light LoRA learned the action format,
+> not the coordinate frame). So the base **and** the Track-A student are both
+> scored `--coord_space pixel` (the default). A teacher that genuinely emits
+> 0–1000 (UI-TARS via `--teacher uitars`) uses `norm`. **Always print a few raw
+> outputs and check coordinate magnitudes before trusting any spatial number** —
+> scoring the wrong space reads a flat ~0 even when the model clicks correctly.
+> (How we caught it: dump `correct:false` clicks from the `*_ac_preds.jsonl` and
+> compare raw `(x,y)` to the 0–1000 ground truth.)
 
 **4d. Pull results back and TERMINATE the instance** (stop paying):
 ```bash
@@ -258,29 +264,42 @@ action class is weakest.
 
 ---
 
-## Part 6 — Toward the paper (next experiments)
+## Part 6 — The teacher sweep (Tracks B & C) and beyond
 
-Once Track A works end to end, the research contributions come from:
+The experiment varies **only the teacher** (label source); student + recipe +
+eval stay fixed (see OVERVIEW §8). Tracks, in order:
 
-1. **Track B — actual distillation.** Run UI-TARS-7B (open, on the same GPU) over
-   the AndroidControl screenshots/goals to generate its *own* `Thought:/Action:`
-   traces. Train a student on those instead of human demos. Compare A vs B: how
-   much does the student inherit the teacher's mistakes?
-   *(Implementation: a `run_teacher.py` that loops the teacher over steps and
-   writes a `steps_trackB.jsonl` in the same schema — then everything downstream
-   is unchanged. Ask me to build this when you're ready.)*
+1. **Track B — distillation from a capable model teacher (UI-TARS-7B).** Run
+   UI-TARS-7B over the AndroidControl screenshots/goals (teacher-forced) to
+   generate its own actions, train a student on those, compare A vs B (teacher-
+   error inheritance). **Built and ready:** `src/run_teacher.py` (writes
+   `steps_trackB.jsonl` in the same schema) + `--teacher uitars` on both eval
+   drivers (uses `src/uitars.py`; UI-TARS emits 0–1000 → forces `coord_space=norm`).
+   ```bash
+   python src/run_teacher.py --steps data/androidcontrol/steps_train.jsonl \
+     --out data/androidcontrol/steps_trackB.jsonl \
+     --model_path bytedance-research/UI-TARS-7B-DPO
+   python src/make_sharegpt.py data/androidcontrol/steps_trackB.jsonl \
+     data/androidcontrol/sharegpt_trackB.json --abs
+   # then train a Track-B student on sharegpt_trackB.json
+   ```
 
-2. **The black-box premise (the paper's core).** Swap the open teacher for a
-   genuinely closed API. Handle that its coordinate outputs are weaker and its
-   format differs. Measure the cost of the black-box constraint specifically.
+2. **Track C — a stronger teacher.** Primary **UI-Venus-72B**, strong alt
+   **GTA1-32B**. Relabel the *same* training states (only the labels differ),
+   train, eval. Tests whether a better teacher yields a better student or the 3B
+   student is capacity-bound (plot student vs *measured* teacher accuracy). Needs
+   a big GPU (~80 GB for 72B) and a fresh recon + parser for that teacher's
+   output format/coords (the `src/uitars.py` pattern).
 
-3. **Stage 5 — rejection sampling.** Make two students: one on all teacher traces,
-   one on only the traces that succeeded. Watch how filtering moves the static vs.
-   interactive numbers differently.
+3. **The black-box premise (the paper's core).** Swap the open teacher for a
+   genuinely **closed API** (open weights ≠ black-box). Handle weaker/different
+   coordinate outputs. Measure the cost of the black-box constraint specifically.
 
-4. **(Stretch) AndroidWorld.** On a proper x86+KVM Linux host, wire the student
-   into the live emulator for true interactive success rate — the strongest
-   multi-step evidence.
+4. **Rejection sampling.** Two students: one on all teacher traces, one on only
+   the traces that succeeded. Watch how filtering moves static vs. interactive.
+
+5. **(Stretch) AndroidWorld.** On an x86+KVM host, wire the student into the live
+   emulator for true interactive success rate — the strongest multi-step evidence.
 
 ---
 

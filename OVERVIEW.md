@@ -88,9 +88,10 @@ make the premise rigorous.
 | Role | Model | Why |
 |---|---|---|
 | **Student** | Qwen2.5-VL-3B-Instruct | Realistic on-device size; well supported by training tools. **Coordinate gotcha:** unlike Qwen2-VL/Qwen-VL, Qwen2.5-VL emits *absolute pixel* coordinates (of the smart-resized image), **not** 0–1000. We normalize everything to the canonical 0–1000 grid in code — see the coordinate design rule in §7. |
-| **Teacher (learning run)** | UI-TARS-7B (open) | Emits `Thought:/Action:` natively → little parsing; cheap to run. |
-| **Teacher (paper)** | a closed API (GPT/Claude/Gemini) | Makes the black-box premise real. |
-| **Cheapest "teacher" of all (Track A)** | AndroidControl human demos | The dataset already contains correct human action sequences — no teacher inference needed at all. |
+| **Track A teacher** | AndroidControl human demos | Correct human actions already in the dataset — no teacher inference. The (≈error-free) reference. |
+| **Track B teacher** | UI-TARS-7B (open) | A capable mid-size GUI agent; emits `Thought:/Action:` natively (parser: `src/uitars.py`; emits **0–1000** coords). ~14 GB → fits one 24 GB GPU. |
+| **Track C teacher** | **UI-Venus-72B** (primary), **GTA1-32B** (strong alt) | A much stronger GUI agent → tests whether a better teacher yields a better student, or the 3B student is capacity-bound. Needs ~80 GB (A100/H100); each needs its own recon + parser. |
+| **Paper teacher (future)** | a closed API (GPT/Claude/Gemini) | Makes the black-box premise rigorous — open weights ≠ black-box. A later track once the open-teacher study is solid. |
 
 ---
 
@@ -163,28 +164,54 @@ base & student & teacher ─▶ eval drivers ─▶ ScreenSpot + AndroidControl 
 
 ## 8. The experiment & the expected result
 
-Fill this table:
+**Design.** Hold the **student** (Qwen2.5-VL-3B) and the **recipe** (same LoRA
+hyperparameters, same training states, same eval) fixed, and vary **only the
+teacher** — i.e. who produces the action labels. Any difference is then
+attributable to the teacher. This gives a clean *teacher* sweep:
+
+| Track | Teacher (label source) | What it tests |
+|---|---|---|
+| **A** | AndroidControl human demos | best case — correct (≈error-free) labels |
+| **B** | UI-TARS-7B (open) | distillation from a *capable* model teacher |
+| **C** | UI-Venus-72B (primary) / GTA1-32B (alt) | does a *stronger* teacher yield a better student, or is the 3B student capacity-bound? |
+
+Fill this table — every cell scored through the *identical* pipeline:
 
 ```
-                       ScreenSpot-V2     AndroidControl-test
-                       (grounding)       (multi-step)
-base Qwen2.5-VL-3B          __                __
-student (Track A)           __                __
-student (Track B/distill)   __                __
-teacher                     __                __
+                          ScreenSpot-V2   AndroidControl-test
+                          (grounding)     (multi-step)
+base Qwen2.5-VL-3B           0.603           0.114     (measured)
+student (A: human)           0.280           0.552     (measured)
+student (B: UI-TARS-7B)      __              __
+student (C: 72B / 32B)       __              __
+teacher B (UI-TARS-7B)       __              __        ← B's ceiling
+teacher C (72B / 32B)        __              __        ← C's ceiling
 ```
 
-The hypothesis you're testing firsthand: **the student closes most of the
-*grounding* gap to the teacher, but a large *multi-step* gap remains.** If true,
-the interesting paper question becomes *why* — is it grounding errors,
-reasoning drift, or failure to recover after a mistake? Logging per-step failure
-types (the eval drivers already break results down by action type) is how you
-turn "a gap exists" into "here is the mechanism," which is the publishable part.
+What the sweep measures:
+- **Static vs interactive gap.** Does the student close the *grounding* gap more
+  than the *multi-step* gap (or vice-versa)? Per-action-type breakdowns turn "a
+  gap exists" into "here is the mechanism" — the publishable part. *(Track A
+  already showed the opposite of the naive guess: multi-step ↑×4.8 in-distribution
+  while out-of-distribution grounding ↓ by half — see `results/Summary.txt`.)*
+- **Teacher-error inheritance (A vs B/C).** Human labels are ≈correct; model
+  teachers make mistakes the student can inherit. A→B→C is a gradient of teacher
+  error.
+- **Teacher-capability transfer (B vs C).** Plot *student accuracy vs measured
+  teacher accuracy*. If the 72B teacher barely beats the 7B-taught student, the
+  bottleneck is the student / black-box channel, not the teacher — a real finding.
 
-**Track A vs Track B** isolates one more thing: Track A trains on *correct human*
-actions; Track B trains on *teacher* actions (including the teacher's mistakes).
-Comparing them shows how much the student inherits the teacher's errors — the
-"teacher-error inheritance" angle.
+Controls that keep it clean: vary only the teacher; **relabel the *same* training
+states** for B and C (only the labels differ); and **measure each teacher's own
+accuracy** (the teacher rows) so student quality is related to *measured* teacher
+skill, not just parameter count. Each new teacher needs its own output recon +
+parser (different action syntax / coordinate convention — see `src/uitars.py` for
+UI-TARS, which emits 0–1000).
+
+**Premise to protect:** A/B/C all use *open* teachers — they are the **learning
+run**. The paper's headline teacher must be a genuinely **closed API** (open
+weights ≠ black-box); that becomes a later track once the open-teacher mechanism
+study is solid.
 
 ---
 
