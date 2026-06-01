@@ -142,13 +142,16 @@ A handful dropped (unsupported action types) is normal.
   data/androidcontrol/sharegpt_train.json --abs
 ```
 
-**Also build a separate TEST slice** for the multi-step eval:
+**Also build a separate TEST slice** for the multi-step eval. `--skip_episodes 800`
+makes it **disjoint** from the 800 training episodes — otherwise the first-200
+test episodes sit *inside* the training set, leaking train data into the eval and
+inflating the multi-step number (the metric the whole study turns on):
 ```bash
 .venv/bin/python src/convert_androidcontrol.py \
   --tfrecords 'gs://gresearch/android_control/android_control*' \
   --img_dir data/androidcontrol/imgs_test \
   --out     data/androidcontrol/steps_test.jsonl \
-  --max_episodes 200
+  --skip_episodes 800 --max_episodes 200
 ```
 
 **Troubleshooting**

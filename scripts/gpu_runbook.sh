@@ -25,12 +25,14 @@ python src/make_sharegpt.py \
 # register the dataset where dataset_dir expects it:
 cp configs/dataset_info.json data/androidcontrol/dataset_info.json
 
-# also build a TEST slice for offline step-accuracy eval (different episodes!):
+# also build a TEST slice for offline step-accuracy eval. --skip_episodes 800
+# makes it DISJOINT from the 800 training episodes (no leakage -> trustworthy
+# multi-step number):
 python src/convert_androidcontrol.py \
   --tfrecords 'gs://gresearch/android_control/android_control*' \
   --img_dir data/androidcontrol/imgs_test \
   --out     data/androidcontrol/steps_test.jsonl \
-  --max_episodes 200
+  --skip_episodes 800 --max_episodes 200
 # NOTE: for publishable numbers, restrict train vs test to the OFFICIAL
 # episode_id splits (see DATA.md) instead of just slicing different counts.
 

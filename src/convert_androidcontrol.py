@@ -105,8 +105,15 @@ def _write_png(png_bytes, img_dir, name):
 
 
 # --- TF-only boundary (not imported during tests) ------------------------------
-def iter_tfrecords(glob_pattern, max_episodes=None):
-    """Yield record dicts from AndroidControl TFRecords. Requires tensorflow."""
+def iter_tfrecords(glob_pattern, max_episodes=None, skip_episodes=0):
+    """Yield record dicts from AndroidControl TFRecords. Requires tensorflow.
+
+    skip_episodes: skip the first N raw episodes before yielding any. Combined
+    with max_episodes this carves a DISJOINT slice — e.g. train = first 800
+    (skip 0), test = next 200 (skip 800) — so the test set shares no episode with
+    the training set. Mixing them would leak training episodes into the eval and
+    inflate the multi-step number, which is the metric the study turns on.
+    """
     import tensorflow as tf
 
     feature_desc = {
@@ -120,8 +127,13 @@ def iter_tfrecords(glob_pattern, max_episodes=None):
     }
     files = tf.io.gfile.glob(glob_pattern)
     ds = tf.data.TFRecordDataset(files, compression_type="GZIP")
-    n = 0
+    seen = 0  # raw records encountered, for skipping (cheap: no parse on skip)
+    n = 0     # records actually yielded
     for raw in ds:
+        if seen < skip_episodes:
+            seen += 1
+            continue
+        seen += 1
         ex = tf.io.parse_single_example(raw, feature_desc)
         sparse = lambda k: tf.sparse.to_dense(ex[k]).numpy()
         yield {
@@ -144,11 +156,14 @@ def main():
     ap.add_argument("--img_dir", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--max_episodes", type=int, default=None)
+    ap.add_argument("--skip_episodes", type=int, default=0,
+                    help="skip the first N episodes; use for a DISJOINT test "
+                         "split (e.g. --skip_episodes 800 when train took 800)")
     ap.add_argument("--no_done", action="store_true", help="don't append terminal done() step")
     args = ap.parse_args()
 
     all_steps, kept, dropped = [], 0, 0
-    for rec in iter_tfrecords(args.tfrecords, args.max_episodes):
+    for rec in iter_tfrecords(args.tfrecords, args.max_episodes, args.skip_episodes):
         s = record_to_steps(rec, args.img_dir, append_done=not args.no_done)
         if s:
             all_steps.extend(s); kept += 1
