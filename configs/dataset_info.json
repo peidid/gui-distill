@@ -13,5 +13,20 @@
       "assistant_tag": "assistant",
       "system_tag": "system"
     }
+  },
+  "gui_androidcontrol_trackB": {
+    "file_name": "sharegpt_trackB.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
   }
 }
