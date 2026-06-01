@@ -16,11 +16,12 @@ Verify on a couple of samples that boxes look sane before trusting the number.
 import argparse
 from collections import defaultdict
 
-from action_space import XY_ACTIONS
+from action_space import XY_ACTIONS, parse_step
 from coords import GRID, Box, norm_from_pixel
 from eval_core import safe_parse, summarize
 from model import load_model
 from prompt import SYSTEM, build_prompt_parts
+from uitars import parse_uitars
 
 
 def bbox_to_norm(bbox, fmt, img_w, img_h):
@@ -47,14 +48,15 @@ def bbox_to_norm(bbox, fmt, img_w, img_h):
     return (a[0], a[1], b[0], b[1])
 
 
-def _pred_point_norm(raw, coord_space, img_w, img_h):
+def _pred_point_norm(raw, coord_space, img_w, img_h, parser=parse_step):
     """Parse the model's click and return it in canonical 0-1000 space, or None.
 
     coord_space='pixel': the model emits ABSOLUTE pixel coords (Qwen2.5-VL's
     native convention) -> normalize by image size. coord_space='norm': the model
-    already emits 0-1000 (e.g. a student fine-tuned on normalized labels).
+    already emits 0-1000 (e.g. a student fine-tuned on normalized labels, or
+    UI-TARS). `parser` swaps the action grammar (e.g. uitars.parse_uitars).
     """
-    pred = safe_parse(raw)
+    pred = safe_parse(raw, parser)
     if pred is None or pred.type not in XY_ACTIONS:
         return None
     if coord_space == "pixel":
@@ -70,7 +72,7 @@ def _get(sample, *keys, default=None):
 
 
 def run(dataset, model, bbox_format, coord_space="pixel", img_dir=None,
-        stream=True):
+        stream=True, parser=parse_step):
     import os
     import sys
     from PIL import Image
@@ -92,7 +94,7 @@ def run(dataset, model, bbox_format, coord_space="pixel", img_dir=None,
 
         user = build_prompt_parts(f"Click on: {instruction}")
         raw = model.generate(path, SYSTEM, user)
-        pt = _pred_point_norm(raw, coord_space, pil.width, pil.height)
+        pt = _pred_point_norm(raw, coord_space, pil.width, pil.height, parser)
         ok = pt is not None and Box(*gt).contains(*pt)
         results.append(ok)
         by_type[_get(s, "data_type", "type", default="all")].append(ok)
@@ -133,7 +135,17 @@ def main():
     ap.add_argument("--no_stream", dest="stream", action="store_false",
                     help="disable the live per-sample running-accuracy line "
                          "(printed to stderr).")
+    ap.add_argument("--teacher", default="none", choices=["none", "uitars"],
+                    help="parse output with a teacher grammar. 'uitars' uses "
+                         "uitars.parse_uitars and forces --coord_space norm.")
     args = ap.parse_args()
+
+    parser = parse_step
+    coord_space = args.coord_space
+    if args.teacher == "uitars":
+        parser = parse_uitars
+        coord_space = "norm"  # UI-TARS emits 0-1000 (verified on recon)
+        print("[teacher=uitars] using parse_uitars + coord_space=norm")
 
     from datasets import load_dataset
     ds = load_dataset(args.hf_name, split=args.split)
@@ -141,8 +153,8 @@ def main():
         ds = ds.select(range(min(args.limit, len(ds))))
 
     model = load_model(args.backend, args.model_path, args.adapter)
-    results, by_type = run(ds, model, args.bbox_format, args.coord_space,
-                           stream=args.stream)
+    results, by_type = run(ds, model, args.bbox_format, coord_space,
+                           stream=args.stream, parser=parser)
     s = summarize(results)
     print(f"\nScreenSpot-V2 grounding accuracy: {s['accuracy']:.3f}  "
           f"({s['correct']}/{s['n']})")

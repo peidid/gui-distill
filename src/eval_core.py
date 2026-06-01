@@ -21,10 +21,14 @@ from coords import Box, norm_from_pixel
 DEFAULT_CLICK_RADIUS = 100
 
 
-def safe_parse(raw):
-    """Model raw text -> Action, or None if unparseable."""
+def safe_parse(raw, parser=parse_step):
+    """Model raw text -> Action, or None if unparseable.
+
+    `parser` lets a different model's grammar be plugged in (e.g.
+    uitars.parse_uitars for the Track-B teacher) without touching the scorers.
+    """
     try:
-        return parse_step(raw)
+        return parser(raw)
     except Exception:
         return None
 
@@ -34,15 +38,16 @@ def _norm_str(s):
 
 
 def step_correct(raw, gt_action, gt_box=None, click_radius=DEFAULT_CLICK_RADIUS,
-                 coord_space="norm", img_w=None, img_h=None):
+                 coord_space="norm", img_w=None, img_h=None, parser=parse_step):
     """AndroidControl-style step accuracy for one step.
 
     coord_space controls how the MODEL's click coords are read (the GT is always
     canonical 0-1000): 'norm' = already 0-1000 (a student trained on normalized
-    labels); 'pixel' = absolute pixels (base Qwen2.5-VL) -> normalized here, which
-    requires img_w/img_h. See coords.py for why the spaces must not be mixed.
+    labels, or UI-TARS); 'pixel' = absolute pixels (base Qwen2.5-VL) -> normalized
+    here, which requires img_w/img_h. See coords.py for why the spaces must not be
+    mixed. `parser` swaps the action grammar (e.g. uitars.parse_uitars).
     """
-    pred = safe_parse(raw)
+    pred = safe_parse(raw, parser)
     if pred is None or pred.type != gt_action.type:
         return False
     if gt_action.type in XY_ACTIONS:
@@ -64,9 +69,9 @@ def step_correct(raw, gt_action, gt_box=None, click_radius=DEFAULT_CLICK_RADIUS,
     return True  # no-arg actions (press_back/home, wait, done): type match is enough
 
 
-def grounding_correct(raw, gt_box):
+def grounding_correct(raw, gt_box, parser=parse_step):
     """ScreenSpot-V2: did the predicted click land in the GT element box (0-1000)?"""
-    pred = safe_parse(raw)
+    pred = safe_parse(raw, parser)
     if pred is None or pred.type not in XY_ACTIONS:
         return False
     return Box(*gt_box).contains(pred.x, pred.y)

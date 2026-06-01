@@ -14,13 +14,16 @@ import argparse
 import json
 from collections import defaultdict
 
+from action_space import parse_step
 from eval_core import step_correct, summarize
 from model import load_model
 from prompt import SYSTEM, build_prompt
 from schema import load_steps
+from uitars import parse_uitars
 
 
-def run(steps, model, out_path=None, coord_space="pixel", stream=True):
+def run(steps, model, out_path=None, coord_space="pixel", stream=True,
+        parser=parse_step):
     import sys
     n_total = len(steps) if hasattr(steps, "__len__") else None
     results, by_type, preds = [], defaultdict(list), []
@@ -28,7 +31,7 @@ def run(steps, model, out_path=None, coord_space="pixel", stream=True):
         raw = model.generate(s.image_path, SYSTEM, build_prompt(s))
         ok = step_correct(raw, s.action, gt_box=s.gt_box,
                           coord_space=coord_space,
-                          img_w=s.image_w, img_h=s.image_h)
+                          img_w=s.image_w, img_h=s.image_h, parser=parser)
         results.append(ok)
         by_type[s.action.type].append(ok)
         preds.append({"episode": s.episode_id, "step": s.step_idx,
@@ -63,14 +66,25 @@ def main():
                          "(base Qwen2.5-VL). 'norm': already 0-1000 (a student "
                          "fine-tuned on normalized labels). The dummy backend "
                          "works under either.")
+    ap.add_argument("--teacher", default="none", choices=["none", "uitars"],
+                    help="parse output with a teacher grammar. 'uitars' uses "
+                         "uitars.parse_uitars and forces --coord_space norm "
+                         "(UI-TARS emits 0-1000).")
     args = ap.parse_args()
+
+    parser = parse_step
+    coord_space = args.coord_space
+    if args.teacher == "uitars":
+        parser = parse_uitars
+        coord_space = "norm"  # UI-TARS emits 0-1000 (verified on recon)
+        print("[teacher=uitars] using parse_uitars + coord_space=norm")
 
     steps = load_steps(args.steps)
     if args.limit:
         steps = steps[:args.limit]
     model = load_model(args.backend, args.model_path, args.adapter)
 
-    results, by_type = run(steps, model, args.out, args.coord_space, args.stream)
+    results, by_type = run(steps, model, args.out, coord_space, args.stream, parser)
     s = summarize(results)
     print(f"\nAndroidControl-test step accuracy: {s['accuracy']:.3f}  "
           f"({s['correct']}/{s['n']})")

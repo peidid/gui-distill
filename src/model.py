@@ -60,14 +60,17 @@ class HFModel:
                  max_tokens=128):
         import torch
         from transformers import AutoProcessor
+        # Auto class resolves the right architecture for ALL our models:
+        # Qwen2.5-VL (base/student) AND Qwen2-VL-based UI-TARS (Track B teacher).
         try:
-            from transformers import Qwen2_5_VLForConditionalGeneration as VLModel
+            from transformers import AutoModelForImageTextToText as VLModel
         except ImportError:  # older transformers naming
-            from transformers import Qwen2VLForConditionalGeneration as VLModel
+            from transformers import AutoModelForVision2Seq as VLModel
         self.torch = torch
         self.gen_max = max_tokens
         self.model = VLModel.from_pretrained(model_path, torch_dtype="auto",
-                                             device_map="auto")
+                                             device_map="auto",
+                                             trust_remote_code=True)
         if adapter:
             from peft import PeftModel
             self.model = PeftModel.from_pretrained(self.model, adapter)
