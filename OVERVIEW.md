@@ -87,7 +87,7 @@ make the premise rigorous.
 
 | Role | Model | Why |
 |---|---|---|
-| **Student** | Qwen2.5-VL-3B-Instruct | Realistic on-device size; native 0–1000 coordinate convention; well supported by training tools. |
+| **Student** | Qwen2.5-VL-3B-Instruct | Realistic on-device size; well supported by training tools. **Coordinate gotcha:** unlike Qwen2-VL/Qwen-VL, Qwen2.5-VL emits *absolute pixel* coordinates (of the smart-resized image), **not** 0–1000. We normalize everything to the canonical 0–1000 grid in code — see the coordinate design rule in §7. |
 | **Teacher (learning run)** | UI-TARS-7B (open) | Emits `Thought:/Action:` natively → little parsing; cheap to run. |
 | **Teacher (paper)** | a closed API (GPT/Claude/Gemini) | Makes the black-box premise real. |
 | **Cheapest "teacher" of all (Track A)** | AndroidControl human demos | The dataset already contains correct human action sequences — no teacher inference needed at all. |
@@ -147,6 +147,14 @@ base & student & teacher ─▶ eval drivers ─▶ ScreenSpot + AndroidControl 
    the dataset, the model's outputs, and the emulator are three *different* spaces;
    mixing them trains a model that clicks the wrong place while the loss looks
    fine. Convert once, in `coords.py`, with tests.
+   *Two real instances of this bit us and are now handled in `eval_screenspot.py`:*
+   (a) the `HongxinLi/ScreenSpot_v2` ground-truth boxes are stored as **normalized
+   `[0,1]` fractions (xyxy)**, not pixels — `bbox_to_norm` auto-detects and scales
+   them; (b) the **base Qwen2.5-VL emits absolute pixels** while a **student
+   fine-tuned on our 0–1000 labels emits 0–1000** — so the eval takes a
+   `--coord_space {pixel,norm}` flag (`pixel` for the base model, `norm` for the
+   student). Get this wrong and accuracy reads a flat 0.000 even when the model is
+   clicking the right place.
 2. **Training and evaluation build the *identical* prompt** (`prompt.py`). If they
    differ, the student is judged on a format it never saw and scores look broken
    for a non-model reason.

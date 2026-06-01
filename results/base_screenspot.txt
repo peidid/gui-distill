@@ -1,0 +1,4 @@
+
+ScreenSpot-V2 grounding accuracy: 0.375  (75/200)
+  icon       0.286  (22/77)
+  text       0.431  (53/123)

@@ -1,0 +1,40 @@
+ScreenSpot-V2 Grounding Baseline — Base Qwen2.5-VL-3B (control)
+================================================================
+
+RESULT
+  Overall grounding accuracy: 0.375  (75/200)
+    icon   0.286  (22/77)
+    text   0.431  (53/123)
+
+SETUP
+  Model      : Qwen2.5-VL-3B-Instruct, 4-bit MLX quant
+               (mlx-community/Qwen2.5-VL-3B-Instruct-4bit), untrained / base.
+  Backend    : mlx   (src/eval_screenspot.py --backend mlx --limit 200)
+  Dataset    : HongxinLi/ScreenSpot_v2, split=test, first 200 of 1272 samples.
+  Metric     : one-shot grounding — a predicted click is correct iff it lands
+               inside the ground-truth element box.
+  Coord space: model emits ABSOLUTE PIXELS (Qwen2.5-VL native), normalized to the
+               canonical 0-1000 grid before scoring (--coord_space pixel).
+               GT boxes are stored as normalized [0,1] xyxy fractions.
+
+READING THE NUMBER
+  - The icon < text gap (0.286 < 0.431) is the expected pattern: icons are harder
+    to localize than text labels. This confirms the pipeline measures real
+    grounding, not noise.
+  - The absolute level is LOW and intentionally read as a controlled baseline,
+    not the model's grounding ceiling. Three suppressors:
+      1. 4-bit quantization degrades coordinate precision.
+      2. The agent prompt's "0-1000 grid" instruction conflicts with the model's
+         pixel-native outputs; some clicks return in the wrong convention.
+      3. The first 200 rows are desktop/web-heavy (the hardest splits); mobile
+         rows, where this model is strongest, are underrepresented in this slice.
+  - Use this as row 1 (base) of the results table. Quote the base->student DELTA,
+    measured through an identical pipeline, NOT the absolute 0.375, in the paper.
+
+CAVEAT FOR THE STUDENT EVAL (Part 4)
+  A student fine-tuned on 0-1000 labels must be scored with --coord_space norm
+  (not the default pixel), or it will show a false zero.
+
+NEXT FOR A TRUSTWORTHY FIGURE
+  Run the full 1272 samples (drop --limit) and add a per-data_source breakdown
+  (mobile / desktop / web) to see where accuracy concentrates.

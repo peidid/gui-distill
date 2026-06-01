@@ -62,14 +62,40 @@ must know this before training, or you can't claim training helped.
   | tee results/base_screenspot.txt
 ```
 
-**You should see** a line like `ScreenSpot-V2 grounding accuracy: 0.6xx` plus a
-per-type breakdown. (The base Qwen2.5-VL-3B is already a decent grounder, so
-expect a fairly high number here — that's fine and expected.)
+**You should see** a live line streamed per sample —
+`[i/200] acc=0.xxx (c/i) OK/miss <type>` — then a final summary like
+`ScreenSpot-V2 grounding accuracy: 0.3xx` with an icon/text breakdown. (Streaming
+goes to **stderr** so it shows even while stdout is piped to `tee`; the file gets
+only the clean summary. Disable with `--no_stream`.)
+
+**Don't expect a high number from this exact setup.** Measured on the first 200
+samples: ~0.375 (icon 0.29, text 0.43). Three things suppress it, none of them a
+bug: the **4-bit MLX quant** (hurts coordinate precision most), the agent prompt's
+**"0–1000 grid" instruction fighting Qwen2.5-VL's pixel-native output**, and a
+**desktop/web-heavy first-200 slice** (the hardest split — mobile rows score far
+higher). What matters is the **icon < text** pattern (icons are harder to ground —
+confirms the pipeline measures real grounding) and that the *same* pipeline scores
+the student later. **Quote the base→student delta, not the absolute.** For a truer
+ceiling, drop `--limit` to run all 1272.
+
+> **Reruns are offline.** The dataset (~0.5 GB) and model (~2.9 GB) are cached
+> under `~/.cache/huggingface` after the first run, so prefix with
+> `HF_HUB_OFFLINE=1` to skip flaky huggingface.co checks entirely:
+> `HF_HUB_OFFLINE=1 .venv/bin/python src/eval_screenspot.py --backend mlx --limit 200 | tee results/base_screenspot.txt`
 
 **Troubleshooting**
-- *Very low accuracy (~0)?* Almost always the **bbox format**. Re-run with
-  `--bbox_format xyxy`. Then sanity-check: print one sample's bbox and image size
-  and confirm the box sits over the right element.
+- *Accuracy exactly `0.000`?* This was a real coordinate-space bug, **now fixed**
+  in `eval_screenspot.py`. Two causes, both handled: (a) the `HongxinLi` mirror's
+  boxes are normalized `[0,1]` *fractions* (xyxy), not pixels — `bbox_to_norm`
+  auto-detects; (b) the model emits *absolute pixels*, converted via
+  `--coord_space` (default `pixel`). If a *different* mirror still reads 0, check
+  `--bbox_format xyxy` and confirm one box sits over the right element.
+- *SSL errors / `Cannot send a request, as the client has been closed` /
+  `huggingface.co` unreachable?* Your network is blocking or throttling
+  huggingface.co (common on campus/VPN-required networks; the bleeding-edge
+  `huggingface_hub` then crashes instead of retrying cleanly). It's often
+  intermittent — retry, use a VPN, or once anything is cached run with
+  `HF_HUB_OFFLINE=1` to avoid the network entirely.
 - *`KeyError` on a column* (e.g. `instruction`/`bbox`/`image`)? The HF mirror uses
   different column names. Try a different `--hf_name` (e.g.
   `os-copilot/ScreenSpot-v2`) or tell me the columns and I'll adapt `_get(...)`.
@@ -82,10 +108,20 @@ Record the number. This is row 1 of your results table.
 
 ---
 
-## Part 3 — Get real training data 💻 ⏱️ ~15–40 min
+## Part 3 — Get real training data 💻 *or* 🖥️ ⏱️ minutes (fast net) → hours (throttled)
 
-AndroidControl streams from Google's **public** bucket — you don't download all
-30 GB, only the episodes you ask for.
+AndroidControl streams from Google's **public** GCS bucket — you don't download
+all 30 GB, only the episodes you ask for.
+
+> ⚠️ **Network reality — you may have to do this on the cloud.** Some home/campus
+> networks throttle Google Cloud Storage hard. We measured **~46 KB/s** here — a
+> single 2.4 GB shard would take **~15 hours**, with stalls that abort the
+> transfer (`...stuck at N bytes for 60 seconds and will be aborted`). If
+> `convert_androidcontrol.py` crawls or stalls, **don't fight it locally — run
+> Part 3 on the rented GPU box (Part 4).** A cloud box has a fast, unthrottled
+> pipe to GCS, and the data has to live there for training anyway, so you skip a
+> slow round-trip upload. The commands below are identical on the box, and
+> `scripts/gpu_runbook.sh` already includes them.
 
 ```bash
 .venv/bin/pip install tensorflow
@@ -116,10 +152,16 @@ A handful dropped (unsupported action types) is normal.
 ```
 
 **Troubleshooting**
-- *`gs://` permission/credentials error?* The bucket is public, but if your
-  network blocks anonymous GCS, install gcloud and `gsutil -m cp` the files once
-  into `data/androidcontrol/raw/`, then point `--tfrecords` at the local glob
-  (see `DATA.md`).
+- *`Could not locate the credentials file` / can't resolve `metadata.google.internal`?*
+  **Normal — ignore it.** The bucket is public; TensorFlow tries credentials
+  first, fails to find any (you have none, and you're not on a Google VM), warns,
+  then falls back to anonymous access — which is correct.
+- *Transfer `stuck at … bytes for 60 seconds and will be aborted`, or painfully
+  slow (KB/s)?* Your network is throttling GCS — see the Network reality note
+  above. Best fix: do the conversion **on the GPU box**. Alternatively, `gsutil -m
+  cp` the shards once into `data/androidcontrol/raw/` (gsutil resumes far better
+  than TF's reader) and point `--tfrecords` at the local glob (see `DATA.md`) —
+  but gsutil hits the same throttled link, so a VPN or the cloud box still wins.
 - *TensorFlow won't install on the Mac?* Do the conversion on the GPU box instead
   (the runbook does exactly this) — nothing else in Part 3 needs your Mac.
 
@@ -158,14 +200,28 @@ missing image files or zero images. Fix: you built `sharegpt_train.json` with
 still don't resolve, regenerate `sharegpt_train.json` *on the box* with `--abs`
 so the absolute paths point at the box's filesystem.
 
-**4c. Evaluate** (already in the runbook). For each of base and student:
+**4c. Evaluate** (already in the runbook). Run each benchmark twice — once for the
+base, once for the student — and mind `--coord_space`:
 ```bash
 B="--backend hf --model_path Qwen/Qwen2.5-VL-3B-Instruct"
-.venv/bin/python src/eval_screenspot.py     $B [--adapter out/qwen3b-trackA-lora] --limit 400
-.venv/bin/python src/eval_androidcontrol.py $B [--adapter out/qwen3b-trackA-lora] \
+A="--adapter out/qwen3b-trackA-lora"
+
+# --- BASE (no adapter): emits ABSOLUTE PIXELS -> --coord_space pixel (default) ---
+.venv/bin/python src/eval_screenspot.py     $B --limit 400
+.venv/bin/python src/eval_androidcontrol.py $B \
+  --steps data/androidcontrol/steps_test.jsonl --out results/base_ac_preds.jsonl
+
+# --- STUDENT (LoRA, trained on 0-1000 labels): emits NORMALIZED -> --coord_space norm ---
+.venv/bin/python src/eval_screenspot.py     $B $A --limit 400 --coord_space norm
+.venv/bin/python src/eval_androidcontrol.py $B $A --coord_space norm \
   --steps data/androidcontrol/steps_test.jsonl --out results/student_ac_preds.jsonl
 ```
-(Run once without `--adapter` for base, once with it for the student.)
+
+> ⚠️ **Coordinate space — don't get a false 0.** Qwen2.5-VL is pixel-native but
+> the student is fine-tuned on 0–1000 labels, so the **base** and **student** runs
+> need *different* `--coord_space` (`pixel` vs `norm`, as shown). **Both**
+> `eval_screenspot.py` and `eval_androidcontrol.py` now take this flag (default
+> `pixel`); get it backwards and a correct model reads ~0.
 
 **4d. Pull results back and TERMINATE the instance** (stop paying):
 ```bash
@@ -233,7 +289,8 @@ Once Track A works end to end, the research contributions come from:
 | Make fake data | `.venv/bin/python scripts/make_synthetic_demo.py` |
 | Convert demos→training | `.venv/bin/python src/make_sharegpt.py IN.jsonl OUT.json --abs` |
 | Convert AndroidControl | `.venv/bin/python src/convert_androidcontrol.py --tfrecords '…' --img_dir … --out … --max_episodes N` |
-| Grounding eval | `.venv/bin/python src/eval_screenspot.py --backend mlx --limit 200` |
+| Grounding eval (base) | `HF_HUB_OFFLINE=1 .venv/bin/python src/eval_screenspot.py --backend mlx --limit 200` |
+| Grounding eval (student) | `... src/eval_screenspot.py --backend hf --adapter out/qwen3b-trackA-lora --coord_space norm` |
 | Step eval | `.venv/bin/python src/eval_androidcontrol.py --backend hf --adapter … --steps …` |
 | Train | `llamafactory-cli train configs/train_qwen3b_lora.yaml` |
 

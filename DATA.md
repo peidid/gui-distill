@@ -41,8 +41,11 @@ the eval step.
 ## ScreenSpot-V2 (static grounding eval)
 
 Source (HF): `os-copilot/ScreenSpot-v2` or `HongxinLi/ScreenSpot_v2` — image +
-instruction + ground-truth element bbox (in pixels). Small (~1.2k samples), no
-emulator. We download + score it in the eval step (`src/eval_screenspot.py`).
+instruction + ground-truth element bbox. **Box format varies by mirror:**
+`HongxinLi/ScreenSpot_v2` stores normalized `[0,1]` *fractions* in **xyxy**;
+other mirrors use pixel **xywh**. `eval_screenspot.py:bbox_to_norm` auto-detects
+the normalized form and otherwise honors `--bbox_format`. Small (~1.2k samples),
+no emulator. We download + score it in the eval step (`src/eval_screenspot.py`).
 
 ## AndroidWorld (interactive) — DEFERRED
 Needs an x86 host + KVM for the live emulator. Skipped for the learning run; the

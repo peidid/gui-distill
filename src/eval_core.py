@@ -14,7 +14,7 @@ actions is useless, so we never give it credit for "almost".
 import math
 
 from action_space import parse_step, XY_ACTIONS, TYPE, SCROLL, OPEN_APP
-from coords import Box
+from coords import Box, norm_from_pixel
 
 # Default click tolerance for AndroidControl (no element box available):
 # normalized L2 distance, 1000-grid. 100 ≈ 10% of screen width.
@@ -33,15 +33,27 @@ def _norm_str(s):
     return (s or "").strip().lower()
 
 
-def step_correct(raw, gt_action, gt_box=None, click_radius=DEFAULT_CLICK_RADIUS):
-    """AndroidControl-style step accuracy for one step."""
+def step_correct(raw, gt_action, gt_box=None, click_radius=DEFAULT_CLICK_RADIUS,
+                 coord_space="norm", img_w=None, img_h=None):
+    """AndroidControl-style step accuracy for one step.
+
+    coord_space controls how the MODEL's click coords are read (the GT is always
+    canonical 0-1000): 'norm' = already 0-1000 (a student trained on normalized
+    labels); 'pixel' = absolute pixels (base Qwen2.5-VL) -> normalized here, which
+    requires img_w/img_h. See coords.py for why the spaces must not be mixed.
+    """
     pred = safe_parse(raw)
     if pred is None or pred.type != gt_action.type:
         return False
     if gt_action.type in XY_ACTIONS:
+        px, py = pred.x, pred.y
+        if coord_space == "pixel":
+            if img_w is None or img_h is None:
+                raise ValueError("coord_space='pixel' requires img_w and img_h")
+            px, py = norm_from_pixel(px, py, img_w, img_h)
         if gt_box:
-            return Box(*gt_box).contains(pred.x, pred.y)
-        d = math.hypot(pred.x - gt_action.x, pred.y - gt_action.y)
+            return Box(*gt_box).contains(px, py)
+        d = math.hypot(px - gt_action.x, py - gt_action.y)
         return d <= click_radius
     if gt_action.type == TYPE:
         return _norm_str(pred.text) == _norm_str(gt_action.text)
@@ -83,6 +95,21 @@ if __name__ == "__main__":
     assert step_correct("Action: scroll(up)", Action("scroll", direction="up"))
     assert step_correct('Action: open_app("Chrome")', Action("open_app", app="chrome"))
     assert step_correct("Thought: done.\nAction: done()", Action("done"))
+    # coord_space='pixel': model emits pixels, normalized before comparison
+    # 540px of 1080 -> 500 (0-1000); inside box (450..550)
+    assert step_correct("Action: click(540, 1200)", Action("click", x=0, y=0),
+                        gt_box=(450, 450, 550, 550), coord_space="pixel",
+                        img_w=1080, img_h=2400)
+    # same pixel click read as 'norm' would be (540,1200) -> outside that box
+    assert not step_correct("Action: click(540, 1200)", Action("click", x=0, y=0),
+                            gt_box=(450, 450, 550, 550))
+    # pixel mode without image size is a loud error, never a silent wrong
+    try:
+        step_correct("Action: click(5, 5)", Action("click", x=0, y=0),
+                     coord_space="pixel")
+        assert False, "expected ValueError"
+    except ValueError:
+        pass
     # unparseable -> wrong
     assert not step_correct("I will click the button", Action("click", x=10, y=10))
     # full thought+action accepted

@@ -47,10 +47,11 @@ B="--backend hf --model_path Qwen/Qwen2.5-VL-3B-Instruct"
 python src/eval_screenspot.py      $B --limit 400 | tee results/base_screenspot.txt
 python src/eval_androidcontrol.py  $B --steps data/androidcontrol/steps_test.jsonl \
   --out results/base_ac_preds.jsonl | tee results/base_ac.txt
-# trained student (add the adapter):
+# trained student (add the adapter). --coord_space norm: the student was trained
+# on 0-1000 labels, so it emits normalized coords (base emits pixels -> default).
 python src/eval_screenspot.py      $B --adapter out/qwen3b-trackA-lora --limit 400 \
-  | tee results/student_screenspot.txt
-python src/eval_androidcontrol.py  $B --adapter out/qwen3b-trackA-lora \
+  --coord_space norm | tee results/student_screenspot.txt
+python src/eval_androidcontrol.py  $B --adapter out/qwen3b-trackA-lora --coord_space norm \
   --steps data/androidcontrol/steps_test.jsonl \
   --out results/student_ac_preds.jsonl | tee results/student_ac.txt
 
