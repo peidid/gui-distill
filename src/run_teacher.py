@@ -25,13 +25,19 @@ import re
 import sys
 from dataclasses import replace
 
-from action_space import parse_step
+from action_space import parse_step, XY_ACTIONS
+from coords import norm_from_pixel
+from gta1 import parse_gta1
 from model import load_model
 from prompt import SYSTEM, build_prompt
 from schema import load_steps, save_steps
 from uitars import parse_uitars
 
-PARSERS = {"uitars": parse_uitars, "default": parse_step}
+PARSERS = {"uitars": parse_uitars, "gta1": parse_gta1, "default": parse_step}
+# Each teacher's native coordinate convention. 'pixel' coords are normalized to
+# the canonical 0-1000 grid per image before storing, so Track-C labels match
+# Track A/B (always 0-1000). UI-TARS already emits 0-1000 -> 'norm' (no-op).
+PARSER_COORD = {"uitars": "norm", "gta1": "pixel", "default": "norm"}
 
 _THOUGHT = re.compile(r"Thought:\s*(.+?)\s*Action:", re.IGNORECASE | re.DOTALL)
 
@@ -57,6 +63,7 @@ def main():
     model_path = None if args.backend == "dummy" else args.teacher_model
     model = load_model(args.backend, model_path)
     parse = PARSERS[args.parser]
+    coord = PARSER_COORD[args.parser]  # 'pixel' teachers get normalized to 0-1000
 
     out, kept, dropped = [], 0, 0
     n = len(steps)
@@ -69,6 +76,11 @@ def main():
         if act is None:
             dropped += 1
         else:
+            # pixel-native teacher (e.g. GTA1) -> convert click coords to the
+            # canonical 0-1000 grid using this image's size, so labels match A/B.
+            if coord == "pixel" and act.type in XY_ACTIONS:
+                nx, ny = norm_from_pixel(act.x, act.y, s.image_w, s.image_h)
+                act = replace(act, x=nx, y=ny)
             # teacher's action + thought; gt_box was the human element box -> drop
             out.append(replace(s, action=act, thought=extract_thought(raw),
                                gt_box=None))

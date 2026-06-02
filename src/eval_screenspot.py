@@ -22,6 +22,7 @@ from eval_core import safe_parse, summarize
 from model import load_model
 from prompt import SYSTEM, build_prompt_parts
 from uitars import parse_uitars
+from gta1 import parse_gta1
 
 
 def bbox_to_norm(bbox, fmt, img_w, img_h):
@@ -135,9 +136,9 @@ def main():
     ap.add_argument("--no_stream", dest="stream", action="store_false",
                     help="disable the live per-sample running-accuracy line "
                          "(printed to stderr).")
-    ap.add_argument("--teacher", default="none", choices=["none", "uitars"],
-                    help="parse output with a teacher grammar. 'uitars' uses "
-                         "uitars.parse_uitars and forces --coord_space norm.")
+    ap.add_argument("--teacher", default="none", choices=["none", "uitars", "gta1"],
+                    help="parse output with a teacher grammar + its coord space. "
+                         "'uitars': parse_uitars + norm. 'gta1': parse_gta1 + pixel.")
     args = ap.parse_args()
 
     parser = parse_step
@@ -146,6 +147,10 @@ def main():
         parser = parse_uitars
         coord_space = "norm"  # UI-TARS emits 0-1000 (verified on recon)
         print("[teacher=uitars] using parse_uitars + coord_space=norm")
+    elif args.teacher == "gta1":
+        parser = parse_gta1
+        coord_space = "pixel"  # GTA1 emits absolute pixels (verified on recon)
+        print("[teacher=gta1] using parse_gta1 + coord_space=pixel")
 
     from datasets import load_dataset
     ds = load_dataset(args.hf_name, split=args.split)

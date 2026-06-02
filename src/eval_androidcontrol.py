@@ -20,6 +20,7 @@ from model import load_model
 from prompt import SYSTEM, build_prompt
 from schema import load_steps
 from uitars import parse_uitars
+from gta1 import parse_gta1
 
 
 def run(steps, model, out_path=None, coord_space="pixel", stream=True,
@@ -66,10 +67,9 @@ def main():
                          "(base Qwen2.5-VL). 'norm': already 0-1000 (a student "
                          "fine-tuned on normalized labels). The dummy backend "
                          "works under either.")
-    ap.add_argument("--teacher", default="none", choices=["none", "uitars"],
-                    help="parse output with a teacher grammar. 'uitars' uses "
-                         "uitars.parse_uitars and forces --coord_space norm "
-                         "(UI-TARS emits 0-1000).")
+    ap.add_argument("--teacher", default="none", choices=["none", "uitars", "gta1"],
+                    help="parse output with a teacher grammar + its coord space. "
+                         "'uitars': parse_uitars + norm. 'gta1': parse_gta1 + pixel.")
     args = ap.parse_args()
 
     parser = parse_step
@@ -78,6 +78,10 @@ def main():
         parser = parse_uitars
         coord_space = "norm"  # UI-TARS emits 0-1000 (verified on recon)
         print("[teacher=uitars] using parse_uitars + coord_space=norm")
+    elif args.teacher == "gta1":
+        parser = parse_gta1
+        coord_space = "pixel"  # GTA1 emits absolute pixels (verified on recon)
+        print("[teacher=gta1] using parse_gta1 + coord_space=pixel")
 
     steps = load_steps(args.steps)
     if args.limit:
