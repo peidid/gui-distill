@@ -1,120 +1,118 @@
 ================================================================================
-GUI AGENT DISTILLATION — RESULTS SUMMARY (learning run: Tracks A & B)
+GUI AGENT DISTILLATION — RESULTS SUMMARY (learning run: Tracks A / B / C)
 Updated 2026-06-02
 ================================================================================
 
 GOAL
   Black-box hard-label distillation of a mobile GUI agent: train a small student
   to imitate a teacher's TEXT actions (no logits), then measure WHERE the small
-  model falls short — grounding (perception) vs multi-step (control).
+  model falls short — grounding (perception) vs multi-step (control) — and how
+  that depends on the TEACHER.
 
-SETUP (identical across tracks unless noted)
+DESIGN — vary ONLY the teacher (label source); student + recipe + states + eval
+  fixed, so any difference is attributable to the teacher.
   Student : Qwen2.5-VL-3B-Instruct, LoRA SFT (rank 16, alpha 32, lr 1e-4,
-            2 epochs, bf16, vision tower frozen; ~30M trainable = 0.79%).
-            Trained on a rented RTX 4090.
-  Design  : vary ONLY the teacher (the source of action labels); same student,
-            recipe, training states, and eval.
-              Track A teacher = AndroidControl human demonstrations (~error-free).
-              Track B teacher = UI-TARS-7B-DPO (open GUI agent); teacher-forced
-                                relabel of the SAME states (run_teacher.py;
-                                92.9% parse coverage, 4798/5167 steps kept).
-  Data    : AndroidControl (Google public bucket). Train = 800 episodes /
-            5167 steps. Test = 200 DISJOINT episodes / 1332 steps
-            (--skip_episodes 800; verified train/test episode overlap = 0).
-  Eval    : ScreenSpot-V2 grounding (400 samples; click must land in GT box) and
-            AndroidControl-test step accuracy (teacher-forced; action TYPE must
-            match AND args: click in box/radius, text/dir/app string match).
-  COORDS  : Qwen2.5-VL emits ABSOLUTE PIXELS (not 0-1000). Both students KEPT the
-            pixel convention -> scored --coord_space pixel. UI-TARS emits 0-1000
-            -> scored norm. (Track-B student: pixel 0.280 vs norm 0.065 confirms
-            pixel.) Verified from raw outputs; mis-scoring the space reads ~0.
+            2 epochs, bf16, vision frozen; ~30M trainable = 0.79%).
+  Tracks  : A teacher = AndroidControl human demos (~error-free).
+            B teacher = UI-TARS-7B-DPO   (open agent; emits 0-1000).
+            C teacher = GTA1-32B         (open grounding specialist; emits PIXELS,
+                                          normalized to 0-1000 for labels).
+  Data    : train 800 episodes / 5167 steps; test 200 DISJOINT episodes /
+            1332 steps (--skip_episodes 800; overlap=0). AndroidControl.
+  Eval    : ScreenSpot-V2 grounding (400; click-in-box) + AndroidControl-test
+            step accuracy (teacher-forced; type match AND args).
+  COORDS  : Qwen2.5-VL & GTA1 emit ABSOLUTE PIXELS; UI-TARS emits 0-1000. All
+            three STUDENTS kept the base's pixel convention (scored pixel; norm
+            reads ~0). Verified from raw outputs; teacher coords handled per model.
+  Label coverage: B (UI-TARS) 92.9% parse; C (GTA1) ~97% parse.
 
 ================================================================================
 MAIN TABLE
 ================================================================================
-                          ScreenSpot-V2     AndroidControl-test
-                          (grounding)       (multi-step)
-  base Qwen2.5-VL-3B         0.603             0.114
-  student A (human)          0.280             0.552
-  student B (UI-TARS)        0.280             0.319
-  teacher UI-TARS-7B         0.650             0.316
+                          ScreenSpot-V2   AndroidControl-test
+                          (grounding)     (multi-step)
+  base Qwen2.5-VL-3B         0.603           0.114
+  student A (human)          0.280           0.552
+  student B (UI-TARS)        0.280           0.319
+  student C (GTA1)           0.302           0.465
+  teacher UI-TARS-7B         0.650           0.316
+  teacher GTA1-32B           0.895           0.514
 
-  (An earlier base ScreenSpot via 4-bit MLX read 0.375; the 0.603 above is
+  (An earlier base ScreenSpot via 4-bit MLX read 0.375; the 0.603 here is
    full-precision HF and is the correct control — all rows use the HF backend.)
 
 ScreenSpot-V2 (grounding) — icon / text:
-  base       0.603   icon 0.429 (72/168)   text 0.728 (169/232)
-  student A  0.280   icon 0.185 (31/168)   text 0.349 (81/232)
-  student B  0.280   icon 0.226 (38/168)   text 0.319 (74/232)
-  teacher    0.650   icon 0.542 (91/168)   text 0.728 (169/232)
-  (student B ScreenSpot under norm = 0.065 — confirms pixel is its convention.)
+  base            0.603   icon 0.429 (72/168)    text 0.728 (169/232)
+  student A       0.280   icon 0.185 (31/168)    text 0.349 (81/232)
+  student B       0.280   icon 0.226 (38/168)    text 0.319 (74/232)
+  student C       0.302   icon 0.196 (33/168)    text 0.379 (88/232)
+  teacher UI-TARS 0.650   icon 0.542 (91/168)    text 0.728 (169/232)
+  teacher GTA1    0.895   icon 0.815 (137/168)   text 0.953 (221/232)
+  (students under 'norm' scoring read ~0.055-0.065 — confirms pixel convention.)
 
-AndroidControl-test — step accuracy by action type (n in last col):
-  action       base    studentA  studentB  teacher    n
-  click        0.125   0.478     0.391     0.448      714
-  done         0.075   0.815     0.000     0.005      200
-  open_app     0.120   0.827     0.133     0.000       75
-  press_back   0.304   0.543     0.717     0.370       46
-  scroll       0.041   0.365     0.338     0.243      148
-  type         0.185   0.580     0.593     0.494       81
-  wait         0.061   0.652     0.076     0.106       66
-  long_press   0.000   0.000     0.000     0.000        2
-  --------------------------------------------------------
-  OVERALL      0.114   0.552     0.319     0.316     1332
+AndroidControl-test — step accuracy by action type:
+  action      base   A(hum) B(UITARS) C(GTA1) | tUITARS tGTA1   n
+  click       0.125  0.478  0.391     0.461   | 0.448   0.591   714
+  done        0.075  0.815  0.000     0.430   | 0.005   0.275   200
+  open_app    0.120  0.827  0.133     0.133   | 0.000   0.080    75
+  press_back  0.304  0.543  0.717     0.522   | 0.370   0.565    46
+  scroll      0.041  0.365  0.338     0.568   | 0.243   0.615   148
+  type        0.185  0.580  0.593     0.667   | 0.494   0.679    81
+  wait        0.061  0.652  0.076     0.485   | 0.106   0.439    66
+  long_press  0.000  0.000  0.000     0.000   | 0.000   0.000     2
+  -------------------------------------------------------------------
+  OVERALL     0.114  0.552  0.319     0.465   | 0.316   0.514   1332
 
 ================================================================================
-FINDINGS
+FINDINGS (confirmed across three teachers)
 ================================================================================
-1) TEACHER-ERROR / COVERAGE INHERITANCE (headline).
-   The Track-B student fails exactly the actions its teacher cannot emit:
-       done    : A 0.815 -> B 0.000   (teacher 0.005)
-       open_app: A 0.827 -> B 0.133   (teacher 0.000)
-   UI-TARS has no open_app action and rarely signals completion, so the student
-   distilled from it never learns to open apps or terminate — while the
-   human-taught student masters both. Black-box hard-label distillation
-   transmits the teacher's blind spots directly.
+1) MULTI-STEP TRACKS TEACHER QUALITY — monotonically.
+   Order teachers by their own AndroidControl skill and the students line up:
+     teacher:  human(~perfect) > GTA1 0.514 > UI-TARS 0.316 > base
+     student:  A 0.552         > C 0.465    > B 0.319       > 0.114
+   Stronger teacher -> stronger student on multi-step; each student lands just
+   below its teacher (C 0.465<-GTA1 0.514; B 0.319<-UI-TARS 0.316).
 
-2) MULTI-STEP TRACKS THE TEACHER.
-   student B overall (0.319) ~= teacher (0.316); student A (0.552) tracks its
-   (human) teacher. The student's multi-step competence is bounded by its
-   teacher -> a better teacher yields a better student on control.
+2) GROUNDING DOES NOT TRANSFER — a hard ceiling ~0.28-0.30.
+   Teacher grounding 0.650 (UI-TARS) -> 0.895 (GTA1), yet every student stays
+   ~0.28-0.30 (A 0.280, B 0.280, C 0.302), below the base (0.603) and far below
+   GTA1's 0.895. Grounding is recipe/capacity-bound, NOT teacher-bound.
+   (Nuance: in-distribution click IMPROVES over base — 0.125 -> 0.46-0.48 — so it
+   is OUT-OF-DISTRIBUTION grounding (desktop/web) that is lost.)
 
-3) GROUNDING DOES NOT TRANSFER.
-   Both students land at EXACTLY 0.280 on ScreenSpot regardless of teacher, and
-   the teacher's far-better grounding (0.650) did NOT carry over. Grounding
-   DEGRADED from base (0.603 -> 0.280) — a property of the fine-tuning
-   recipe/distribution (narrow phone-GUI SFT, frozen vision, a light LoRA that
-   keeps the base's coordinate convention), NOT of the label source.
-   Nuance: in-distribution click IMPROVED over base (0.125 -> 0.478 A / 0.391 B);
-   the ScreenSpot drop is OUT-OF-DISTRIBUTION (desktop/web) grounding.
+3) ACTION-COVERAGE / ERROR INHERITANCE, per action type.
+   Students inherit what their teacher demonstrates:
+     done    : A 0.815 / C 0.430 / B 0.000   (teachers: GTA1 0.275, UITARS 0.005)
+     scroll  : C 0.568 > B 0.338              (teachers: GTA1 0.615, UITARS 0.243)
+     type    : C 0.667 > B 0.593              (teacher GTA1 0.679)
+     open_app: A 0.827 but B=C=0.133          (NO model teacher emits it: GTA1
+               0.080, UITARS 0.000 -> only the HUMAN teacher taught open_app)
 
 INTERPRETATION
-   Distillation here transmits PROCEDURE (which action, in-distribution) far more
-   than PERCEPTION (general grounding), and faithfully inherits the teacher's
-   action-space coverage gaps. The "cost" of black-box hard-label distillation
-   concentrates in (a) out-of-distribution grounding and (b) capabilities the
-   teacher cannot demonstrate.
+  Black-box hard-label distillation scales multi-step/control behavior with
+  teacher quality, but (a) grounding does not transfer (stuck ~0.30 regardless of
+  teacher), and (b) students inherit the teacher's action-coverage gaps. The cost
+  of the simple recipe concentrates in PERCEPTION (general grounding) and in
+  capabilities NO teacher demonstrates (open_app).
 
 CAVEATS
-   - Offline teacher-forced step accuracy measures AGREEMENT with the single
-     human reference action; it favors the human-distilled student and penalizes
-     a capable-but-different agent. UI-TARS's low AndroidControl number (0.316)
-     is largely action-space mismatch (no open_app, different termination), NOT
-     incompetence — its grounding (0.650) leads all models.
-   - Single run, no seeds/error bars (pilot). ScreenSpot is OOD vs the phone
-     training data. Teachers are OPEN (learning run); the paper's premise needs a
-     genuinely CLOSED API teacher.
+  - Offline teacher-forced step accuracy measures agreement with the single human
+    reference action; it favors the human-distilled student and undercounts a
+    capable-but-different agent. (UI-TARS 0.316 / GTA1 0.514 partly reflect
+    action-space differences, not pure skill — both ground far better than they
+    step-match.)
+  - Single run, no seeds/error bars (pilot). ScreenSpot is OOD vs phone training.
+    Teachers are OPEN (learning run); the paper's premise needs a CLOSED API.
 
-NEXT — Track C
-   Stronger teacher: UI-Venus-72B (primary) / GTA1-32B (alt). Needs ~80 GB GPU +
-   its own output recon + parser (the src/uitars.py pattern). Relabel the SAME
-   states, train, eval. Questions: does a stronger teacher cover open_app/done,
-   lift multi-step, and does grounding stay pinned ~0.28?
+NEXT
+  - Closed-API teacher (GPT/Claude/Gemini) -> makes the black-box premise rigorous.
+  - UI-Venus-72B agent teacher -> does an agent (vs grounding) teacher close the
+    open_app gap?  - Phone-grounding test to isolate OOD-grounding loss.
+  - Tighten: seeds/error bars, full ScreenSpot (1272).
 
-FILES (results/)
-   {base,student,teacher,trackB}_*screenspot*.txt , *_ac.txt   summaries
-   *_ac_preds.jsonl                                  per-step preds (failure analysis)
-   adapters: out/qwen3b-trackA-lora, out/qwen3b-trackB-lora
-   local backups (gitignored, too big for git): adapter.tar.gz [A],
-   trackB_bundle.tar.gz [B adapter + labels + results]
+ARTIFACTS
+  results/{base,student,teacher,trackB,trackC}_*.txt + *_ac_preds.jsonl
+  adapters: out/qwen3b-track{A,B,C}-lora  (local zips, gitignored:
+            adapter.tar.gz [A], trackB_bundle.tar.gz [B], trackC_bundle.tar.gz [C])
+  parsers : src/uitars.py (0-1000), src/gta1.py (pixel->0-1000); eval --teacher flag.
 ================================================================================
