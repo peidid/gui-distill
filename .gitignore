@@ -10,9 +10,11 @@ results/*.png
 *.tfrecord
 *.parquet
 
-# model weights / adapters
+# model weights / adapters / big bundles (keep local; git is not for large binaries)
 *.safetensors
 *.bin
+*.tar.gz
+*.zip
 
 # keep folder structure
 !data/.gitkeep

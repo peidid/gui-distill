@@ -1,0 +1,35 @@
+=== TRACK A RESULTS (all pixel-scored) ===
+--- base_screenspot ---
+
+ScreenSpot-V2 grounding accuracy: 0.603  (241/400)
+  icon       0.429  (72/168)
+  text       0.728  (169/232)
+--- student_screenspot ---
+
+ScreenSpot-V2 grounding accuracy: 0.280  (112/400)
+  icon       0.185  (31/168)
+  text       0.349  (81/232)
+--- base_ac ---
+
+AndroidControl-test step accuracy: 0.114  (152/1332)
+per action type:
+  click        0.125  (89/714)
+  done         0.075  (15/200)
+  long_press   0.000  (0/2)
+  open_app     0.120  (9/75)
+  press_back   0.304  (14/46)
+  scroll       0.041  (6/148)
+  type         0.185  (15/81)
+  wait         0.061  (4/66)
+--- student_ac ---
+
+AndroidControl-test step accuracy: 0.552  (735/1332)
+per action type:
+  click        0.478  (341/714)
+  done         0.815  (163/200)
+  long_press   0.000  (0/2)
+  open_app     0.827  (62/75)
+  press_back   0.543  (25/46)
+  scroll       0.365  (54/148)
+  type         0.580  (47/81)
+  wait         0.652  (43/66)

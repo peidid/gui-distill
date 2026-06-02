@@ -1,0 +1,1332 @@
+{"episode": "ac422", "step": 0, "gt": "click(487, 134)", "raw": "Thought: To change the title of \"My Recording 3\" to \"Audio 1\", I need to access the recording settings or options where such changes can be made. The current screen shows general settings but not specific recording options. I should look for a way to navigate to the recording section or settings menu that might allow me to rename the recording.\nAction: scroll down", "correct": false}
+{"episode": "ac422", "step": 1, "gt": "click(897, 329)", "raw": "click(487, 134)", "correct": false}
+{"episode": "ac422", "step": 2, "gt": "click(500, 487)", "raw": "Action: click(487, 1165)", "correct": true}
+{"episode": "ac422", "step": 3, "gt": "click(500, 505)", "raw": "Action: type(Audio 1)", "correct": false}
+{"episode": "ac422", "step": 4, "gt": "type(\"Audio 1\")", "raw": "type(Audio 1)", "correct": false}
+{"episode": "ac422", "step": 5, "gt": "click(807, 412)", "raw": "Action: click(897, 986)", "correct": true}
+{"episode": "ac422", "step": 6, "gt": "done()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac443", "step": 0, "gt": "click(287, 91)", "raw": "Action: click on the search bar", "correct": false}
+{"episode": "ac443", "step": 1, "gt": "click(529, 259)", "raw": "type(\"Google Community Team\")", "correct": false}
+{"episode": "ac443", "step": 2, "gt": "done()", "raw": "click(364, 360)", "correct": false}
+{"episode": "ac463", "step": 0, "gt": "press_back()", "raw": "Action: click(645, 217)", "correct": false}
+{"episode": "ac463", "step": 1, "gt": "scroll(down)", "raw": "Action: scroll(-50%)", "correct": false}
+{"episode": "ac463", "step": 2, "gt": "click(521, 560)", "raw": "Action: long_press(x, y)", "correct": false}
+{"episode": "ac463", "step": 3, "gt": "click(706, 91)", "raw": "click(763, 214)", "correct": false}
+{"episode": "ac463", "step": 4, "gt": "done()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac483", "step": 0, "gt": "click(700, 938)", "raw": "Action: click on the More option", "correct": false}
+{"episode": "ac483", "step": 1, "gt": "click(556, 211)", "raw": "click(700, 938)", "correct": false}
+{"episode": "ac483", "step": 2, "gt": "type(\"sounds of nature\")", "raw": "type(\"nature\")", "correct": false}
+{"episode": "ac483", "step": 3, "gt": "click(920, 899)", "raw": "Action: click(1004, 2159)", "correct": true}
+{"episode": "ac483", "step": 4, "gt": "click(209, 132)", "raw": "click(247, 730)", "correct": false}
+{"episode": "ac483", "step": 5, "gt": "scroll(down)", "raw": "Action: click(245, 888)", "correct": false}
+{"episode": "ac483", "step": 6, "gt": "scroll(down)", "raw": "Action: click(247, 568)", "correct": false}
+{"episode": "ac483", "step": 7, "gt": "click(500, 217)", "raw": "Action: click(245, 568)", "correct": false}
+{"episode": "ac483", "step": 8, "gt": "click(499, 609)", "raw": "click(475, 1460)", "correct": false}
+{"episode": "ac483", "step": 9, "gt": "done()", "raw": "Action: click(950, 1766)", "correct": false}
+{"episode": "ac503", "step": 0, "gt": "click(67, 79)", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac503", "step": 1, "gt": "click(500, 310)", "raw": "click(382, 465)", "correct": false}
+{"episode": "ac503", "step": 2, "gt": "click(499, 872)", "raw": "click(824, 1614)", "correct": false}
+{"episode": "ac503", "step": 3, "gt": "done()", "raw": "click(499, 872)", "correct": false}
+{"episode": "ac523", "step": 0, "gt": "click(905, 775)", "raw": "Action: click(985, 1862)", "correct": true}
+{"episode": "ac523", "step": 1, "gt": "done()", "raw": "click(963, 1862)", "correct": false}
+{"episode": "ac543", "step": 0, "gt": "open_app(\"ClockBuddy\")", "raw": "Action: wait()", "correct": false}
+{"episode": "ac543", "step": 1, "gt": "click(920, 125)", "raw": "Action: click(562, 327)", "correct": false}
+{"episode": "ac543", "step": 2, "gt": "click(894, 280)", "raw": "Action: click(978, 683)", "correct": true}
+{"episode": "ac543", "step": 3, "gt": "done()", "raw": "Action: click(894, 280)", "correct": false}
+{"episode": "ac583", "step": 0, "gt": "open_app(\"Clock\")", "raw": "Action: Press back()", "correct": false}
+{"episode": "ac583", "step": 1, "gt": "click(100, 930)", "raw": "click(235, 814)", "correct": false}
+{"episode": "ac583", "step": 2, "gt": "click(500, 816)", "raw": "Action: click(532, 1960)", "correct": true}
+{"episode": "ac583", "step": 3, "gt": "click(379, 660)", "raw": "click(420, 1620)", "correct": false}
+{"episode": "ac583", "step": 4, "gt": "click(777, 316)", "raw": "Action: click(284, 1356)", "correct": false}
+{"episode": "ac583", "step": 5, "gt": "click(801, 760)", "raw": "Action: click(240, 1489)", "correct": false}
+{"episode": "ac583", "step": 6, "gt": "done()", "raw": "click(245, 816)", "correct": false}
+{"episode": "ac603", "step": 0, "gt": "click(335, 154)", "raw": "Action: click on the Brand filter", "correct": false}
+{"episode": "ac603", "step": 1, "gt": "click(166, 332)", "raw": "click(335, 154)", "correct": false}
+{"episode": "ac603", "step": 2, "gt": "click(398, 206)", "raw": "click(418, 497)", "correct": false}
+{"episode": "ac603", "step": 3, "gt": "click(776, 942)", "raw": "click(700, 226)", "correct": false}
+{"episode": "ac603", "step": 4, "gt": "done()", "raw": "click(776, 942)", "correct": false}
+{"episode": "ac623", "step": 0, "gt": "click(499, 207)", "raw": "Action: click on the task \"Good Bye, Lenin!\"", "correct": false}
+{"episode": "ac623", "step": 1, "gt": "click(548, 312)", "raw": "click(499, 738)", "correct": false}
+{"episode": "ac623", "step": 2, "gt": "click(548, 605)", "raw": "click(499, 207)", "correct": false}
+{"episode": "ac623", "step": 3, "gt": "click(500, 676)", "raw": "click(548, 605)", "correct": false}
+{"episode": "ac623", "step": 4, "gt": "click(801, 761)", "raw": "click(842, 860)", "correct": false}
+{"episode": "ac623", "step": 5, "gt": "click(769, 803)", "raw": "click(801, 761)", "correct": false}
+{"episode": "ac623", "step": 6, "gt": "done()", "raw": "click(499, 676)", "correct": false}
+{"episode": "ac643", "step": 0, "gt": "open_app(\"ClevCalc\")", "raw": "Action: open_app(\"ClevCalc\")", "correct": true}
+{"episode": "ac643", "step": 1, "gt": "press_back()", "raw": "click(253, 746)", "correct": false}
+{"episode": "ac643", "step": 2, "gt": "click(139, 408)", "raw": "Action: long_press(458, 1376)", "correct": false}
+{"episode": "ac643", "step": 3, "gt": "click(242, 384)", "raw": "click(256, 927)", "correct": false}
+{"episode": "ac643", "step": 4, "gt": "click(620, 586)", "raw": "Action: click(756, 1400)", "correct": true}
+{"episode": "ac643", "step": 5, "gt": "click(615, 585)", "raw": "click(70, 1270)", "correct": false}
+{"episode": "ac643", "step": 6, "gt": "click(901, 868)", "raw": "Action: click(139, 408)", "correct": false}
+{"episode": "ac643", "step": 7, "gt": "done()", "raw": "click(137, 1160)", "correct": false}
+{"episode": "ac663", "step": 0, "gt": "open_app(\"BigBFS\")", "raw": "Action: open app \"Big BFS\"", "correct": false}
+{"episode": "ac663", "step": 1, "gt": "scroll(down)", "raw": "click(234, 1567)", "correct": false}
+{"episode": "ac663", "step": 2, "gt": "click(189, 643)", "raw": "click(234, 756)", "correct": false}
+{"episode": "ac663", "step": 3, "gt": "click(498, 303)", "raw": "click(527, 643)", "correct": false}
+{"episode": "ac663", "step": 4, "gt": "done()", "raw": "click(257, 1470)", "correct": false}
+{"episode": "ac683", "step": 0, "gt": "click(500, 947)", "raw": "Action: click on the search icon at the bottom of the screen", "correct": false}
+{"episode": "ac683", "step": 1, "gt": "click(500, 83)", "raw": "click(500, 947)", "correct": false}
+{"episode": "ac683", "step": 2, "gt": "type(\"Palermo womens leather womens sneakers\")", "raw": "type(Palermo womens leather womens sneakers)", "correct": false}
+{"episode": "ac683", "step": 3, "gt": "click(920, 899)", "raw": "Action: click(1002, 2160)", "correct": true}
+{"episode": "ac683", "step": 4, "gt": "done()", "raw": "click(500, 83)", "correct": false}
+{"episode": "ac703", "step": 0, "gt": "click(576, 261)", "raw": "Action: click(974, 762)", "correct": false}
+{"episode": "ac703", "step": 1, "gt": "scroll(down)", "raw": "click(576, 261)", "correct": false}
+{"episode": "ac703", "step": 2, "gt": "click(499, 266)", "raw": "click(489, 2363)", "correct": false}
+{"episode": "ac703", "step": 3, "gt": "scroll(down)", "raw": "click(499, 266)", "correct": false}
+{"episode": "ac703", "step": 4, "gt": "click(385, 616)", "raw": "click(382, 2250)", "correct": false}
+{"episode": "ac703", "step": 5, "gt": "scroll(down)", "raw": "click(499, 266)", "correct": false}
+{"episode": "ac703", "step": 6, "gt": "done()", "raw": "click(499, 266)", "correct": false}
+{"episode": "ac723", "step": 0, "gt": "press_back()", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac723", "step": 1, "gt": "press_back()", "raw": "click(728, 203)", "correct": false}
+{"episode": "ac723", "step": 2, "gt": "click(677, 87)", "raw": "click(724, 196)", "correct": false}
+{"episode": "ac723", "step": 3, "gt": "type(\"US military\")", "raw": "type(\"US military\")", "correct": false}
+{"episode": "ac723", "step": 4, "gt": "click(920, 904)", "raw": "Action: click(993, 2154)", "correct": true}
+{"episode": "ac723", "step": 5, "gt": "done()", "raw": "Action: scroll(down)", "correct": false}
+{"episode": "ac744", "step": 0, "gt": "click(931, 923)", "raw": "Action: click on the brightness icon at the bottom of the screen", "correct": false}
+{"episode": "ac744", "step": 1, "gt": "done()", "raw": "click(874, 2216)", "correct": false}
+{"episode": "ac764", "step": 0, "gt": "press_back()", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac764", "step": 1, "gt": "click(684, 246)", "raw": "Action: click on the first product", "correct": false}
+{"episode": "ac764", "step": 2, "gt": "scroll(down)", "raw": "click(684, 246)", "correct": false}
+{"episode": "ac764", "step": 3, "gt": "scroll(left)", "raw": "click(537, 1090)", "correct": false}
+{"episode": "ac764", "step": 4, "gt": "scroll(down)", "raw": "click(357, 749)", "correct": false}
+{"episode": "ac764", "step": 5, "gt": "scroll(left)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac764", "step": 6, "gt": "scroll(left)", "raw": "scroll(left)", "correct": false}
+{"episode": "ac764", "step": 7, "gt": "done()", "raw": "Action: scroll(right)", "correct": false}
+{"episode": "ac784", "step": 0, "gt": "press_back()", "raw": "Thought: To achieve the goal of filtering the search for leather sofa sets, I need to first navigate away from this product page and access the main search or filter options on the app.\nAction: press_back()", "correct": true}
+{"episode": "ac784", "step": 1, "gt": "click(463, 140)", "raw": "click on Filter option", "correct": false}
+{"episode": "ac784", "step": 2, "gt": "click(200, 428)", "raw": "click(52, 1027)", "correct": false}
+{"episode": "ac784", "step": 3, "gt": "click(699, 565)", "raw": "click(597, 1354)", "correct": false}
+{"episode": "ac784", "step": 4, "gt": "click(700, 944)", "raw": "click(700, 1354)", "correct": false}
+{"episode": "ac784", "step": 5, "gt": "wait()", "raw": "click(700, 944)", "correct": false}
+{"episode": "ac784", "step": 6, "gt": "done()", "raw": "click(700, 944)", "correct": false}
+{"episode": "ac804", "step": 0, "gt": "click(68, 87)", "raw": "Action: click(64, 203)", "correct": true}
+{"episode": "ac804", "step": 1, "gt": "click(106, 102)", "raw": "click(105, 249)", "correct": false}
+{"episode": "ac804", "step": 2, "gt": "click(707, 932)", "raw": "click(345, 2269)", "correct": false}
+{"episode": "ac804", "step": 3, "gt": "click(440, 315)", "raw": "click(450, 744)", "correct": false}
+{"episode": "ac804", "step": 4, "gt": "click(500, 871)", "raw": "Action: click(420, 2095)", "correct": false}
+{"episode": "ac804", "step": 5, "gt": "click(494, 826)", "raw": "Action: click(500, 871)", "correct": false}
+{"episode": "ac804", "step": 6, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac824", "step": 0, "gt": "open_app(\"Nykaa\")", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac824", "step": 1, "gt": "click(442, 139)", "raw": "click(234, 326)", "correct": false}
+{"episode": "ac824", "step": 2, "gt": "type(\"Pencil eyeliner\")", "raw": "type(\"Pencil eyeliner\")", "correct": false}
+{"episode": "ac824", "step": 3, "gt": "click(920, 899)", "raw": "click(1005, 2156)", "correct": false}
+{"episode": "ac824", "step": 4, "gt": "done()", "raw": "click(756, 1030)", "correct": false}
+{"episode": "ac864", "step": 0, "gt": "open_app(\"Edmunds\")", "raw": "Action: open app \"Edmunds\"", "correct": false}
+{"episode": "ac864", "step": 1, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac864", "step": 2, "gt": "click(375, 943)", "raw": "Action: click(495, 1238)", "correct": false}
+{"episode": "ac864", "step": 3, "gt": "scroll(down)", "raw": "Action: scroll(-1000, 0)", "correct": false}
+{"episode": "ac864", "step": 4, "gt": "scroll(down)", "raw": "Action: scroll(down)", "correct": true}
+{"episode": "ac864", "step": 5, "gt": "click(606, 752)", "raw": "click(286, 1808)", "correct": false}
+{"episode": "ac864", "step": 6, "gt": "click(500, 269)", "raw": "click(380, 752)", "correct": false}
+{"episode": "ac864", "step": 7, "gt": "click(519, 329)", "raw": "click(380, 1043)", "correct": false}
+{"episode": "ac864", "step": 8, "gt": "click(500, 547)", "raw": "click(519, 329)", "correct": false}
+{"episode": "ac864", "step": 9, "gt": "done()", "raw": "click(500, 547)", "correct": false}
+{"episode": "ac884", "step": 0, "gt": "click(935, 89)", "raw": "Action: click(425, 1783)", "correct": false}
+{"episode": "ac884", "step": 1, "gt": "click(931, 83)", "raw": "wait()", "correct": false}
+{"episode": "ac884", "step": 2, "gt": "done()", "raw": "click(426, 2270)", "correct": false}
+{"episode": "ac904", "step": 0, "gt": "open_app(\"Omio\")", "raw": "Action: open_app(Omio)", "correct": true}
+{"episode": "ac904", "step": 1, "gt": "click(481, 347)", "raw": "click(Rotterdam Netherlands)", "correct": false}
+{"episode": "ac904", "step": 2, "gt": "type(\"Rotterdam\")", "raw": "type(\"Rotterdam\")", "correct": false}
+{"episode": "ac904", "step": 3, "gt": "click(529, 219)", "raw": "click(256, 519)", "correct": false}
+{"episode": "ac904", "step": 4, "gt": "click(538, 410)", "raw": "click(160, 980)", "correct": false}
+{"episode": "ac904", "step": 5, "gt": "type(\"Oxford\")", "raw": "type(\"Oxford\")", "correct": false}
+{"episode": "ac904", "step": 6, "gt": "click(529, 219)", "raw": "click(360, 518)", "correct": false}
+{"episode": "ac904", "step": 7, "gt": "click(500, 612)", "raw": "Action: click(462, 1470)", "correct": true}
+{"episode": "ac904", "step": 8, "gt": "wait()", "raw": "click(500, 612)", "correct": false}
+{"episode": "ac904", "step": 9, "gt": "done()", "raw": "click(500, 612)", "correct": false}
+{"episode": "ac924", "step": 0, "gt": "click(941, 591)", "raw": "Action: click on the three dots icon next to the PXL_20230614_075718185.MP.jpg", "correct": false}
+{"episode": "ac924", "step": 1, "gt": "click(541, 642)", "raw": "Action: click(200, 1540)", "correct": false}
+{"episode": "ac924", "step": 2, "gt": "click(521, 170)", "raw": "click(240, 402)", "correct": false}
+{"episode": "ac924", "step": 3, "gt": "click(521, 390)", "raw": "click(521, 170)", "correct": false}
+{"episode": "ac924", "step": 4, "gt": "click(854, 938)", "raw": "Action: select", "correct": false}
+{"episode": "ac924", "step": 5, "gt": "click(521, 426)", "raw": "click(521, 170)", "correct": false}
+{"episode": "ac924", "step": 6, "gt": "done()", "raw": "click(521, 426)", "correct": false}
+{"episode": "ac964", "step": 0, "gt": "open_app(\"YouTube\")", "raw": "Action: click on the YouTube icon at the bottom of the screen", "correct": false}
+{"episode": "ac964", "step": 1, "gt": "click(875, 428)", "raw": "click(893, 204)", "correct": false}
+{"episode": "ac964", "step": 2, "gt": "done()", "raw": "click(639, 428)", "correct": false}
+{"episode": "ac984", "step": 0, "gt": "open_app(\"Maps\")", "raw": "Action: open app \"Citymapper\"", "correct": false}
+{"episode": "ac984", "step": 1, "gt": "click(776, 197)", "raw": "click on the walking option", "correct": false}
+{"episode": "ac984", "step": 2, "gt": "done()", "raw": "click(234, 2265)", "correct": false}
+{"episode": "ac1004", "step": 0, "gt": "click(499, 920)", "raw": "Action: click(425, 2206)", "correct": false}
+{"episode": "ac1004", "step": 1, "gt": "scroll(down)", "raw": "click(563, 2237)", "correct": false}
+{"episode": "ac1004", "step": 2, "gt": "done()", "raw": "click(537, 2228)", "correct": false}
+{"episode": "ac1024", "step": 0, "gt": "press_back()", "raw": "Thought: To achieve the goal of creating an art gallery titled \"Self Art,\" I need to navigate back to the main menu or home screen where I can access the app's features for creating galleries.\nAction: press_back()", "correct": true}
+{"episode": "ac1024", "step": 1, "gt": "press_back()", "raw": "Thought: The goal is to create an art gallery titled \"Self Art,\" but the current screen shows topics about literature. To achieve this goal, I need to navigate back to the main menu or home page where I can access the app's features for creating galleries.\nAction: press_back()", "correct": true}
+{"episode": "ac1024", "step": 2, "gt": "scroll(down)", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac1024", "step": 3, "gt": "scroll(down)", "raw": "Action: scroll(down)", "correct": true}
+{"episode": "ac1024", "step": 4, "gt": "click(274, 571)", "raw": "Action: scroll(down)", "correct": false}
+{"episode": "ac1024", "step": 5, "gt": "click(502, 515)", "raw": "click(683, 439)", "correct": false}
+{"episode": "ac1024", "step": 6, "gt": "click(256, 440)", "raw": "click(274, 571)", "correct": false}
+{"episode": "ac1024", "step": 7, "gt": "click(498, 358)", "raw": "Action: wait()", "correct": false}
+{"episode": "ac1024", "step": 8, "gt": "click(866, 87)", "raw": "Action: click(930, 198)", "correct": true}
+{"episode": "ac1024", "step": 9, "gt": "click(499, 120)", "raw": "Action: type(Self Art)", "correct": false}
+{"episode": "ac1024", "step": 10, "gt": "type(\"Self Art\")", "raw": "Action: type(Self Art)", "correct": true}
+{"episode": "ac1024", "step": 11, "gt": "click(866, 87)", "raw": "Action: done()", "correct": false}
+{"episode": "ac1024", "step": 12, "gt": "wait()", "raw": "Action: done()", "correct": false}
+{"episode": "ac1024", "step": 13, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac1044", "step": 0, "gt": "click(200, 241)", "raw": "Action: click on the first product", "correct": false}
+{"episode": "ac1044", "step": 1, "gt": "scroll(down)", "raw": "click(375, 2260)", "correct": false}
+{"episode": "ac1044", "step": 2, "gt": "done()", "raw": "click(350, 241)", "correct": false}
+{"episode": "ac1065", "step": 0, "gt": "scroll(down)", "raw": "Action: click on the first product", "correct": false}
+{"episode": "ac1065", "step": 1, "gt": "scroll(down)", "raw": "click(234, 1568)", "correct": false}
+{"episode": "ac1065", "step": 2, "gt": "scroll(down)", "raw": "click(253, 486)", "correct": false}
+{"episode": "ac1065", "step": 3, "gt": "click(250, 705)", "raw": "click on the third product", "correct": false}
+{"episode": "ac1065", "step": 4, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac1065", "step": 5, "gt": "scroll(down)", "raw": "click(250, 705)", "correct": false}
+{"episode": "ac1065", "step": 6, "gt": "scroll(down)", "raw": "click(250, 705)", "correct": false}
+{"episode": "ac1065", "step": 7, "gt": "scroll(down)", "raw": "click(348, 1960)", "correct": false}
+{"episode": "ac1065", "step": 8, "gt": "click(500, 474)", "raw": "click(346, 1890)", "correct": false}
+{"episode": "ac1065", "step": 9, "gt": "done()", "raw": "click(600, 583)", "correct": false}
+{"episode": "ac1085", "step": 0, "gt": "open_app(\"Blaze Wordpad\")", "raw": "Action: open app blaze wordpad", "correct": false}
+{"episode": "ac1085", "step": 1, "gt": "click(873, 855)", "raw": "click(945, 2053)", "correct": false}
+{"episode": "ac1085", "step": 2, "gt": "click(502, 656)", "raw": "type(\"Dear Sir/Madam\")", "correct": false}
+{"episode": "ac1085", "step": 3, "gt": "type(\"Manager\")", "raw": "type(\"Manager AA Technologies Pune\")", "correct": false}
+{"episode": "ac1085", "step": 4, "gt": "click(920, 904)", "raw": "Action: done()", "correct": false}
+{"episode": "ac1085", "step": 5, "gt": "click(103, 758)", "raw": "Action: done()", "correct": false}
+{"episode": "ac1085", "step": 6, "gt": "click(78, 834)", "raw": "Action: type(\"AA Technologies Pune\")", "correct": false}
+{"episode": "ac1085", "step": 7, "gt": "click(103, 758)", "raw": "Action: type(\"AA Technologies Pune\")", "correct": false}
+{"episode": "ac1085", "step": 8, "gt": "click(549, 904)", "raw": "Action: done()", "correct": false}
+{"episode": "ac1085", "step": 9, "gt": "click(78, 834)", "raw": "Action: click(920, 904)", "correct": false}
+{"episode": "ac1085", "step": 10, "gt": "click(449, 688)", "raw": "Action: click(920, 904)", "correct": false}
+{"episode": "ac1085", "step": 11, "gt": "click(252, 688)", "raw": "Action: type(\"The\")", "correct": false}
+{"episode": "ac1085", "step": 12, "gt": "click(400, 827)", "raw": "Action: click(920, 904)", "correct": false}
+{"episode": "ac1085", "step": 13, "gt": "click(598, 758)", "raw": "Action: click(920, 904)", "correct": false}
+{"episode": "ac1085", "step": 14, "gt": "click(697, 827)", "raw": "Action: click(873, 707)", "correct": false}
+{"episode": "ac1085", "step": 15, "gt": "click(846, 688)", "raw": "Action: click(873, 706)", "correct": false}
+{"episode": "ac1085", "step": 16, "gt": "click(767, 627)", "raw": "Action: click(883, 706)", "correct": false}
+{"episode": "ac1085", "step": 17, "gt": "click(920, 904)", "raw": "Action: click(883, 706)", "correct": false}
+{"episode": "ac1085", "step": 18, "gt": "click(945, 688)", "raw": "Action: click(920, 904)", "correct": false}
+{"episode": "ac1085", "step": 19, "gt": "click(647, 688)", "raw": "Action: type(\"Dear Sir/Madam,\\n\\nI am writing this letter to enquire about the position of Manager at AA Technologies Pune.\\n\\nI have been working as a software engineer for the past few years and I am very interested in the position of Manager at AA Technologies Pune.\\n\\nI believe that my skills and experience make me a suitable candidate for this position. I would be grateful if you could provide me with more information about the position and the requirements for the role.\\n\\nThank you for your time and consideration.\\n\\nSincerely,\\n[Your Name]\")", "correct": false}
+{"episode": "ac1085", "step": 20, "gt": "click(697, 827)", "raw": "Action: type(\"Purchase\")", "correct": false}
+{"episode": "ac1085", "step": 21, "gt": "click(252, 688)", "raw": "Action: type(\"Manager AA Technologies Pune\")", "correct": false}
+{"episode": "ac1085", "step": 22, "gt": "click(920, 904)", "raw": "Action: click(920, 904)", "correct": false}
+{"episode": "ac1085", "step": 23, "gt": "click(920, 904)", "raw": "Action: type(\"Manager AA Technologies Pune\")", "correct": false}
+{"episode": "ac1085", "step": 24, "gt": "click(301, 758)", "raw": "Action: type(\"Manager AA Technologies Pune\")", "correct": false}
+{"episode": "ac1085", "step": 25, "gt": "click(252, 688)", "raw": "Action: type(\"Dear Sir/Madam\")", "correct": false}
+{"episode": "ac1085", "step": 26, "gt": "click(103, 758)", "raw": "Action: type(\"Dear Sir/Madam\")", "correct": false}
+{"episode": "ac1085", "step": 27, "gt": "click(350, 688)", "raw": "Action: type(\"Dear\")", "correct": false}
+{"episode": "ac1085", "step": 28, "gt": "click(549, 904)", "raw": "Action: type(\"Dear Sir/Madam\")", "correct": false}
+{"episode": "ac1085", "step": 29, "gt": "click(201, 758)", "raw": "Action: type(\"Dear Sir\")", "correct": false}
+{"episode": "ac1085", "step": 30, "gt": "click(747, 688)", "raw": "Action: type(\"Dear students\")", "correct": false}
+{"episode": "ac1085", "step": 31, "gt": "click(350, 688)", "raw": "Action: type(\"sir\")", "correct": false}
+{"episode": "ac1085", "step": 32, "gt": "done()", "raw": "Action: type(\"Dear sir\")", "correct": false}
+{"episode": "ac1105", "step": 0, "gt": "click(212, 83)", "raw": "Action: click(1024, 193)", "correct": false}
+{"episode": "ac1105", "step": 1, "gt": "done()", "raw": "click(212, 83)", "correct": false}
+{"episode": "ac1125", "step": 0, "gt": "click(125, 939)", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac1125", "step": 1, "gt": "click(499, 481)", "raw": "click(186, 1114)", "correct": false}
+{"episode": "ac1125", "step": 2, "gt": "click(500, 859)", "raw": "click(601, 2060)", "correct": false}
+{"episode": "ac1125", "step": 3, "gt": "done()", "raw": "click(499, 2060)", "correct": false}
+{"episode": "ac1145", "step": 0, "gt": "click(754, 917)", "raw": "Action: click(798, 2203)", "correct": true}
+{"episode": "ac1145", "step": 1, "gt": "done()", "raw": "Action: click(1023, 206)", "correct": false}
+{"episode": "ac1165", "step": 0, "gt": "click(262, 181)", "raw": "Action: click on the snooze button", "correct": false}
+{"episode": "ac1165", "step": 1, "gt": "done()", "raw": "Action: click(532, 1957)", "correct": false}
+{"episode": "ac1185", "step": 0, "gt": "press_back()", "raw": "Action: click on the play button", "correct": false}
+{"episode": "ac1185", "step": 1, "gt": "press_back()", "raw": "Action: click(952, 1683)", "correct": false}
+{"episode": "ac1185", "step": 2, "gt": "click(499, 135)", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac1185", "step": 3, "gt": "click(514, 232)", "raw": "click(267, 558)", "correct": false}
+{"episode": "ac1185", "step": 4, "gt": "click(867, 285)", "raw": "Action: click(967, 680)", "correct": true}
+{"episode": "ac1185", "step": 5, "gt": "click(514, 348)", "raw": "Action: click(532, 914)", "correct": true}
+{"episode": "ac1185", "step": 6, "gt": "done()", "raw": "Action: click(514, 348)", "correct": false}
+{"episode": "ac1205", "step": 0, "gt": "open_app(\"Temu\")", "raw": "Thought: The current screen is not related to searching for a stand desk for a laptop. It seems to be loading or starting up, which means I need to navigate back to the home screen to access the Temu app.\nAction: press_back()", "correct": false}
+{"episode": "ac1205", "step": 1, "gt": "wait()", "raw": "type(\"stand desk for laptop\")", "correct": false}
+{"episode": "ac1205", "step": 2, "gt": "click(244, 85)", "raw": "click(456, 203)", "correct": false}
+{"episode": "ac1205", "step": 3, "gt": "type(\"stand desk for laptop \")", "raw": "click(244, 85)", "correct": false}
+{"episode": "ac1205", "step": 4, "gt": "click(920, 904)", "raw": "Action: click(976, 2163)", "correct": true}
+{"episode": "ac1205", "step": 5, "gt": "done()", "raw": "click(376, 308)", "correct": false}
+{"episode": "ac1245", "step": 0, "gt": "open_app(\"ClevCalc\")", "raw": "Action: type \"500 USD to JPY\" in the search bar", "correct": false}
+{"episode": "ac1245", "step": 1, "gt": "type(\"500\")", "raw": "Action: type(\"500\")", "correct": true}
+{"episode": "ac1245", "step": 2, "gt": "wait()", "raw": "Action: type(\"00\")", "correct": false}
+{"episode": "ac1245", "step": 3, "gt": "done()", "raw": "Action: click(372, 2064)", "correct": false}
+{"episode": "ac1265", "step": 0, "gt": "click(372, 79)", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac1265", "step": 1, "gt": "done()", "raw": "click(372, 79)", "correct": false}
+{"episode": "ac1285", "step": 0, "gt": "click(872, 774)", "raw": "Action: long_press(352, 704)", "correct": false}
+{"episode": "ac1285", "step": 1, "gt": "click(500, 235)", "raw": "Action: click(872, 774)", "correct": false}
+{"episode": "ac1285", "step": 2, "gt": "click(123, 883)", "raw": "click(116, 2116)", "correct": false}
+{"episode": "ac1285", "step": 3, "gt": "type(\"clarawagner98b@gmail.com\")", "raw": "type(clarawagner98b@gmail.com)", "correct": false}
+{"episode": "ac1285", "step": 4, "gt": "click(426, 268)", "raw": "click(896, 235)", "correct": false}
+{"episode": "ac1285", "step": 5, "gt": "click(824, 91)", "raw": "click(888, 214)", "correct": false}
+{"episode": "ac1285", "step": 6, "gt": "done()", "raw": "Action: click(1000, 570)", "correct": false}
+{"episode": "ac1305", "step": 0, "gt": "click(499, 313)", "raw": "Action: click on the first product", "correct": false}
+{"episode": "ac1305", "step": 1, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac1305", "step": 2, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac1305", "step": 3, "gt": "click(500, 817)", "raw": "click(528, 1976)", "correct": false}
+{"episode": "ac1305", "step": 4, "gt": "done()", "raw": "click(625, 870)", "correct": false}
+{"episode": "ac1345", "step": 0, "gt": "open_app(\"Any.do\")", "raw": "Action: click on sync home view", "correct": false}
+{"episode": "ac1345", "step": 1, "gt": "click(615, 917)", "raw": "click(283, 1394)", "correct": false}
+{"episode": "ac1345", "step": 2, "gt": "click(931, 84)", "raw": "click(615, 917)", "correct": false}
+{"episode": "ac1345", "step": 3, "gt": "click(499, 90)", "raw": "click(615, 917)", "correct": false}
+{"episode": "ac1345", "step": 4, "gt": "done()", "raw": "click(200, 480)", "correct": false}
+{"episode": "ac1385", "step": 0, "gt": "click(216, 816)", "raw": "Action: click on reset button", "correct": false}
+{"episode": "ac1385", "step": 1, "gt": "done()", "raw": "Action: click(534, 1957)", "correct": false}
+{"episode": "ac1425", "step": 0, "gt": "click(694, 338)", "raw": "Action: click(735, 806)", "correct": true}
+{"episode": "ac1425", "step": 1, "gt": "click(500, 913)", "raw": "Action: click(527, 2190)", "correct": true}
+{"episode": "ac1425", "step": 2, "gt": "wait()", "raw": "Action: click(472, 2189)", "correct": false}
+{"episode": "ac1425", "step": 3, "gt": "wait()", "raw": "click(500, 913)", "correct": false}
+{"episode": "ac1425", "step": 4, "gt": "click(499, 548)", "raw": "click(720, 1630)", "correct": false}
+{"episode": "ac1425", "step": 5, "gt": "click(262, 485)", "raw": "click(720, 1530)", "correct": false}
+{"episode": "ac1425", "step": 6, "gt": "done()", "raw": "click(700, 1600)", "correct": false}
+{"episode": "ac1445", "step": 0, "gt": "open_app(\"Amazon\")", "raw": "Action: open app \"Amazon\"", "correct": false}
+{"episode": "ac1445", "step": 1, "gt": "click(493, 89)", "raw": "click(256, 208)", "correct": false}
+{"episode": "ac1445", "step": 2, "gt": "type(\"Apple Macbook Air Laptop\")", "raw": "type(\"Apple MacBook Air\")", "correct": false}
+{"episode": "ac1445", "step": 3, "gt": "click(920, 899)", "raw": "Action: click(1005, 2167)", "correct": true}
+{"episode": "ac1445", "step": 4, "gt": "done()", "raw": "wait()", "correct": false}
+{"episode": "ac1465", "step": 0, "gt": "click(143, 692)", "raw": "Action: click(234, 2285)", "correct": false}
+{"episode": "ac1465", "step": 1, "gt": "click(502, 965)", "raw": "click(143, 692)", "correct": false}
+{"episode": "ac1465", "step": 2, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac1465", "step": 3, "gt": "done()", "raw": "click(502, 965)", "correct": false}
+{"episode": "ac1485", "step": 0, "gt": "scroll(down)", "raw": "Action: click on the first result", "correct": false}
+{"episode": "ac1485", "step": 1, "gt": "done()", "raw": "click(523, 467)", "correct": false}
+{"episode": "ac1525", "step": 0, "gt": "open_app(\"Zoho Meeting\")", "raw": "Action: click on the meeting to view details", "correct": false}
+{"episode": "ac1525", "step": 1, "gt": "wait()", "raw": "Action: click on the three dots of the bluebird meeting", "correct": false}
+{"episode": "ac1525", "step": 2, "gt": "click(933, 247)", "raw": "Action: click on the three dots of the bluebird meeting", "correct": false}
+{"episode": "ac1525", "step": 3, "gt": "click(761, 323)", "raw": "Action: click(685, 774)", "correct": false}
+{"episode": "ac1525", "step": 4, "gt": "click(740, 567)", "raw": "Action: click(658, 1360)", "correct": false}
+{"episode": "ac1525", "step": 5, "gt": "done()", "raw": "click(918, 600)", "correct": false}
+{"episode": "ac1545", "step": 0, "gt": "open_app(\"Fitness Coach\")", "raw": "Action: done()", "correct": false}
+{"episode": "ac1545", "step": 1, "gt": "type(\"Fabio\")", "raw": "Action: type(\"John\")", "correct": false}
+{"episode": "ac1545", "step": 2, "gt": "click(920, 904)", "raw": "Action: done()", "correct": false}
+{"episode": "ac1545", "step": 3, "gt": "click(500, 915)", "raw": "Action: click(513, 2206)", "correct": true}
+{"episode": "ac1545", "step": 4, "gt": "click(744, 548)", "raw": "click(378, 1360)", "correct": false}
+{"episode": "ac1545", "step": 5, "gt": "click(500, 921)", "raw": "Action: click(495, 2213)", "correct": true}
+{"episode": "ac1545", "step": 6, "gt": "click(594, 665)", "raw": "Action: click(500, 1306)", "correct": false}
+{"episode": "ac1545", "step": 7, "gt": "click(500, 921)", "raw": "Action: click(500, 2230)", "correct": true}
+{"episode": "ac1545", "step": 8, "gt": "click(500, 921)", "raw": "Action: click(500, 2213)", "correct": true}
+{"episode": "ac1545", "step": 9, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac1545", "step": 10, "gt": "done()", "raw": "Action: click(430, 2098)", "correct": false}
+{"episode": "ac1565", "step": 0, "gt": "open_app(\"Blossom\")", "raw": "Action: click on the plus icon", "correct": false}
+{"episode": "ac1565", "step": 1, "gt": "click(125, 930)", "raw": "Action: click on the + icon at the bottom right corner of the screen", "correct": false}
+{"episode": "ac1565", "step": 2, "gt": "click(530, 629)", "raw": "click(517, 1486)", "correct": false}
+{"episode": "ac1565", "step": 3, "gt": "click(337, 760)", "raw": "click(847, 629)", "correct": false}
+{"episode": "ac1565", "step": 4, "gt": "click(163, 345)", "raw": "click(840, 760)", "correct": false}
+{"episode": "ac1565", "step": 5, "gt": "click(854, 934)", "raw": "click(810, 760)", "correct": false}
+{"episode": "ac1565", "step": 6, "gt": "click(931, 774)", "raw": "click(530, 629)", "correct": false}
+{"episode": "ac1565", "step": 7, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac1565", "step": 8, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac1585", "step": 0, "gt": "click(173, 366)", "raw": "Action: click(137, 814)", "correct": true}
+{"episode": "ac1585", "step": 1, "gt": "scroll(down)", "raw": "click(173, 366)", "correct": false}
+{"episode": "ac1585", "step": 2, "gt": "done()", "raw": "click(849, 2254)", "correct": false}
+{"episode": "ac1645", "step": 0, "gt": "open_app(\"Nykaa\")", "raw": "Action: open_app(Nykaa)", "correct": true}
+{"episode": "ac1645", "step": 1, "gt": "wait()", "raw": "Action: allow notifications", "correct": false}
+{"episode": "ac1645", "step": 2, "gt": "wait()", "raw": "Action: allow notifications", "correct": false}
+{"episode": "ac1645", "step": 3, "gt": "click(442, 139)", "raw": "click(235, 324)", "correct": false}
+{"episode": "ac1645", "step": 4, "gt": "click(427, 89)", "raw": "type(\"Maybelline New York Nude Brown Shade Lipstick\")", "correct": false}
+{"episode": "ac1645", "step": 5, "gt": "type(\"Maybelline New York Nude Brown Shade Lipstick\")", "raw": "type(\"Maybelline New York Nude Brown Shade Lipstick\")", "correct": false}
+{"episode": "ac1645", "step": 6, "gt": "click(920, 904)", "raw": "Action: click(1005, 2167)", "correct": true}
+{"episode": "ac1645", "step": 7, "gt": "done()", "raw": "click(920, 904)", "correct": false}
+{"episode": "ac1665", "step": 0, "gt": "click(499, 885)", "raw": "Action: click on the Start button", "correct": false}
+{"episode": "ac1665", "step": 1, "gt": "wait()", "raw": "click(1023, 186)", "correct": false}
+{"episode": "ac1665", "step": 2, "gt": "done()", "raw": "Action: click(499, 2237)", "correct": false}
+{"episode": "ac1685", "step": 0, "gt": "click(424, 338)", "raw": "Action: click on the first bus schedule", "correct": false}
+{"episode": "ac1685", "step": 1, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac1685", "step": 2, "gt": "click(181, 343)", "raw": "click(256, 1057)", "correct": false}
+{"episode": "ac1685", "step": 3, "gt": "done()", "raw": "click(256, 1079)", "correct": false}
+{"episode": "ac1705", "step": 0, "gt": "scroll(down)", "raw": "Thought: To find thick-soled high-top sneakers, I need to change the current filter from 'WOMEN SHOES' to something more specific like 'SNEAKERS'. This will help narrow down the results to only show relevant products.\nAction: click(250, 498)", "correct": false}
+{"episode": "ac1705", "step": 1, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac1705", "step": 2, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac1705", "step": 3, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac1705", "step": 4, "gt": "click(250, 577)", "raw": "click(264, 763)", "correct": false}
+{"episode": "ac1705", "step": 5, "gt": "scroll(down)", "raw": "click(364, 2108)", "correct": false}
+{"episode": "ac1705", "step": 6, "gt": "scroll(down)", "raw": "click(364, 2108)", "correct": false}
+{"episode": "ac1705", "step": 7, "gt": "scroll(down)", "raw": "click(364, 2108)", "correct": false}
+{"episode": "ac1705", "step": 8, "gt": "scroll(down)", "raw": "click(364, 2108)", "correct": false}
+{"episode": "ac1705", "step": 9, "gt": "done()", "raw": "Action: click(368, 2104)", "correct": false}
+{"episode": "ac1745", "step": 0, "gt": "press_back()", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac1745", "step": 1, "gt": "scroll(right)", "raw": "click(375, 204)", "correct": false}
+{"episode": "ac1745", "step": 2, "gt": "scroll(right)", "raw": "Action: scroll(right)", "correct": true}
+{"episode": "ac1745", "step": 3, "gt": "click(619, 558)", "raw": "Action: click(952, 1340)", "correct": false}
+{"episode": "ac1745", "step": 4, "gt": "done()", "raw": "click(1024, 463)", "correct": false}
+{"episode": "ac1765", "step": 0, "gt": "press_back()", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac1765", "step": 1, "gt": "press_back()", "raw": "Thought: The current screen shows search results for \"oscar and the wolf music,\" but it doesn't seem to be related to making a playlist. To proceed towards creating a playlist, I need to navigate back to the home screen or app menu where I can access the playlist creation feature.\nAction: press_back()", "correct": true}
+{"episode": "ac1765", "step": 2, "gt": "click(299, 958)", "raw": "wait()", "correct": false}
+{"episode": "ac1765", "step": 3, "gt": "click(893, 864)", "raw": "click(299, 958)", "correct": false}
+{"episode": "ac1765", "step": 4, "gt": "click(500, 176)", "raw": "Action: type(\"Naomi ros\")", "correct": false}
+{"episode": "ac1765", "step": 5, "gt": "type(\"Naomi ros\")", "raw": "type(Naomi Ros)", "correct": false}
+{"episode": "ac1765", "step": 6, "gt": "click(920, 899)", "raw": "Action: click(983, 202)", "correct": false}
+{"episode": "ac1765", "step": 7, "gt": "click(919, 87)", "raw": "Action: click(985, 202)", "correct": true}
+{"episode": "ac1765", "step": 8, "gt": "done()", "raw": "Action: click(406, 1578)", "correct": false}
+{"episode": "ac1785", "step": 0, "gt": "open_app(\"Shopsy\")", "raw": "Action: click on the Shopsy app icon", "correct": false}
+{"episode": "ac1785", "step": 1, "gt": "click(303, 941)", "raw": "Action: click(x, y)", "correct": false}
+{"episode": "ac1785", "step": 2, "gt": "type(\"Sports shoes\")", "raw": "Action: type(\"Sports Shoes\")", "correct": true}
+{"episode": "ac1785", "step": 3, "gt": "click(920, 899)", "raw": "Action: click(303, 941)", "correct": false}
+{"episode": "ac1785", "step": 4, "gt": "wait()", "raw": "Action: click(275, 1416)", "correct": false}
+{"episode": "ac1785", "step": 5, "gt": "done()", "raw": "click(756, 899)", "correct": false}
+{"episode": "ac1805", "step": 0, "gt": "press_back()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac1805", "step": 1, "gt": "click(325, 360)", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac1805", "step": 2, "gt": "click(324, 107)", "raw": "click(325, 360)", "correct": false}
+{"episode": "ac1805", "step": 3, "gt": "type(\"sao paulo\")", "raw": "Action: type(\"Sao Paulo\")", "correct": true}
+{"episode": "ac1805", "step": 4, "gt": "click(578, 200)", "raw": "click(324, 107)", "correct": false}
+{"episode": "ac1805", "step": 5, "gt": "done()", "raw": "click(900, 250)", "correct": false}
+{"episode": "ac1825", "step": 0, "gt": "open_app(\"DigiCal\")", "raw": "Action: open digical app", "correct": false}
+{"episode": "ac1825", "step": 1, "gt": "click(565, 834)", "raw": "Action: click on the live raters meeting", "correct": false}
+{"episode": "ac1825", "step": 2, "gt": "click(824, 80)", "raw": "click(872, 183)", "correct": false}
+{"episode": "ac1825", "step": 3, "gt": "click(130, 890)", "raw": "click(127, 2123)", "correct": false}
+{"episode": "ac1825", "step": 4, "gt": "type(\"dbwscratch.test.id9@gmail.com.\")", "raw": "click(130, 890)", "correct": false}
+{"episode": "ac1825", "step": 5, "gt": "click(294, 261)", "raw": "Action: click(897, 195)", "correct": false}
+{"episode": "ac1825", "step": 6, "gt": "click(824, 84)", "raw": "click(897, 194)", "correct": false}
+{"episode": "ac1825", "step": 7, "gt": "click(827, 545)", "raw": "click(897, 1304)", "correct": false}
+{"episode": "ac1825", "step": 8, "gt": "click(824, 84)", "raw": "Action: click(827, 545)", "correct": false}
+{"episode": "ac1825", "step": 9, "gt": "done()", "raw": "click(824, 84)", "correct": false}
+{"episode": "ac1845", "step": 0, "gt": "click(255, 236)", "raw": "Action: click on the plus icon at the bottom right corner of the screen", "correct": false}
+{"episode": "ac1845", "step": 1, "gt": "click(58, 947)", "raw": "click(255, 236)", "correct": false}
+{"episode": "ac1845", "step": 2, "gt": "click(211, 947)", "raw": "click(255, 236)", "correct": false}
+{"episode": "ac1845", "step": 3, "gt": "press_back()", "raw": "click(211, 947)", "correct": false}
+{"episode": "ac1845", "step": 4, "gt": "done()", "raw": "click(255, 236)", "correct": false}
+{"episode": "ac1865", "step": 0, "gt": "press_back()", "raw": "Thought: To proceed with adding the item to the cart, I need to return to the previous screen or home page of the app.\nAction: press_back()", "correct": true}
+{"episode": "ac1865", "step": 1, "gt": "scroll(up)", "raw": "click(75, 216)", "correct": false}
+{"episode": "ac1865", "step": 2, "gt": "click(500, 378)", "raw": "Action: click(173, 924)", "correct": false}
+{"episode": "ac1865", "step": 3, "gt": "wait()", "raw": "click(200, 914)", "correct": false}
+{"episode": "ac1865", "step": 4, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac1885", "step": 0, "gt": "scroll(up)", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac1885", "step": 1, "gt": "done()", "raw": "click on the reviews tab", "correct": false}
+{"episode": "ac1905", "step": 0, "gt": "open_app(\"PlantApp\")", "raw": "Action: click on the Identify/ Add tab at the bottom of the screen", "correct": false}
+{"episode": "ac1905", "step": 1, "gt": "click(881, 560)", "raw": "Action: click on Differences Between Species and Varieties", "correct": false}
+{"episode": "ac1905", "step": 2, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac1905", "step": 3, "gt": "done()", "raw": "Action: scroll(down)", "correct": false}
+{"episode": "ac1945", "step": 0, "gt": "click(550, 557)", "raw": "Thought: To switch on the auto reading brightness, I need to access the settings of the Moon+ Reader app first. The current screen shows the content of a book, but it doesn't provide any direct control over the brightness settings. Therefore, I should navigate back to the home screen to find the app settings or options menu.\nAction: press_back()", "correct": false}
+{"episode": "ac1945", "step": 1, "gt": "click(636, 940)", "raw": "click(550, 557)", "correct": false}
+{"episode": "ac1945", "step": 2, "gt": "click(85, 888)", "raw": "click(28, 2114)", "correct": false}
+{"episode": "ac1945", "step": 3, "gt": "done()", "raw": "click(200, 2135)", "correct": false}
+{"episode": "ac1965", "step": 0, "gt": "open_app(\"Moira Cosmetics\")", "raw": "Action: open app moira cosmetics", "correct": false}
+{"episode": "ac1965", "step": 1, "gt": "wait()", "raw": "Action: wait()", "correct": true}
+{"episode": "ac1965", "step": 2, "gt": "click(512, 248)", "raw": "click(458, 592)", "correct": false}
+{"episode": "ac1965", "step": 3, "gt": "type(\"blush \")", "raw": "Action: type(\"blush\")", "correct": true}
+{"episode": "ac1965", "step": 4, "gt": "wait()", "raw": "Action: click(997, 2163)", "correct": false}
+{"episode": "ac1965", "step": 5, "gt": "done()", "raw": "Action: scroll()", "correct": false}
+{"episode": "ac1985", "step": 0, "gt": "press_back()", "raw": "Thought: The goal is to go back, which typically involves clicking on the back arrow at the top left of the screen.\nAction: click(58, 213)", "correct": false}
+{"episode": "ac1985", "step": 1, "gt": "click(875, 930)", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac1985", "step": 2, "gt": "scroll(down)", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac1985", "step": 3, "gt": "click(500, 726)", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac1985", "step": 4, "gt": "click(499, 210)", "raw": "Thought: The goal is to go back, and I have already pressed the back button once. Now, I need to perform another back operation to achieve the goal of going back.\nAction: press_back()", "correct": false}
+{"episode": "ac1985", "step": 5, "gt": "type(\"Memories\")", "raw": "Action: click(500, 726)", "correct": false}
+{"episode": "ac1985", "step": 6, "gt": "click(920, 899)", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac1985", "step": 7, "gt": "done()", "raw": "Action: click(65, 210)", "correct": false}
+{"episode": "ac2005", "step": 0, "gt": "click(917, 87)", "raw": "Action: click on the three dots icon of the recording", "correct": false}
+{"episode": "ac2005", "step": 1, "gt": "click(499, 312)", "raw": "click(234, 756)", "correct": false}
+{"episode": "ac2005", "step": 2, "gt": "click(470, 688)", "raw": "click(256, 1640)", "correct": false}
+{"episode": "ac2005", "step": 3, "gt": "done()", "raw": "click(151, 830)", "correct": false}
+{"episode": "ac2045", "step": 0, "gt": "open_app(\"ColorNote\")", "raw": "Action: click on the + icon at the bottom right corner of the screen", "correct": false}
+{"episode": "ac2045", "step": 1, "gt": "click(784, 78)", "raw": "Action: long_press(253, 364)", "correct": false}
+{"episode": "ac2045", "step": 2, "gt": "click(431, 82)", "raw": "click(784, 78)", "correct": false}
+{"episode": "ac2045", "step": 3, "gt": "type(\"My Books\")", "raw": "click(695, 142), type(\"My Books\"), press_back()", "correct": false}
+{"episode": "ac2045", "step": 4, "gt": "click(500, 350)", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac2045", "step": 5, "gt": "type(\"Mahabharata\")", "raw": "Action: type(\"Mahabharata\")", "correct": true}
+{"episode": "ac2045", "step": 6, "gt": "click(64, 76)", "raw": "Action: done()", "correct": false}
+{"episode": "ac2045", "step": 7, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac2085", "step": 0, "gt": "open_app(\"bigbasket\")", "raw": "Thought: The goal was to find Saffola Classic Masala oats, which has been achieved as it is displayed on the screen.\nAction: done()", "correct": false}
+{"episode": "ac2085", "step": 1, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac2085", "step": 2, "gt": "click(257, 217)", "raw": "click(253, 648)", "correct": false}
+{"episode": "ac2085", "step": 3, "gt": "click(447, 191)", "raw": "type(\"saffola classic masala oats\")", "correct": false}
+{"episode": "ac2085", "step": 4, "gt": "click(461, 140)", "raw": "type(\"saffola classic masala oats\")", "correct": false}
+{"episode": "ac2085", "step": 5, "gt": "type(\"Saffola Classic Masala oats\")", "raw": "type(\"saffola classic masala oats\")", "correct": false}
+{"episode": "ac2085", "step": 6, "gt": "click(920, 904)", "raw": "click(1003, 2178)", "correct": false}
+{"episode": "ac2085", "step": 7, "gt": "done()", "raw": "click(893, 1004)", "correct": false}
+{"episode": "ac2125", "step": 0, "gt": "click(548, 537)", "raw": "Action: Click on the task \"leave work\" to edit its time.", "correct": false}
+{"episode": "ac2125", "step": 1, "gt": "click(500, 369)", "raw": "click(269, 882)", "correct": false}
+{"episode": "ac2125", "step": 2, "gt": "click(500, 812)", "raw": "click(200, 1100)", "correct": false}
+{"episode": "ac2125", "step": 3, "gt": "done()", "raw": "click(200, 1730)", "correct": false}
+{"episode": "ac2165", "step": 0, "gt": "click(349, 127)", "raw": "Action: click(375, 298)", "correct": true}
+{"episode": "ac2165", "step": 1, "gt": "click(250, 865)", "raw": "click(265, 2080)", "correct": false}
+{"episode": "ac2165", "step": 2, "gt": "wait()", "raw": "Action: click(350, 127)", "correct": false}
+{"episode": "ac2165", "step": 3, "gt": "done()", "raw": "Action: click(350, 127)", "correct": false}
+{"episode": "ac2185", "step": 0, "gt": "click(750, 546)", "raw": "Action: click on the Classic Speed Hurdles", "correct": false}
+{"episode": "ac2185", "step": 1, "gt": "scroll(down)", "raw": "click(750, 546)", "correct": false}
+{"episode": "ac2185", "step": 2, "gt": "done()", "raw": "click(238, 900)", "correct": false}
+{"episode": "ac2285", "step": 0, "gt": "click(92, 214)", "raw": "Action: long_press(235, 564)", "correct": false}
+{"episode": "ac2285", "step": 1, "gt": "click(500, 378)", "raw": "Action: click(638, 1557)", "correct": false}
+{"episode": "ac2285", "step": 2, "gt": "click(497, 219)", "raw": "click(500, 378)", "correct": false}
+{"episode": "ac2285", "step": 3, "gt": "type(\"akashgahlot@google.com\")", "raw": "Action: type(\"akashgahlot@google.com\")", "correct": true}
+{"episode": "ac2285", "step": 4, "gt": "click(294, 268)", "raw": "Action: click(670, 1536)", "correct": false}
+{"episode": "ac2285", "step": 5, "gt": "click(824, 91)", "raw": "Action: click(890, 214)", "correct": true}
+{"episode": "ac2285", "step": 6, "gt": "done()", "raw": "click(920, 214)", "correct": false}
+{"episode": "ac2305", "step": 0, "gt": "click(499, 343)", "raw": "Action: click on Ashu's birthday", "correct": false}
+{"episode": "ac2305", "step": 1, "gt": "click(951, 310)", "raw": "click(499, 343)", "correct": false}
+{"episode": "ac2305", "step": 2, "gt": "click(921, 376)", "raw": "click(978, 902)", "correct": false}
+{"episode": "ac2305", "step": 3, "gt": "click(500, 305)", "raw": "click(380, 799)", "correct": false}
+{"episode": "ac2305", "step": 4, "gt": "click(751, 932)", "raw": "click(380, 798)", "correct": false}
+{"episode": "ac2305", "step": 5, "gt": "click(929, 109)", "raw": "click(981, 890)", "correct": false}
+{"episode": "ac2305", "step": 6, "gt": "done()", "raw": "click(80, 885)", "correct": false}
+{"episode": "ac2345", "step": 0, "gt": "scroll(down)", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac2345", "step": 1, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac2345", "step": 2, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac2345", "step": 3, "gt": "click(470, 785)", "raw": "Action: scroll(down)", "correct": false}
+{"episode": "ac2345", "step": 4, "gt": "done()", "raw": "click(923, 642)", "correct": false}
+{"episode": "ac2386", "step": 0, "gt": "click(68, 80)", "raw": "Action: click(756, 183)", "correct": false}
+{"episode": "ac2386", "step": 1, "gt": "click(319, 526)", "raw": "click(572, 554)", "correct": false}
+{"episode": "ac2386", "step": 2, "gt": "click(465, 148)", "raw": "click(247, 348)", "correct": false}
+{"episode": "ac2386", "step": 3, "gt": "click(434, 278)", "raw": "click(70, 714)", "correct": false}
+{"episode": "ac2386", "step": 4, "gt": "click(931, 153)", "raw": "Action: click(1013, 526)", "correct": true}
+{"episode": "ac2386", "step": 5, "gt": "done()", "raw": "Action: click(1014, 560)", "correct": false}
+{"episode": "ac2406", "step": 0, "gt": "click(951, 277)", "raw": "Action: click on the three dots of My audio.m4a", "correct": false}
+{"episode": "ac2406", "step": 1, "gt": "click(752, 286)", "raw": "click(834, 686)", "correct": false}
+{"episode": "ac2406", "step": 2, "gt": "type(\"Kieransato10@gmail.com\")", "raw": "click(34, 510)", "correct": false}
+{"episode": "ac2406", "step": 3, "gt": "click(824, 88)", "raw": "Action: click(340, 674)", "correct": false}
+{"episode": "ac2406", "step": 4, "gt": "done()", "raw": "click(951, 277)", "correct": false}
+{"episode": "ac2426", "step": 0, "gt": "open_app(\"Weather\")", "raw": "Action: click on search bar", "correct": false}
+{"episode": "ac2426", "step": 1, "gt": "click(911, 65)", "raw": "click(546, 172))", "correct": false}
+{"episode": "ac2426", "step": 2, "gt": "type(\"Shimla\")", "raw": "type(\"Shimla\")", "correct": false}
+{"episode": "ac2426", "step": 3, "gt": "click(500, 157)", "raw": "click(234, 378)", "correct": false}
+{"episode": "ac2426", "step": 4, "gt": "done()", "raw": "wait()", "correct": false}
+{"episode": "ac2446", "step": 0, "gt": "click(933, 81)", "raw": "Thought: To delete the Zumba session reminder, I need to access the options menu for this task. The three-dot icon typically represents additional options or settings.\nAction: click on the three-dot icon at the top right corner of the screen.", "correct": false}
+{"episode": "ac2446", "step": 1, "gt": "click(882, 580)", "raw": "click(933, 81)", "correct": false}
+{"episode": "ac2446", "step": 2, "gt": "done()", "raw": "click(964, 2070)", "correct": false}
+{"episode": "ac2466", "step": 0, "gt": "open_app(\"Any.do\")", "raw": "Action: Click on the three dots icon of the French Classes task.", "correct": false}
+{"episode": "ac2466", "step": 1, "gt": "click(457, 375)", "raw": "Action: click on the French classes task", "correct": false}
+{"episode": "ac2466", "step": 2, "gt": "click(546, 406)", "raw": "click(982, 206)", "correct": false}
+{"episode": "ac2466", "step": 3, "gt": "click(509, 415)", "raw": "click(289, 1000)", "correct": false}
+{"episode": "ac2466", "step": 4, "gt": "click(908, 148)", "raw": "Action: click(1028, 350)", "correct": true}
+{"episode": "ac2466", "step": 5, "gt": "done()", "raw": "click(200, 894)", "correct": false}
+{"episode": "ac2486", "step": 0, "gt": "open_app(\"Amazon\")", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac2486", "step": 1, "gt": "wait()", "raw": "click(502, 1346)", "correct": false}
+{"episode": "ac2486", "step": 2, "gt": "click(507, 89)", "raw": "click(234, 205)", "correct": false}
+{"episode": "ac2486", "step": 3, "gt": "type(\"Black Sports Shoes for women\")", "raw": "type(\"Black Sports Shoes\")", "correct": false}
+{"episode": "ac2486", "step": 4, "gt": "click(920, 904)", "raw": "Action: click(1003, 2164)", "correct": true}
+{"episode": "ac2486", "step": 5, "gt": "done()", "raw": "click(920, 904)", "correct": false}
+{"episode": "ac2506", "step": 0, "gt": "press_back()", "raw": "Action: done()", "correct": false}
+{"episode": "ac2506", "step": 1, "gt": "press_back()", "raw": "Thought: I need to navigate back to the previous screen to search for the hotel as the current screen shows flight options instead of hotel information.\nAction: press_back()", "correct": true}
+{"episode": "ac2506", "step": 2, "gt": "press_back()", "raw": "click(678, 1574)", "correct": false}
+{"episode": "ac2506", "step": 3, "gt": "click(383, 248)", "raw": "Action: click on Hotels option", "correct": false}
+{"episode": "ac2506", "step": 4, "gt": "click(219, 210)", "raw": "click(383, 248)", "correct": false}
+{"episode": "ac2506", "step": 5, "gt": "type(\"Dubai\")", "raw": "type(\"Dubai\")", "correct": false}
+{"episode": "ac2506", "step": 6, "gt": "click(369, 234)", "raw": "click(206, 517)", "correct": false}
+{"episode": "ac2506", "step": 7, "gt": "click(202, 295)", "raw": "click(176, 704), click(512, 704), click(770, 704), click(476, 1048)", "correct": false}
+{"episode": "ac2506", "step": 8, "gt": "click(642, 381)", "raw": "click(700, 248)", "correct": false}
+{"episode": "ac2506", "step": 9, "gt": "click(356, 446)", "raw": "click(270, 1066)", "correct": false}
+{"episode": "ac2506", "step": 10, "gt": "click(500, 932)", "raw": "click(570, 2238)", "correct": false}
+{"episode": "ac2506", "step": 11, "gt": "click(500, 439)", "raw": "click(370, 1050)", "correct": false}
+{"episode": "ac2506", "step": 12, "gt": "click(500, 511)", "raw": "click(500, 439)", "correct": false}
+{"episode": "ac2506", "step": 13, "gt": "wait()", "raw": "click(700, 1771)", "correct": false}
+{"episode": "ac2506", "step": 14, "gt": "click(737, 934)", "raw": "click(700, 2242)", "correct": false}
+{"episode": "ac2506", "step": 15, "gt": "wait()", "raw": "click(737, 934)", "correct": false}
+{"episode": "ac2506", "step": 16, "gt": "click(737, 934)", "raw": "click(737, 934)", "correct": false}
+{"episode": "ac2506", "step": 17, "gt": "done()", "raw": "click(737, 934)", "correct": false}
+{"episode": "ac2526", "step": 0, "gt": "press_back()", "raw": "Thought: To achieve the goal of going through the terms of use in the account tab and contacting customer support, I need to navigate back to the main menu or home screen of the app first.\nAction: press_back()", "correct": true}
+{"episode": "ac2526", "step": 1, "gt": "click(900, 943)", "raw": "click(974, 2253)", "correct": false}
+{"episode": "ac2526", "step": 2, "gt": "click(470, 578)", "raw": "click(256, 1387)", "correct": false}
+{"episode": "ac2526", "step": 3, "gt": "click(470, 166)", "raw": "click(62, 197)", "correct": false}
+{"episode": "ac2526", "step": 4, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac2526", "step": 5, "gt": "scroll(down)", "raw": "click(250, 1727)", "correct": false}
+{"episode": "ac2526", "step": 6, "gt": "scroll(left)", "raw": "click(250, 1360)", "correct": false}
+{"episode": "ac2526", "step": 7, "gt": "click(328, 884)", "raw": "click(250, 1356)", "correct": false}
+{"episode": "ac2526", "step": 8, "gt": "click(244, 828)", "raw": "click(328, 884)", "correct": false}
+{"episode": "ac2526", "step": 9, "gt": "wait()", "raw": "click(244, 828)", "correct": false}
+{"episode": "ac2526", "step": 10, "gt": "done()", "raw": "click(244, 828)", "correct": false}
+{"episode": "ac2546", "step": 0, "gt": "open_app(\"GVB\")", "raw": "Action: click on the GVB app icon", "correct": false}
+{"episode": "ac2546", "step": 1, "gt": "click(459, 262)", "raw": "click(358, 624)", "correct": false}
+{"episode": "ac2546", "step": 2, "gt": "type(\"brussels\")", "raw": "type(\"Brussels\")", "correct": false}
+{"episode": "ac2546", "step": 3, "gt": "click(519, 315)", "raw": "click(847, 230)", "correct": false}
+{"episode": "ac2546", "step": 4, "gt": "click(431, 160)", "raw": "click(278, 478)", "correct": false}
+{"episode": "ac2546", "step": 5, "gt": "type(\"Antwerp\")", "raw": "click(431, 160)", "correct": false}
+{"episode": "ac2546", "step": 6, "gt": "click(519, 175)", "raw": "Action: click(431, 160)", "correct": false}
+{"episode": "ac2546", "step": 7, "gt": "click(368, 327)", "raw": "click(280, 774)", "correct": false}
+{"episode": "ac2546", "step": 8, "gt": "scroll(down)", "raw": "click(431, 1160)", "correct": false}
+{"episode": "ac2546", "step": 9, "gt": "scroll(down)", "raw": "click(431, 1100), click(431, 1100), click(431, 1100), click(431, 1100), click(431, 1100), click(431, 1100), click(431, 1100), click(431, 1100), click(431, 1100), click(431, 1100), click(431, 1", "correct": false}
+{"episode": "ac2546", "step": 10, "gt": "scroll(down)", "raw": "click(368, 327), click(368, 327), click(368, 327), click(368, 327), click(368, 327), click(368, 327), click(368, 327), click(368, 327), click(368, 327), click(368, 327), click(368, 327), click(368, ", "correct": false}
+{"episode": "ac2546", "step": 11, "gt": "scroll(down)", "raw": "click(431, 160), type(\"Antwerp\"), click(519, 175), click(368, 327), scroll(down), scroll(down), scroll(down)", "correct": false}
+{"episode": "ac2546", "step": 12, "gt": "scroll(down)", "raw": "click(368, 1210)", "correct": false}
+{"episode": "ac2546", "step": 13, "gt": "scroll(down)", "raw": "click(425, 1370)", "correct": false}
+{"episode": "ac2546", "step": 14, "gt": "click(590, 644)", "raw": "Action: click(368, 1214)", "correct": false}
+{"episode": "ac2546", "step": 15, "gt": "wait()", "raw": "click(819, 776)", "correct": false}
+{"episode": "ac2546", "step": 16, "gt": "done()", "raw": "click(1008, 1206)", "correct": false}
+{"episode": "ac2566", "step": 0, "gt": "scroll(up)", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac2566", "step": 1, "gt": "scroll(up)", "raw": "click(253, 634)", "correct": false}
+{"episode": "ac2566", "step": 2, "gt": "scroll(up)", "raw": "click on All 4735 reviews", "correct": false}
+{"episode": "ac2566", "step": 3, "gt": "click(935, 834)", "raw": "scroll(up)", "correct": false}
+{"episode": "ac2566", "step": 4, "gt": "done()", "raw": "scroll(up)", "correct": false}
+{"episode": "ac2586", "step": 0, "gt": "click(836, 381)", "raw": "Action: click on the download button", "correct": false}
+{"episode": "ac2586", "step": 1, "gt": "click(500, 869)", "raw": "click(95, 297)", "correct": false}
+{"episode": "ac2586", "step": 2, "gt": "done()", "raw": "click(74, 298)", "correct": false}
+{"episode": "ac2607", "step": 0, "gt": "click(125, 166)", "raw": "Action: click(125, 368)", "correct": true}
+{"episode": "ac2607", "step": 1, "gt": "click(625, 943)", "raw": "click(125, 166)", "correct": false}
+{"episode": "ac2607", "step": 2, "gt": "click(252, 845)", "raw": "click(257, 2138)", "correct": false}
+{"episode": "ac2607", "step": 3, "gt": "click(785, 946)", "raw": "click(252, 845)", "correct": false}
+{"episode": "ac2607", "step": 4, "gt": "done()", "raw": "click(125, 166)", "correct": false}
+{"episode": "ac2627", "step": 0, "gt": "open_app(\"TripIt\")", "raw": "Action: open the Triplt app", "correct": false}
+{"episode": "ac2627", "step": 1, "gt": "click(912, 870)", "raw": "Action: click on the + icon at the bottom right corner of the screen", "correct": false}
+{"episode": "ac2627", "step": 2, "gt": "click(129, 234)", "raw": "click(912, 534)", "correct": false}
+{"episode": "ac2627", "step": 3, "gt": "type(\"Montreal's Cruise\")", "raw": "Action: type(\"Holland MI Cruises\")", "correct": false}
+{"episode": "ac2627", "step": 4, "gt": "click(64, 320)", "raw": "click(156, 726)", "correct": false}
+{"episode": "ac2627", "step": 5, "gt": "click(743, 739)", "raw": "click(925, 1774)", "correct": false}
+{"episode": "ac2627", "step": 6, "gt": "click(301, 395)", "raw": "click(52, 1014), type(\"Cruiser\"), click(129, 1014), type(\"Cruises\"), click(129, 1014), type(\"Cruises\"), click(129, 1014), type(\"Cruises\"), click(129, 1014), type(\"Cruises\"), click(129, 1014), type(\"Cruises\"), click(129, 1014), type(\"Cruises\"), click(1", "correct": false}
+{"episode": "ac2627", "step": 7, "gt": "click(242, 552)", "raw": "click(924, 1770)", "correct": false}
+{"episode": "ac2627", "step": 8, "gt": "click(743, 739)", "raw": "click(818, 1772)", "correct": false}
+{"episode": "ac2627", "step": 9, "gt": "click(269, 445)", "raw": "click(129, 234), click(242, 552), click(743, 739)", "correct": false}
+{"episode": "ac2627", "step": 10, "gt": "click(941, 87)", "raw": "Action: type(\"Montreal's Cruise\")", "correct": false}
+{"episode": "ac2627", "step": 11, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac2627", "step": 12, "gt": "done()", "raw": "click(1000, 2086)", "correct": false}
+{"episode": "ac2647", "step": 0, "gt": "open_app(\"Foursquare\")", "raw": "Action: open app \"Foursquare\"", "correct": false}
+{"episode": "ac2647", "step": 1, "gt": "click(563, 306)", "raw": "Action: click on the search bar", "correct": false}
+{"episode": "ac2647", "step": 2, "gt": "type(\"attractions \")", "raw": "type(\"attractions\")", "correct": false}
+{"episode": "ac2647", "step": 3, "gt": "click(920, 899)", "raw": "click(987, 2146)", "correct": false}
+{"episode": "ac2647", "step": 4, "gt": "click(548, 239)", "raw": "click(470, 570)", "correct": false}
+{"episode": "ac2647", "step": 5, "gt": "done()", "raw": "click(548, 239)", "correct": false}
+{"episode": "ac2668", "step": 0, "gt": "open_app(\"eBay\")", "raw": "Thought: The task is to find the iPhone 15 Pro Max (256GB) in Blue Titanium on eBay. Since the current screen shows the cart page of a different store, I need to navigate back to the home screen to start searching for the desired product on eBay.\nAction: press_back()", "correct": false}
+{"episode": "ac2668", "step": 1, "gt": "click(382, 162)", "raw": "click(234, 387)", "correct": false}
+{"episode": "ac2668", "step": 2, "gt": "type(\"iPhone 15 Pro Max (256GB) in Blue Titanium\")", "raw": "type(\"iPhone 15 Pro Max (256GB) in Blue Titanium\")", "correct": false}
+{"episode": "ac2668", "step": 3, "gt": "click(920, 904)", "raw": "Action: click(997, 2164)", "correct": true}
+{"episode": "ac2668", "step": 4, "gt": "done()", "raw": "click(700, 1020)", "correct": false}
+{"episode": "ac2688", "step": 0, "gt": "open_app(\"Math Learning App\")", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac2688", "step": 1, "gt": "click(250, 696)", "raw": "click(234, 1675)", "correct": false}
+{"episode": "ac2688", "step": 2, "gt": "click(501, 154)", "raw": "click(250, 378)", "correct": false}
+{"episode": "ac2688", "step": 3, "gt": "scroll(down)", "raw": "click(752, 138)", "correct": false}
+{"episode": "ac2688", "step": 4, "gt": "scroll(down)", "raw": "click(378, 1000)", "correct": false}
+{"episode": "ac2688", "step": 5, "gt": "done()", "raw": "click(370, 1800)", "correct": false}
+{"episode": "ac2708", "step": 0, "gt": "press_back()", "raw": "Thought: To find more details about the product or its specifications, I need to navigate back to the previous screen where I can apply filters like 'home' and 'living'.\nAction: scroll up", "correct": false}
+{"episode": "ac2708", "step": 1, "gt": "press_back()", "raw": "Action: scroll(-50%)", "correct": false}
+{"episode": "ac2708", "step": 2, "gt": "click(141, 152)", "raw": "click(Filter)", "correct": false}
+{"episode": "ac2708", "step": 3, "gt": "click(500, 305)", "raw": "Action: click(638, 2237)", "correct": false}
+{"episode": "ac2708", "step": 4, "gt": "click(485, 404)", "raw": "click(196, 978)", "correct": false}
+{"episode": "ac2708", "step": 5, "gt": "click(485, 459)", "raw": "click(679, 1076)", "correct": false}
+{"episode": "ac2708", "step": 6, "gt": "click(485, 513)", "raw": "click(485, 670)", "correct": false}
+{"episode": "ac2708", "step": 7, "gt": "click(500, 925)", "raw": "click(485, 607)", "correct": false}
+{"episode": "ac2708", "step": 8, "gt": "done()", "raw": "click(485, 976)", "correct": false}
+{"episode": "ac2728", "step": 0, "gt": "open_app(\"CruiseMapper\")", "raw": "Thought: To view the schedule for the ACL American Eagle cruise, I need to access the details of Day 12, which is currently visible on the screen.\nAction: click(756, 963)", "correct": false}
+{"episode": "ac2728", "step": 1, "gt": "click(540, 74)", "raw": "click(1024, 193)", "correct": false}
+{"episode": "ac2728", "step": 2, "gt": "click(310, 140)", "raw": "click(382, 336)", "correct": false}
+{"episode": "ac2728", "step": 3, "gt": "scroll(down)", "raw": "click(260, 1980)", "correct": false}
+{"episode": "ac2728", "step": 4, "gt": "click(539, 646)", "raw": "click(260, 1289)", "correct": false}
+{"episode": "ac2728", "step": 5, "gt": "scroll(down)", "raw": "click(539, 646)", "correct": false}
+{"episode": "ac2728", "step": 6, "gt": "done()", "raw": "click(280, 1035)", "correct": false}
+{"episode": "ac2748", "step": 0, "gt": "click(916, 540)", "raw": "Action: click on the share icon", "correct": false}
+{"episode": "ac2748", "step": 1, "gt": "click(863, 931)", "raw": "click(823, 799)", "correct": false}
+{"episode": "ac2748", "step": 2, "gt": "click(499, 876)", "raw": "click(72, 2244)", "correct": false}
+{"episode": "ac2748", "step": 3, "gt": "click(846, 769)", "raw": "click(200, 2248)", "correct": false}
+{"episode": "ac2748", "step": 4, "gt": "click(500, 466)", "raw": "type(\"Favorite Recipe\")", "correct": false}
+{"episode": "ac2748", "step": 5, "gt": "type(\"Favorite Recipe\")", "raw": "type(\"Favorite Recipe\")", "correct": false}
+{"episode": "ac2748", "step": 6, "gt": "click(801, 432)", "raw": "Action: click(846, 931)", "correct": true}
+{"episode": "ac2748", "step": 7, "gt": "done()", "raw": "click(801, 432)", "correct": false}
+{"episode": "ac2788", "step": 0, "gt": "open_app(\"adidas\")", "raw": "Action: open app drawer", "correct": false}
+{"episode": "ac2788", "step": 1, "gt": "click(500, 140)", "raw": "click(135,1134)", "correct": false}
+{"episode": "ac2788", "step": 2, "gt": "type(\"hiking shoes\")", "raw": "type(\"Adidas hiking shoes\")", "correct": false}
+{"episode": "ac2788", "step": 3, "gt": "click(500, 565)", "raw": "Action: click(986, 2173)", "correct": false}
+{"episode": "ac2788", "step": 4, "gt": "done()", "raw": "click(500, 565)", "correct": false}
+{"episode": "ac2808", "step": 0, "gt": "click(683, 554)", "raw": "Action: click on the three dots of the movie name.txt", "correct": false}
+{"episode": "ac2808", "step": 1, "gt": "click(928, 105)", "raw": "click(683, 554)", "correct": false}
+{"episode": "ac2808", "step": 2, "gt": "type(\"All about eve and Schindler\u2019s list\")", "raw": "click(683, 554)", "correct": false}
+{"episode": "ac2808", "step": 3, "gt": "click(916, 105)", "raw": "Action: done()", "correct": false}
+{"episode": "ac2808", "step": 4, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac2828", "step": 0, "gt": "click(437, 149)", "raw": "Action: click on compare option", "correct": false}
+{"episode": "ac2828", "step": 1, "gt": "scroll(right)", "raw": "click(437, 149)", "correct": false}
+{"episode": "ac2828", "step": 2, "gt": "click(518, 760)", "raw": "click(437, 149)", "correct": false}
+{"episode": "ac2828", "step": 3, "gt": "scroll(down)", "raw": "click(518, 760)", "correct": false}
+{"episode": "ac2828", "step": 4, "gt": "done()", "raw": "click(200, 1572)", "correct": false}
+{"episode": "ac2848", "step": 0, "gt": "click(287, 91)", "raw": "Action: click on search bar", "correct": false}
+{"episode": "ac2848", "step": 1, "gt": "type(\"Cerebra Research\")", "raw": "type(\"Cerebra Research\")", "correct": false}
+{"episode": "ac2848", "step": 2, "gt": "done()", "raw": "Action: click(996, 2153)", "correct": false}
+{"episode": "ac2949", "step": 0, "gt": "click(750, 140)", "raw": "Thought: To delete an audio file, I need to first access the list of recorded files. The three-dot menu icon likely provides options for managing recordings, including deleting them.\nAction: click(923, 185)", "correct": false}
+{"episode": "ac2949", "step": 1, "gt": "click(951, 277)", "raw": "click(750, 140)", "correct": false}
+{"episode": "ac2949", "step": 2, "gt": "click(752, 338)", "raw": "click(683, 840)", "correct": false}
+{"episode": "ac2949", "step": 3, "gt": "click(806, 539)", "raw": "Action: click(860, 1300)", "correct": true}
+{"episode": "ac2949", "step": 4, "gt": "done()", "raw": "wait()", "correct": false}
+{"episode": "ac3009", "step": 0, "gt": "click(858, 415)", "raw": "Action: click on the weight icon", "correct": false}
+{"episode": "ac3009", "step": 1, "gt": "click(915, 362)", "raw": "click(237, 969)", "correct": false}
+{"episode": "ac3009", "step": 2, "gt": "click(199, 669)", "raw": "click(207, 1564)", "correct": false}
+{"episode": "ac3009", "step": 3, "gt": "click(199, 734)", "raw": "click(207, 1564)", "correct": false}
+{"episode": "ac3009", "step": 4, "gt": "click(575, 734)", "raw": "click(199, 734)", "correct": false}
+{"episode": "ac3009", "step": 5, "gt": "done()", "raw": "click(199, 734)", "correct": false}
+{"episode": "ac3029", "step": 0, "gt": "click(911, 300)", "raw": "Action: click on the three dots of the Essay Business file", "correct": false}
+{"episode": "ac3029", "step": 1, "gt": "click(731, 414)", "raw": "Action: click(675, 989)", "correct": false}
+{"episode": "ac3029", "step": 2, "gt": "click(125, 900)", "raw": "click(825, 216)", "correct": false}
+{"episode": "ac3029", "step": 3, "gt": "click(509, 154)", "raw": "type(marco.rossi@rossoday.com)", "correct": false}
+{"episode": "ac3029", "step": 4, "gt": "click(587, 228)", "raw": "click(68, 510)", "correct": false}
+{"episode": "ac3029", "step": 5, "gt": "type(\" marco.rossi@rossoday.com\")", "raw": "Action: type(marco.rossi@rossoday.com)", "correct": true}
+{"episode": "ac3029", "step": 6, "gt": "click(824, 88)", "raw": "Action: click(896, 205)", "correct": true}
+{"episode": "ac3029", "step": 7, "gt": "done()", "raw": "click(960, 222)", "correct": false}
+{"episode": "ac3049", "step": 0, "gt": "open_app(\"Citymapper\")", "raw": "Action: type \"las vegas\"", "correct": false}
+{"episode": "ac3049", "step": 1, "gt": "click(499, 468)", "raw": "click(394, 1645)", "correct": false}
+{"episode": "ac3049", "step": 2, "gt": "type(\"las vegas strip\")", "raw": "type(\"Las Vegas Strip\")", "correct": false}
+{"episode": "ac3049", "step": 3, "gt": "click(485, 247)", "raw": "click(275, 600)", "correct": false}
+{"episode": "ac3049", "step": 4, "gt": "type(\"Las Vegas Convention center\")", "raw": "click(485, 247)", "correct": false}
+{"episode": "ac3049", "step": 5, "gt": "click(485, 341)", "raw": "click(350, 565)", "correct": false}
+{"episode": "ac3049", "step": 6, "gt": "click(796, 83)", "raw": "click(955, 1854)", "correct": false}
+{"episode": "ac3049", "step": 7, "gt": "scroll(down)", "raw": "click(485, 247)", "correct": false}
+{"episode": "ac3049", "step": 8, "gt": "scroll(down)", "raw": "click(485, 247), click(796, 83), click(485, 247), click(796, 83)", "correct": false}
+{"episode": "ac3049", "step": 9, "gt": "scroll(up)", "raw": "click(485, 247), click(796, 83), click(485, 247), click(796, 83)", "correct": false}
+{"episode": "ac3049", "step": 10, "gt": "scroll(down)", "raw": "click(485, 247)", "correct": false}
+{"episode": "ac3049", "step": 11, "gt": "scroll(right)", "raw": "click(485, 247)", "correct": false}
+{"episode": "ac3049", "step": 12, "gt": "wait()", "raw": "click(499, 1746)", "correct": false}
+{"episode": "ac3049", "step": 13, "gt": "click(608, 921)", "raw": "Action: click(600, 2213)", "correct": true}
+{"episode": "ac3049", "step": 14, "gt": "done()", "raw": "click(953, 1854)", "correct": false}
+{"episode": "ac3089", "step": 0, "gt": "open_app(\"Maps\")", "raw": "Action: click on the link", "correct": false}
+{"episode": "ac3089", "step": 1, "gt": "click(67, 91)", "raw": "click on the close icon at the top left corner of the screen", "correct": false}
+{"episode": "ac3089", "step": 2, "gt": "click(187, 723)", "raw": "click(854, 203)", "correct": false}
+{"episode": "ac3089", "step": 3, "gt": "click(558, 408)", "raw": "click(452, 212)", "correct": false}
+{"episode": "ac3089", "step": 4, "gt": "click(929, 271)", "raw": "click(187, 723)", "correct": false}
+{"episode": "ac3089", "step": 5, "gt": "click(377, 769)", "raw": "click(394, 1820)", "correct": false}
+{"episode": "ac3089", "step": 6, "gt": "click(434, 414)", "raw": "click(400, 1826)", "correct": false}
+{"episode": "ac3089", "step": 7, "gt": "done()", "raw": "click(187, 723)", "correct": false}
+{"episode": "ac3109", "step": 0, "gt": "open_app(\"What to Expect\")", "raw": "Action: open app What to Expect", "correct": false}
+{"episode": "ac3109", "step": 1, "gt": "click(951, 418)", "raw": "click(985, 1072)", "correct": false}
+{"episode": "ac3109", "step": 2, "gt": "done()", "raw": "click(523, 1840)", "correct": false}
+{"episode": "ac3129", "step": 0, "gt": "click(921, 83)", "raw": "Action: click(923, 186)", "correct": true}
+{"episode": "ac3129", "step": 1, "gt": "click(499, 549)", "raw": "click(921, 1316)", "correct": false}
+{"episode": "ac3129", "step": 2, "gt": "click(115, 898)", "raw": "click(116, 2117)", "correct": false}
+{"episode": "ac3129", "step": 3, "gt": "type(\"evankramer@gmail.com\")", "raw": "type(evankramer@gmail.com)", "correct": false}
+{"episode": "ac3129", "step": 4, "gt": "click(387, 268)", "raw": "Action: click(886, 217)", "correct": false}
+{"episode": "ac3129", "step": 5, "gt": "click(824, 91)", "raw": "Action: click(890, 213)", "correct": true}
+{"episode": "ac3129", "step": 6, "gt": "done()", "raw": "wait()", "correct": false}
+{"episode": "ac3189", "step": 0, "gt": "open_app(\"The Clock\")", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac3189", "step": 1, "gt": "click(68, 296)", "raw": "Action: click(63, 705)", "correct": true}
+{"episode": "ac3189", "step": 2, "gt": "click(766, 497)", "raw": "click(435, 1367)", "correct": false}
+{"episode": "ac3189", "step": 3, "gt": "click(500, 497)", "raw": "Action: click(530, 1362)", "correct": true}
+{"episode": "ac3189", "step": 4, "gt": "done()", "raw": "click(530, 1362)", "correct": false}
+{"episode": "ac3209", "step": 0, "gt": "open_app(\"Omio\")", "raw": "Action: type(\"bus schedule from Cardiff to Cambridge\")", "correct": false}
+{"episode": "ac3209", "step": 1, "gt": "click(481, 342)", "raw": "click(156, 814)", "correct": false}
+{"episode": "ac3209", "step": 2, "gt": "type(\"Cardiff\")", "raw": "type(\"Cardiff\")", "correct": false}
+{"episode": "ac3209", "step": 3, "gt": "click(529, 219)", "raw": "click(256, 520)", "correct": false}
+{"episode": "ac3209", "step": 4, "gt": "click(538, 405)", "raw": "click(176, 968), type(\"Brighton\"), click(529, 219)", "correct": false}
+{"episode": "ac3209", "step": 5, "gt": "type(\"Cambridge\")", "raw": "click(538, 405)", "correct": false}
+{"episode": "ac3209", "step": 6, "gt": "wait()", "raw": "click(376, 516)", "correct": false}
+{"episode": "ac3209", "step": 7, "gt": "click(500, 608)", "raw": "Action: click(567, 1460)", "correct": true}
+{"episode": "ac3209", "step": 8, "gt": "wait()", "raw": "click(500, 608)", "correct": false}
+{"episode": "ac3209", "step": 9, "gt": "done()", "raw": "click(700, 816)", "correct": false}
+{"episode": "ac3229", "step": 0, "gt": "open_app(\"Nike\")", "raw": "Thought: The current screen shows a product page that is not related to the goal of finding sports clothes in the Nike app. To achieve the goal, I need to navigate back to the home screen or search for the desired item within the app.\nAction: press_back()", "correct": false}
+{"episode": "ac3229", "step": 1, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac3229", "step": 2, "gt": "click(824, 87)", "raw": "click(263, 354)", "correct": false}
+{"episode": "ac3229", "step": 3, "gt": "type(\"Women Pants\")", "raw": "click(235, 429)", "correct": false}
+{"episode": "ac3229", "step": 4, "gt": "click(920, 904)", "raw": "Action: click(956, 2163)", "correct": true}
+{"episode": "ac3229", "step": 5, "gt": "scroll(down)", "raw": "Action: scroll(-1000, 0)", "correct": false}
+{"episode": "ac3229", "step": 6, "gt": "click(884, 699)", "raw": "click(356, 402)", "correct": false}
+{"episode": "ac3229", "step": 7, "gt": "done()", "raw": "click(884, 699)", "correct": false}
+{"episode": "ac3269", "step": 0, "gt": "open_app(\"Milkbasket\")", "raw": "Action: open app \"Milkbasket\"", "correct": false}
+{"episode": "ac3269", "step": 1, "gt": "click(393, 80)", "raw": "click(375, 184)", "correct": false}
+{"episode": "ac3269", "step": 2, "gt": "click(554, 68)", "raw": "type(\"eggs\")", "correct": false}
+{"episode": "ac3269", "step": 3, "gt": "type(\"egg tray\")", "raw": "type(\"eggs\")", "correct": false}
+{"episode": "ac3269", "step": 4, "gt": "click(920, 899)", "raw": "Action: click(1005, 2157)", "correct": true}
+{"episode": "ac3269", "step": 5, "gt": "click(920, 899)", "raw": "click(920, 899)", "correct": false}
+{"episode": "ac3269", "step": 6, "gt": "done()", "raw": "click(920, 899)", "correct": false}
+{"episode": "ac3309", "step": 0, "gt": "open_app(\"Gmail\")", "raw": "Thought: To compose a new email, I need to navigate back to the home screen of the app or device.\nAction: press_back()", "correct": false}
+{"episode": "ac3309", "step": 1, "gt": "click(777, 873)", "raw": "Action: click on the compose button at the bottom right of the screen", "correct": false}
+{"episode": "ac3309", "step": 2, "gt": "type(\"dbwscratch.test.id4@gmail.com\")", "raw": "Action: type(dbwscratch.test.id4@gmail.com)", "correct": true}
+{"episode": "ac3309", "step": 3, "gt": "click(457, 268)", "raw": "click(692, 656)", "correct": false}
+{"episode": "ac3309", "step": 4, "gt": "click(500, 330)", "raw": "click(109, 780)", "correct": false}
+{"episode": "ac3309", "step": 5, "gt": "type(\"Holiday\")", "raw": "Action: type(\"Cerebra\")", "correct": false}
+{"episode": "ac3309", "step": 6, "gt": "click(502, 343)", "raw": "Action: click(893, 214)", "correct": false}
+{"episode": "ac3309", "step": 7, "gt": "type(\"Go With Us Mumbai\")", "raw": "Action: type(\"Go With Us Mumbai\")", "correct": true}
+{"episode": "ac3309", "step": 8, "gt": "click(824, 91)", "raw": "Action: click(893, 213)", "correct": true}
+{"episode": "ac3309", "step": 9, "gt": "done()", "raw": "Action: click(824, 91)", "correct": false}
+{"episode": "ac3329", "step": 0, "gt": "click(81, 85)", "raw": "Action: click on the menu icon at the top left corner of the screen", "correct": false}
+{"episode": "ac3329", "step": 1, "gt": "click(274, 251)", "raw": "click(203, 579)", "correct": false}
+{"episode": "ac3329", "step": 2, "gt": "click(434, 203)", "raw": "click(369, 458)", "correct": false}
+{"episode": "ac3329", "step": 3, "gt": "done()", "raw": "click(690, 203)", "correct": false}
+{"episode": "ac3349", "step": 0, "gt": "open_app(\"SurveyMonkey\")", "raw": "Thought: To proceed with creating an invitation form, I need to navigate away from this login screen. The home button will allow me to return to the main screen where I can access other apps or features.\nAction: press_back()", "correct": false}
+{"episode": "ac3349", "step": 1, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac3349", "step": 2, "gt": "click(500, 294)", "raw": "Action: click on CREATE SURVEY", "correct": false}
+{"episode": "ac3349", "step": 3, "gt": "click(499, 585)", "raw": "Action: click(500, 1253)", "correct": true}
+{"episode": "ac3349", "step": 4, "gt": "click(395, 136)", "raw": "click(499, 585)", "correct": false}
+{"episode": "ac3349", "step": 5, "gt": "click(500, 774)", "raw": "click(395, 136)", "correct": false}
+{"episode": "ac3349", "step": 6, "gt": "wait()", "raw": "Action: wait()", "correct": true}
+{"episode": "ac3349", "step": 7, "gt": "click(499, 226)", "raw": "click(500, 1000)", "correct": false}
+{"episode": "ac3349", "step": 8, "gt": "click(197, 199)", "raw": "Action: type(\"Radha's wedding invitation\")", "correct": false}
+{"episode": "ac3349", "step": 9, "gt": "type(\"Radha's Wedding\")", "raw": "type(\"Radha's wedding invitation\")", "correct": false}
+{"episode": "ac3349", "step": 10, "gt": "click(941, 80)", "raw": "click(1017, 183)", "correct": false}
+{"episode": "ac3349", "step": 11, "gt": "wait()", "raw": "Action: wait()", "correct": true}
+{"episode": "ac3349", "step": 12, "gt": "done()", "raw": "Action: click(197, 199)", "correct": false}
+{"episode": "ac3369", "step": 0, "gt": "press_back()", "raw": "Thought: To achieve the goal of listening to the Sleep Meditation on the Meditopia app, I need to first open the app. The current screen does not show any indication of the Meditopia app, so I should navigate back to the home screen to access it.\nAction: press_back()", "correct": true}
+{"episode": "ac3369", "step": 1, "gt": "click(827, 569)", "raw": "Action: click(893, 1364)", "correct": true}
+{"episode": "ac3369", "step": 2, "gt": "click(471, 936)", "raw": "click(43, 426)", "correct": false}
+{"episode": "ac3369", "step": 3, "gt": "click(281, 522)", "raw": "click(163, 1020)", "correct": false}
+{"episode": "ac3369", "step": 4, "gt": "wait()", "raw": "click(281, 522)", "correct": false}
+{"episode": "ac3369", "step": 5, "gt": "done()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac3389", "step": 0, "gt": "press_back()", "raw": "Thought: To achieve the goal of learning about new kid's clothing styles, I need to navigate away from this login page and find a way to access the Bash app or related content.\nAction: press_back()", "correct": true}
+{"episode": "ac3389", "step": 1, "gt": "click(100, 937)", "raw": "Action: scroll(-1000, 0)", "correct": false}
+{"episode": "ac3389", "step": 2, "gt": "click(50, 91)", "raw": "click(250, 846)", "correct": false}
+{"episode": "ac3389", "step": 3, "gt": "click(61, 84)", "raw": "click(248, 196)", "correct": false}
+{"episode": "ac3389", "step": 4, "gt": "scroll(down)", "raw": "click(200, 330)", "correct": false}
+{"episode": "ac3389", "step": 5, "gt": "scroll(down)", "raw": "click(200, 1037)", "correct": false}
+{"episode": "ac3389", "step": 6, "gt": "scroll(down)", "raw": "click(200, 1000)", "correct": false}
+{"episode": "ac3389", "step": 7, "gt": "scroll(down)", "raw": "click(200, 1300)", "correct": false}
+{"episode": "ac3389", "step": 8, "gt": "scroll(down)", "raw": "click(200, 1000)", "correct": false}
+{"episode": "ac3389", "step": 9, "gt": "scroll(down)", "raw": "click(200, 1000)", "correct": false}
+{"episode": "ac3389", "step": 10, "gt": "click(500, 370)", "raw": "click(125, 1406)", "correct": false}
+{"episode": "ac3389", "step": 11, "gt": "scroll(down)", "raw": "click(200, 370)", "correct": false}
+{"episode": "ac3389", "step": 12, "gt": "scroll(down)", "raw": "click(200, 1100)", "correct": false}
+{"episode": "ac3389", "step": 13, "gt": "done()", "raw": "click(200, 1300)", "correct": false}
+{"episode": "ac3409", "step": 0, "gt": "click(68, 87)", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac3409", "step": 1, "gt": "click(416, 394)", "raw": "click(253, 704)", "correct": false}
+{"episode": "ac3409", "step": 2, "gt": "done()", "raw": "click(256, 724)", "correct": false}
+{"episode": "ac3429", "step": 0, "gt": "click(499, 358)", "raw": "Action: type(\"My favorite event is the Tomorrowland Festival\")", "correct": false}
+{"episode": "ac3429", "step": 1, "gt": "click(499, 494)", "raw": "type(\"My favorite event is the Tomorrowland Festival\")", "correct": false}
+{"episode": "ac3429", "step": 2, "gt": "type(\"My favorite event is the Tomorrowland Festival\")", "raw": "type(\"My favorite event is the Tomorrowland Festival.\")", "correct": false}
+{"episode": "ac3429", "step": 3, "gt": "done()", "raw": "Action: click(62, 207))", "correct": false}
+{"episode": "ac3449", "step": 0, "gt": "click(100, 943)", "raw": "Action: click on the 9th of January", "correct": false}
+{"episode": "ac3449", "step": 1, "gt": "click(625, 149)", "raw": "click(562, 347)", "correct": false}
+{"episode": "ac3449", "step": 2, "gt": "done()", "raw": "click(625, 149)", "correct": false}
+{"episode": "ac3470", "step": 0, "gt": "open_app(\"Currency Plus\")", "raw": "Action: click(125, 1578)", "correct": false}
+{"episode": "ac3470", "step": 1, "gt": "click(834, 80)", "raw": "click(896, 185)", "correct": false}
+{"episode": "ac3470", "step": 2, "gt": "click(381, 786)", "raw": "click(295, 2067)", "correct": false}
+{"episode": "ac3470", "step": 3, "gt": "click(381, 858)", "raw": "type(\"1000\")", "correct": false}
+{"episode": "ac3470", "step": 4, "gt": "click(381, 858)", "raw": "click(298, 1008)", "correct": false}
+{"episode": "ac3470", "step": 5, "gt": "click(381, 858)", "raw": "click(381, 858)", "correct": false}
+{"episode": "ac3470", "step": 6, "gt": "done()", "raw": "click(381, 858)", "correct": false}
+{"episode": "ac3510", "step": 0, "gt": "click(877, 173)", "raw": "Action: click on the close icon at the top right of the screen", "correct": false}
+{"episode": "ac3510", "step": 1, "gt": "done()", "raw": "Action: click(824, 1659)", "correct": false}
+{"episode": "ac3530", "step": 0, "gt": "open_app(\"Phases of the Moon\")", "raw": "Action: open_app(Phases of the moon)", "correct": true}
+{"episode": "ac3530", "step": 1, "gt": "done()", "raw": "wait()", "correct": false}
+{"episode": "ac3570", "step": 0, "gt": "open_app(\"Tasks\")", "raw": "Action: click on the Tasks app icon", "correct": false}
+{"episode": "ac3570", "step": 1, "gt": "click(185, 930)", "raw": "click on the three dots icon at the bottom of the screen", "correct": false}
+{"episode": "ac3570", "step": 2, "gt": "click(548, 865)", "raw": "click(204, 2076)", "correct": false}
+{"episode": "ac3570", "step": 3, "gt": "done()", "raw": "click(1072, 2234)", "correct": false}
+{"episode": "ac3630", "step": 0, "gt": "click(78, 91)", "raw": "Action: wait()", "correct": false}
+{"episode": "ac3630", "step": 1, "gt": "click(389, 373)", "raw": "click(235, 406)", "correct": false}
+{"episode": "ac3630", "step": 2, "gt": "done()", "raw": "click(245, 600)", "correct": false}
+{"episode": "ac3650", "step": 0, "gt": "open_app(\"Duolingo\")", "raw": "Action: type \"Duolingo\" in the search bar", "correct": false}
+{"episode": "ac3650", "step": 1, "gt": "click(500, 853)", "raw": "Action: click(475, 2043)", "correct": true}
+{"episode": "ac3650", "step": 2, "gt": "click(500, 928)", "raw": "Action: click(500, 2224)", "correct": true}
+{"episode": "ac3650", "step": 3, "gt": "click(500, 928)", "raw": "Action: click(500, 2224)", "correct": true}
+{"episode": "ac3650", "step": 4, "gt": "wait()", "raw": "Action: click(500, 2234)", "correct": false}
+{"episode": "ac3650", "step": 5, "gt": "scroll(down)", "raw": "click(500, 1076)", "correct": false}
+{"episode": "ac3650", "step": 6, "gt": "click(549, 454)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3650", "step": 7, "gt": "click(500, 928)", "raw": "click(549, 454)", "correct": false}
+{"episode": "ac3650", "step": 8, "gt": "done()", "raw": "wait()", "correct": false}
+{"episode": "ac3670", "step": 0, "gt": "click(824, 77)", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac3670", "step": 1, "gt": "click(215, 571)", "raw": "click(590, 1370)", "correct": false}
+{"episode": "ac3670", "step": 2, "gt": "click(231, 858)", "raw": "click(290, 1700)", "correct": false}
+{"episode": "ac3670", "step": 3, "gt": "click(205, 616)", "raw": "click(200, 1479)", "correct": false}
+{"episode": "ac3670", "step": 4, "gt": "done()", "raw": "click(205, 616)", "correct": false}
+{"episode": "ac3691", "step": 0, "gt": "click(500, 630)", "raw": "Action: click on the play button", "correct": false}
+{"episode": "ac3691", "step": 1, "gt": "click(500, 630)", "raw": "click(500, 630)", "correct": false}
+{"episode": "ac3691", "step": 2, "gt": "wait()", "raw": "Action: click(500, 630)", "correct": false}
+{"episode": "ac3691", "step": 3, "gt": "done()", "raw": "Action: click(532, 1514)", "correct": false}
+{"episode": "ac3711", "step": 0, "gt": "open_app(\"FormsApp\")", "raw": "Thought: To proceed with creating a form using the customer satisfaction template, I need to first sign into the Cerebra platform. The 'Continue as Cerebra' button seems like the logical next step to achieve this.\nAction: click(456, 2137)", "correct": false}
+{"episode": "ac3711", "step": 1, "gt": "click(500, 912)", "raw": "Action: click on the plus icon at the bottom of the screen", "correct": false}
+{"episode": "ac3711", "step": 2, "gt": "click(500, 442)", "raw": "click(500, 912)", "correct": false}
+{"episode": "ac3711", "step": 3, "gt": "click(500, 532)", "raw": "click(327, 2276)", "correct": false}
+{"episode": "ac3711", "step": 4, "gt": "click(499, 100)", "raw": "click(500, 167)", "correct": false}
+{"episode": "ac3711", "step": 5, "gt": "type(\"Research Customer Satisfaction Form 2023\")", "raw": "type(\"Research Customer Feedback Form 2023\")", "correct": false}
+{"episode": "ac3711", "step": 6, "gt": "done()", "raw": "click(500, 1067)", "correct": false}
+{"episode": "ac3731", "step": 0, "gt": "click(219, 162)", "raw": "Action: Click on the filter icon at the top left of the screen.", "correct": false}
+{"episode": "ac3731", "step": 1, "gt": "click(911, 125)", "raw": "click(538, 2234)", "correct": false}
+{"episode": "ac3731", "step": 2, "gt": "click(755, 316)", "raw": "click(743, 800)", "correct": false}
+{"episode": "ac3731", "step": 3, "gt": "click(727, 450)", "raw": "Action: click(84, 1720)", "correct": false}
+{"episode": "ac3731", "step": 4, "gt": "done()", "raw": "click(787, 1074)", "correct": false}
+{"episode": "ac3751", "step": 0, "gt": "open_app(\"Flipboard\")", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac3751", "step": 1, "gt": "wait()", "raw": "click(234, 1756)", "correct": false}
+{"episode": "ac3751", "step": 2, "gt": "click(499, 638)", "raw": "click(256, 743)", "correct": false}
+{"episode": "ac3751", "step": 3, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac3751", "step": 4, "gt": "scroll(down)", "raw": "Action: scroll(down)", "correct": true}
+{"episode": "ac3751", "step": 5, "gt": "click(475, 746)", "raw": "Action: click(499, 638)", "correct": false}
+{"episode": "ac3751", "step": 6, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac3751", "step": 7, "gt": "scroll(down)", "raw": "Action: scroll(down)", "correct": true}
+{"episode": "ac3751", "step": 8, "gt": "done()", "raw": "click(475, 746)", "correct": false}
+{"episode": "ac3792", "step": 0, "gt": "press_back()", "raw": "Action: click(587, 2063)", "correct": false}
+{"episode": "ac3792", "step": 1, "gt": "click(500, 947)", "raw": "click(546, 2273)", "correct": false}
+{"episode": "ac3792", "step": 2, "gt": "click(393, 866)", "raw": "Action: click(420, 2083)", "correct": true}
+{"episode": "ac3792", "step": 3, "gt": "click(124, 253)", "raw": "Action: click(922, 208)", "correct": false}
+{"episode": "ac3792", "step": 4, "gt": "click(891, 92)", "raw": "Action: click(955, 214)", "correct": true}
+{"episode": "ac3792", "step": 5, "gt": "click(873, 932)", "raw": "click(124, 253)", "correct": false}
+{"episode": "ac3792", "step": 6, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac3812", "step": 0, "gt": "click(493, 955)", "raw": "Action: click on the constellation name", "correct": false}
+{"episode": "ac3812", "step": 1, "gt": "done()", "raw": "wait()", "correct": false}
+{"episode": "ac3872", "step": 0, "gt": "open_app(\"Clock\")", "raw": "Action: wait()", "correct": false}
+{"episode": "ac3872", "step": 1, "gt": "click(233, 226)", "raw": "click on the label \"Add label\"", "correct": false}
+{"episode": "ac3872", "step": 2, "gt": "click(567, 342)", "raw": "Action: click(748, 869)", "correct": false}
+{"episode": "ac3872", "step": 3, "gt": "click(290, 621)", "raw": "click(890, 1820)", "correct": false}
+{"episode": "ac3872", "step": 4, "gt": "click(801, 760)", "raw": "click(840, 840)", "correct": false}
+{"episode": "ac3872", "step": 5, "gt": "done()", "raw": "click(290, 621)", "correct": false}
+{"episode": "ac3912", "step": 0, "gt": "scroll(down)", "raw": "Action: click on the three dots menu icon at the top right corner of the screen", "correct": false}
+{"episode": "ac3912", "step": 1, "gt": "scroll(down)", "raw": "Action: scroll(down)", "correct": true}
+{"episode": "ac3912", "step": 2, "gt": "click(529, 466)", "raw": "Action: click on the three dots menu icon at the top right corner of the screen", "correct": false}
+{"episode": "ac3912", "step": 3, "gt": "click(941, 88)", "raw": "click(873, 204)", "correct": false}
+{"episode": "ac3912", "step": 4, "gt": "click(752, 97)", "raw": "click(730, 225)", "correct": false}
+{"episode": "ac3912", "step": 5, "gt": "click(548, 482)", "raw": "click(320, 1280)", "correct": false}
+{"episode": "ac3912", "step": 6, "gt": "done()", "raw": "click(548, 482)", "correct": false}
+{"episode": "ac3932", "step": 0, "gt": "click(834, 147)", "raw": "Action: click on the publish tab at the top right corner of the screen", "correct": false}
+{"episode": "ac3932", "step": 1, "gt": "click(499, 205)", "raw": "click(526, 489)", "correct": false}
+{"episode": "ac3932", "step": 2, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac3932", "step": 3, "gt": "done()", "raw": "click(499, 205)", "correct": false}
+{"episode": "ac3972", "step": 0, "gt": "click(369, 305)", "raw": "Action: click(253, 746)", "correct": false}
+{"episode": "ac3972", "step": 1, "gt": "click(500, 928)", "raw": "click(247, 738)", "correct": false}
+{"episode": "ac3972", "step": 2, "gt": "click(500, 928)", "raw": "Action: click(476, 2225)", "correct": true}
+{"episode": "ac3972", "step": 3, "gt": "click(500, 639)", "raw": "click(500, 1417)", "correct": false}
+{"episode": "ac3972", "step": 4, "gt": "click(500, 928)", "raw": "click(500, 1217)", "correct": false}
+{"episode": "ac3972", "step": 5, "gt": "click(500, 928)", "raw": "Action: click(479, 2225)", "correct": true}
+{"episode": "ac3972", "step": 6, "gt": "click(500, 928)", "raw": "Action: click(475, 2224)", "correct": true}
+{"episode": "ac3972", "step": 7, "gt": "wait()", "raw": "click(500, 1327)", "correct": false}
+{"episode": "ac3972", "step": 8, "gt": "click(646, 471)", "raw": "Action: click(500, 1327)", "correct": false}
+{"episode": "ac3972", "step": 9, "gt": "click(500, 928)", "raw": "click(500, 1326)", "correct": false}
+{"episode": "ac3972", "step": 10, "gt": "click(500, 928)", "raw": "Action: click(500, 2224)", "correct": true}
+{"episode": "ac3972", "step": 11, "gt": "click(499, 605)", "raw": "Action: click(500, 1454)", "correct": true}
+{"episode": "ac3972", "step": 12, "gt": "click(500, 547)", "raw": "click(500, 1314)", "correct": false}
+{"episode": "ac3972", "step": 13, "gt": "wait()", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 14, "gt": "click(500, 928)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 15, "gt": "wait()", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 16, "gt": "click(334, 435)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 17, "gt": "click(500, 928)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 18, "gt": "click(500, 928)", "raw": "Action: click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 19, "gt": "click(740, 690)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 20, "gt": "click(500, 928)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 21, "gt": "click(500, 928)", "raw": "Action: click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 22, "gt": "click(259, 487)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 23, "gt": "click(500, 928)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 24, "gt": "click(500, 928)", "raw": "Action: click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 25, "gt": "click(259, 487)", "raw": "Action: click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 26, "gt": "click(500, 928)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 27, "gt": "click(500, 928)", "raw": "Action: click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 28, "gt": "click(499, 652)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 29, "gt": "click(500, 928)", "raw": "click(500, 928)", "correct": false}
+{"episode": "ac3972", "step": 30, "gt": "click(500, 928)", "raw": "Action: click(500, 2215)", "correct": true}
+{"episode": "ac3972", "step": 31, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac4012", "step": 0, "gt": "open_app(\"Media365 Reader\")", "raw": "Action: open_app(\"Media365 Reader\")", "correct": true}
+{"episode": "ac4012", "step": 1, "gt": "click(300, 943)", "raw": "click(428, 579)", "correct": false}
+{"episode": "ac4012", "step": 2, "gt": "click(547, 156)", "raw": "click(287, 366)", "correct": false}
+{"episode": "ac4012", "step": 3, "gt": "type(\"The War of the Worlds\")", "raw": "type(\"The War of the Worlds\")", "correct": false}
+{"episode": "ac4012", "step": 4, "gt": "wait()", "raw": "click(820, 1200)", "correct": false}
+{"episode": "ac4012", "step": 5, "gt": "click(699, 217)", "raw": "click(280, 518)", "correct": false}
+{"episode": "ac4012", "step": 6, "gt": "click(924, 814)", "raw": "Action: click(885, 1955)", "correct": false}
+{"episode": "ac4012", "step": 7, "gt": "click(299, 885)", "raw": "click(293, 217)", "correct": false}
+{"episode": "ac4012", "step": 8, "gt": "type(\"karin.iversen@example.com\")", "raw": "Action: type(\"karin.iversen@example.com\")", "correct": true}
+{"episode": "ac4012", "step": 9, "gt": "click(176, 28)", "raw": "Action: click(893, 217)", "correct": false}
+{"episode": "ac4012", "step": 10, "gt": "done()", "raw": "Action: click(924, 814)", "correct": false}
+{"episode": "ac4072", "step": 0, "gt": "open_app(\"Xe\")", "raw": "Action: click on the Xe link", "correct": false}
+{"episode": "ac4072", "step": 1, "gt": "wait()", "raw": "click(500, 500)", "correct": false}
+{"episode": "ac4072", "step": 2, "gt": "click(159, 221)", "raw": "Action: click on the AUD currency option", "correct": false}
+{"episode": "ac4072", "step": 3, "gt": "click(367, 150)", "raw": "Action: click(347, 368)", "correct": true}
+{"episode": "ac4072", "step": 4, "gt": "type(\"Canadian Dollar\")", "raw": "Action: type(\"CAD\")", "correct": false}
+{"episode": "ac4072", "step": 5, "gt": "click(499, 202)", "raw": "click(482, 482)", "correct": false}
+{"episode": "ac4072", "step": 6, "gt": "click(502, 208)", "raw": "click(180, 800)", "correct": false}
+{"episode": "ac4072", "step": 7, "gt": "click(502, 515)", "raw": "click(107, 1934), type(\"1000\"), click(107, 2210), click(843, 2180)", "correct": false}
+{"episode": "ac4072", "step": 8, "gt": "click(300, 937)", "raw": "Action: type(\"1000\")", "correct": false}
+{"episode": "ac4072", "step": 9, "gt": "click(300, 937)", "raw": "Action: type(\"1000\")", "correct": false}
+{"episode": "ac4072", "step": 10, "gt": "click(300, 937)", "raw": "Action: type(\"1000\")", "correct": false}
+{"episode": "ac4072", "step": 11, "gt": "click(791, 907)", "raw": "Action: click(107, 1582)", "correct": false}
+{"episode": "ac4072", "step": 12, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac4092", "step": 0, "gt": "open_app(\"Reminders\")", "raw": "Action: open app \"Reminders\"", "correct": false}
+{"episode": "ac4092", "step": 1, "gt": "click(56, 379)", "raw": "Action: click(63, 894)", "correct": true}
+{"episode": "ac4092", "step": 2, "gt": "done()", "raw": "click(56, 824)", "correct": false}
+{"episode": "ac4112", "step": 0, "gt": "click(737, 84)", "raw": "Action: click on the settings icon at the top left corner of the screen", "correct": false}
+{"episode": "ac4112", "step": 1, "gt": "click(491, 397)", "raw": "click(562, 920)", "correct": false}
+{"episode": "ac4112", "step": 2, "gt": "click(180, 389)", "raw": "click(162, 985)", "correct": false}
+{"episode": "ac4112", "step": 3, "gt": "click(931, 895)", "raw": "click(652, 2150)", "correct": false}
+{"episode": "ac4112", "step": 4, "gt": "done()", "raw": "click(621, 1000)", "correct": false}
+{"episode": "ac4132", "step": 0, "gt": "scroll(down)", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac4132", "step": 1, "gt": "click(750, 258)", "raw": "click(350, 624)", "correct": false}
+{"episode": "ac4132", "step": 2, "gt": "scroll(down)", "raw": "click(750, 258)", "correct": false}
+{"episode": "ac4132", "step": 3, "gt": "done()", "raw": "click(693, 1462)", "correct": false}
+{"episode": "ac4152", "step": 0, "gt": "open_app(\"Keep Notes\")", "raw": "Action: open app \"Google Keep\"", "correct": false}
+{"episode": "ac4152", "step": 1, "gt": "click(855, 908)", "raw": "Action: click on the plus icon at the bottom right corner of the screen", "correct": false}
+{"episode": "ac4152", "step": 2, "gt": "click(517, 166)", "raw": "type(\"Buy groceries\")", "correct": false}
+{"episode": "ac4152", "step": 3, "gt": "type(\"To buy groceries\")", "raw": "type(\"Buy groceries\")", "correct": false}
+{"episode": "ac4152", "step": 4, "gt": "click(500, 219)", "raw": "Action: done()", "correct": false}
+{"episode": "ac4152", "step": 5, "gt": "click(500, 219)", "raw": "Action: done()", "correct": false}
+{"episode": "ac4152", "step": 6, "gt": "type(\"Milk, eggs and brocolli\")", "raw": "Action: done()", "correct": false}
+{"episode": "ac4152", "step": 7, "gt": "click(941, 91)", "raw": "Action: done()", "correct": false}
+{"episode": "ac4152", "step": 8, "gt": "wait()", "raw": "Action: click(500, 219)", "correct": false}
+{"episode": "ac4152", "step": 9, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac4192", "step": 0, "gt": "click(701, 943)", "raw": "Action: click(756, 2248)", "correct": true}
+{"episode": "ac4192", "step": 1, "gt": "scroll(up)", "raw": "click(526, 1086)", "correct": false}
+{"episode": "ac4192", "step": 2, "gt": "done()", "raw": "click(701, 943)", "correct": false}
+{"episode": "ac4212", "step": 0, "gt": "click(499, 925)", "raw": "Action: click on VIEW BASKET (AED 17.25)", "correct": false}
+{"episode": "ac4212", "step": 1, "gt": "done()", "raw": "click(499, 925)", "correct": false}
+{"episode": "ac4232", "step": 0, "gt": "click(92, 149)", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac4232", "step": 1, "gt": "scroll(down)", "raw": "click(1315, 267)}", "correct": false}
+{"episode": "ac4232", "step": 2, "gt": "click(582, 676)", "raw": "click(835, 2116)", "correct": false}
+{"episode": "ac4232", "step": 3, "gt": "click(615, 925)", "raw": "click(1300, 232)", "correct": false}
+{"episode": "ac4232", "step": 4, "gt": "done()", "raw": "click(352, 1000)", "correct": false}
+{"episode": "ac4272", "step": 0, "gt": "open_app(\"Amazon\")", "raw": "Action: open_app(\"Amazon\")", "correct": true}
+{"episode": "ac4272", "step": 1, "gt": "click(493, 89)", "raw": "click(234, 205)", "correct": false}
+{"episode": "ac4272", "step": 2, "gt": "type(\"Athletic shoe \")", "raw": "type(\"athletic shoes\")", "correct": false}
+{"episode": "ac4272", "step": 3, "gt": "click(502, 172)", "raw": "Action: click(1005, 2167)", "correct": false}
+{"episode": "ac4272", "step": 4, "gt": "scroll(down)", "raw": "click(502, 172)", "correct": false}
+{"episode": "ac4272", "step": 5, "gt": "done()", "raw": "Action: scroll(down)", "correct": false}
+{"episode": "ac4312", "step": 0, "gt": "click(107, 91)", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac4312", "step": 1, "gt": "click(500, 355)", "raw": "click(182, 653)", "correct": false}
+{"episode": "ac4312", "step": 2, "gt": "click(941, 516)", "raw": "Action: click(1024, 1246)", "correct": true}
+{"episode": "ac4312", "step": 3, "gt": "click(557, 822)", "raw": "click(280, 1973)", "correct": false}
+{"episode": "ac4312", "step": 4, "gt": "done()", "raw": "Action: click(1024, 864)", "correct": false}
+{"episode": "ac4332", "step": 0, "gt": "open_app(\"TeraBox\")", "raw": "Action: Click on the three dots icon of the business report file.", "correct": false}
+{"episode": "ac4332", "step": 1, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac4332", "step": 2, "gt": "click(951, 500)", "raw": "Action: click on the Business Report.docx", "correct": false}
+{"episode": "ac4332", "step": 3, "gt": "click(100, 943)", "raw": "Action: click(1038, 204)", "correct": false}
+{"episode": "ac4332", "step": 4, "gt": "click(276, 818)", "raw": "Action: click(267, 1968)", "correct": true}
+{"episode": "ac4332", "step": 5, "gt": "done()", "raw": "Action: click(100, 943)", "correct": false}
+{"episode": "ac4352", "step": 0, "gt": "click(67, 79)", "raw": "Action: click(897, 185)", "correct": false}
+{"episode": "ac4352", "step": 1, "gt": "click(546, 408)", "raw": "click(234, 975)", "correct": false}
+{"episode": "ac4352", "step": 2, "gt": "click(844, 80)", "raw": "click(672, 193)", "correct": false}
+{"episode": "ac4352", "step": 3, "gt": "click(866, 558)", "raw": "Action: click(932, 1335)", "correct": true}
+{"episode": "ac4352", "step": 4, "gt": "done()", "raw": "click(866, 558)", "correct": false}
+{"episode": "ac4392", "step": 0, "gt": "open_app(\"SideChef\")", "raw": "Thought: To find a dessert recipe, I need to navigate back to the main screen or home page of the SideChef app.\nAction: press_back()", "correct": false}
+{"episode": "ac4392", "step": 1, "gt": "click(742, 648)", "raw": "click on the Dessert category", "correct": false}
+{"episode": "ac4392", "step": 2, "gt": "wait()", "raw": "click(742, 648)", "correct": false}
+{"episode": "ac4392", "step": 3, "gt": "click(558, 98)", "raw": "click(359, 228)", "correct": false}
+{"episode": "ac4392", "step": 4, "gt": "type(\"Rustic Fruit trat\")", "raw": "type(\"Rustic Fruit trat\")", "correct": false}
+{"episode": "ac4392", "step": 5, "gt": "click(920, 899)", "raw": "Action: click(1003, 2160)", "correct": true}
+{"episode": "ac4392", "step": 6, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac4392", "step": 7, "gt": "click(260, 283)", "raw": "Action: click(300, 1044)", "correct": false}
+{"episode": "ac4392", "step": 8, "gt": "done()", "raw": "click(260, 283)", "correct": false}
+{"episode": "ac4412", "step": 0, "gt": "press_back()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac4412", "step": 1, "gt": "click(100, 938)", "raw": "Action: click(475, 1173)", "correct": false}
+{"episode": "ac4412", "step": 2, "gt": "click(499, 258)", "raw": "click(546, 578)", "correct": false}
+{"episode": "ac4412", "step": 3, "gt": "click(245, 685)", "raw": "Action: click(116, 1740)", "correct": false}
+{"episode": "ac4412", "step": 4, "gt": "click(245, 685)", "raw": "click(570, 1744)", "correct": false}
+{"episode": "ac4412", "step": 5, "gt": "done()", "raw": "Action: click(978, 160)", "correct": false}
+{"episode": "ac4432", "step": 0, "gt": "click(459, 243)", "raw": "Action: click on the search bar", "correct": false}
+{"episode": "ac4432", "step": 1, "gt": "type(\"Spanner set\")", "raw": "type(Spanner Set)", "correct": false}
+{"episode": "ac4432", "step": 2, "gt": "click(920, 904)", "raw": "Action: click(1006, 2178)", "correct": true}
+{"episode": "ac4432", "step": 3, "gt": "done()", "raw": "click(459, 243), type(\"Spanner set\"), click(920, 904)", "correct": false}
+{"episode": "ac4452", "step": 0, "gt": "press_back()", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac4452", "step": 1, "gt": "scroll(down)", "raw": "click(985, 204)", "correct": false}
+{"episode": "ac4452", "step": 2, "gt": "click(499, 261)", "raw": "click(984, 1342)", "correct": false}
+{"episode": "ac4452", "step": 3, "gt": "click(915, 95)", "raw": "click(499, 261)", "correct": false}
+{"episode": "ac4452", "step": 4, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac4452", "step": 5, "gt": "done()", "raw": "click(378, 1920)", "correct": false}
+{"episode": "ac4492", "step": 0, "gt": "open_app(\"WeatherVane\")", "raw": "Action: click(658, 234)", "correct": false}
+{"episode": "ac4492", "step": 1, "gt": "click(95, 202)", "raw": "click(x, y)", "correct": false}
+{"episode": "ac4492", "step": 2, "gt": "click(300, 943)", "raw": "click(346, 1378)", "correct": false}
+{"episode": "ac4492", "step": 3, "gt": "done()", "raw": "click(300, 943)", "correct": false}
+{"episode": "ac4512", "step": 0, "gt": "click(869, 162)", "raw": "Action: click on the Filter option at the top right of the screen", "correct": false}
+{"episode": "ac4512", "step": 1, "gt": "scroll(down)", "raw": "click(357, 498)", "correct": false}
+{"episode": "ac4512", "step": 2, "gt": "click(235, 450)", "raw": "click(345, 1076)", "correct": false}
+{"episode": "ac4512", "step": 3, "gt": "click(320, 162)", "raw": "click(270, 350)", "correct": false}
+{"episode": "ac4512", "step": 4, "gt": "click(638, 912)", "raw": "click(270, 500)", "correct": false}
+{"episode": "ac4512", "step": 5, "gt": "done()", "raw": "click(730, 382)", "correct": false}
+{"episode": "ac4532", "step": 0, "gt": "click(877, 678)", "raw": "Action: click on the three dots next to the Travel Locations task", "correct": false}
+{"episode": "ac4532", "step": 1, "gt": "click(125, 943)", "raw": "Action: click(235, 1749)", "correct": false}
+{"episode": "ac4532", "step": 2, "gt": "click(558, 886)", "raw": "Action: click(193, 2130)", "correct": false}
+{"episode": "ac4532", "step": 3, "gt": "done()", "raw": "click(1000, 2080)", "correct": false}
+{"episode": "ac4552", "step": 0, "gt": "press_back()", "raw": "Thought: The current screen shows flight details but does not provide information on accommodations like Sotetsu Fresa Inn. To find accommodations, I need to navigate back to the main menu or search page where I can enter the destination and check for hotels.\nAction: press_back()", "correct": true}
+{"episode": "ac4552", "step": 1, "gt": "press_back()", "raw": "Thought: The current screen shows flight options but does not display the desired hotel information. To find the hotel, I need to navigate back to the previous screen or home page where I can access the hotel booking section.\nAction: press_back()", "correct": true}
+{"episode": "ac4552", "step": 2, "gt": "click(499, 215)", "raw": "click(546, 517)", "correct": false}
+{"episode": "ac4552", "step": 3, "gt": "click(378, 139)", "raw": "click(499, 215)", "correct": false}
+{"episode": "ac4552", "step": 4, "gt": "type(\"Tokyo\")", "raw": "click(65, 612)", "correct": false}
+{"episode": "ac4552", "step": 5, "gt": "click(324, 257)", "raw": "click(260, 614)", "correct": false}
+{"episode": "ac4552", "step": 6, "gt": "click(750, 139)", "raw": "click(860, 333)", "correct": false}
+{"episode": "ac4552", "step": 7, "gt": "click(500, 807)", "raw": "click(968, 1762)", "correct": false}
+{"episode": "ac4552", "step": 8, "gt": "click(500, 807)", "raw": "click(686, 1934)", "correct": false}
+{"episode": "ac4552", "step": 9, "gt": "wait()", "raw": "click(686, 1934)", "correct": false}
+{"episode": "ac4552", "step": 10, "gt": "click(873, 197)", "raw": "click(600, 1930)", "correct": false}
+{"episode": "ac4552", "step": 11, "gt": "wait()", "raw": "click(873, 197)", "correct": false}
+{"episode": "ac4552", "step": 12, "gt": "scroll(down)", "raw": "click(462, 2200)", "correct": false}
+{"episode": "ac4552", "step": 13, "gt": "scroll(down)", "raw": "click(600, 139)", "correct": false}
+{"episode": "ac4552", "step": 14, "gt": "scroll(down)", "raw": "click(600, 197)", "correct": false}
+{"episode": "ac4552", "step": 15, "gt": "click(500, 710)", "raw": "click(600, 215)", "correct": false}
+{"episode": "ac4552", "step": 16, "gt": "wait()", "raw": "click(500, 710)", "correct": false}
+{"episode": "ac4552", "step": 17, "gt": "done()", "raw": "click(500, 710)", "correct": false}
+{"episode": "ac4592", "step": 0, "gt": "click(87, 480)", "raw": "Action: long_press(235, 1146)", "correct": false}
+{"episode": "ac4592", "step": 1, "gt": "click(951, 87)", "raw": "click(695, 2073)", "correct": false}
+{"episode": "ac4592", "step": 2, "gt": "click(781, 87)", "raw": "click(692, 453)", "correct": false}
+{"episode": "ac4592", "step": 3, "gt": "click(527, 436)", "raw": "click(236, 628)", "correct": false}
+{"episode": "ac4592", "step": 4, "gt": "done()", "raw": "click(527, 436)", "correct": false}
+{"episode": "ac4612", "step": 0, "gt": "click(525, 931)", "raw": "Action: click(546, 2238)", "correct": true}
+{"episode": "ac4612", "step": 1, "gt": "done()", "raw": "click(746, 1548)", "correct": false}
+{"episode": "ac4633", "step": 0, "gt": "press_back()", "raw": "Action: type \"how you are\"", "correct": false}
+{"episode": "ac4633", "step": 1, "gt": "click(532, 599)", "raw": "Action: click(253, 346)", "correct": false}
+{"episode": "ac4633", "step": 2, "gt": "click(73, 944)", "raw": "type(\"how you are\")", "correct": false}
+{"episode": "ac4633", "step": 3, "gt": "click(579, 418)", "raw": "Action: click(268, 1024)", "correct": false}
+{"episode": "ac4633", "step": 4, "gt": "click(167, 914)", "raw": "click(579, 418)", "correct": false}
+{"episode": "ac4633", "step": 5, "gt": "click(895, 927)", "raw": "click(1000, 2200)", "correct": false}
+{"episode": "ac4633", "step": 6, "gt": "click(848, 934)", "raw": "Action: done()", "correct": false}
+{"episode": "ac4633", "step": 7, "gt": "done()", "raw": "Action: type(\"how you are\")", "correct": false}
+{"episode": "ac4693", "step": 0, "gt": "press_back()", "raw": "Action: press_back()", "correct": true}
+{"episode": "ac4693", "step": 1, "gt": "press_back()", "raw": "Thought: I need to navigate back to the previous screen to find the MakeMyTrip app for booking the journey.\nAction: press_back()", "correct": true}
+{"episode": "ac4693", "step": 2, "gt": "scroll(down)", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac4693", "step": 3, "gt": "click(500, 732)", "raw": "click(VIEW ON MAP)", "correct": false}
+{"episode": "ac4693", "step": 4, "gt": "click(480, 933)", "raw": "click(469, 200)", "correct": false}
+{"episode": "ac4693", "step": 5, "gt": "done()", "raw": "click(986, 2025)", "correct": false}
+{"episode": "ac4713", "step": 0, "gt": "long_press(496, 390)", "raw": "Action: click on the first email from Naomi Rousseau", "correct": false}
+{"episode": "ac4713", "step": 1, "gt": "click(824, 91)", "raw": "Action: click(782, 215)", "correct": false}
+{"episode": "ac4713", "step": 2, "gt": "done()", "raw": "Action: click(824, 91)", "correct": false}
+{"episode": "ac4734", "step": 0, "gt": "open_app(\"Nike\")", "raw": "Action: open_app(Nike)", "correct": true}
+{"episode": "ac4734", "step": 1, "gt": "wait()", "raw": "Action: wait()", "correct": true}
+{"episode": "ac4734", "step": 2, "gt": "click(824, 83)", "raw": "Action: click(358, 204)", "correct": false}
+{"episode": "ac4734", "step": 3, "gt": "click(578, 84)", "raw": "Action: type(\"trackpants\")", "correct": false}
+{"episode": "ac4734", "step": 4, "gt": "type(\"Trackpant for women\")", "raw": "type(\"trackpants\")", "correct": false}
+{"episode": "ac4734", "step": 5, "gt": "click(920, 904)", "raw": "Action: click(996, 2158)", "correct": true}
+{"episode": "ac4734", "step": 6, "gt": "done()", "raw": "wait()", "correct": false}
+{"episode": "ac4754", "step": 0, "gt": "open_app(\"Urban Ladder\")", "raw": "Thought: The current screen shows study tables, which do not match the goal of comparing the Arabia Gordon 4-seater storage dining table set. I need to navigate back to the home page or search for the specific table set.\nAction: press_back()", "correct": false}
+{"episode": "ac4754", "step": 1, "gt": "click(253, 526)", "raw": "click on Compare button of first product", "correct": false}
+{"episode": "ac4754", "step": 2, "gt": "scroll(down)", "raw": "click(789, 462)", "correct": false}
+{"episode": "ac4754", "step": 3, "gt": "done()", "raw": "click(789, 440)", "correct": false}
+{"episode": "ac4794", "step": 0, "gt": "click(647, 396)", "raw": "Action: click on Tools Titan 25 IN 1 Screwdriver Set 6", "correct": false}
+{"episode": "ac4794", "step": 1, "gt": "scroll(down)", "raw": "scroll up", "correct": false}
+{"episode": "ac4794", "step": 2, "gt": "scroll(down)", "raw": "click(647, 396)", "correct": false}
+{"episode": "ac4794", "step": 3, "gt": "scroll(down)", "raw": "click(647, 396)", "correct": false}
+{"episode": "ac4794", "step": 4, "gt": "scroll(down)", "raw": "click(647, 396)", "correct": false}
+{"episode": "ac4794", "step": 5, "gt": "click(217, 657)", "raw": "click(180, 1574)", "correct": false}
+{"episode": "ac4794", "step": 6, "gt": "scroll(down)", "raw": "click(800, 2256)", "correct": false}
+{"episode": "ac4794", "step": 7, "gt": "scroll(down)", "raw": "click(800, 2256)", "correct": false}
+{"episode": "ac4794", "step": 8, "gt": "done()", "raw": "click(217, 657)", "correct": false}
+{"episode": "ac4814", "step": 0, "gt": "click(919, 250)", "raw": "Action: click(985, 602)", "correct": true}
+{"episode": "ac4814", "step": 1, "gt": "done()", "raw": "wait()", "correct": false}
+{"episode": "ac4834", "step": 0, "gt": "open_app(\"Decathlon\")", "raw": "Action: click(753, 204)", "correct": false}
+{"episode": "ac4834", "step": 1, "gt": "scroll(down)", "raw": "click(92, 2234)", "correct": false}
+{"episode": "ac4834", "step": 2, "gt": "scroll(down)", "raw": "Action: click on the add to cart button", "correct": false}
+{"episode": "ac4834", "step": 3, "gt": "scroll(down)", "raw": "Action: click on the add to cart button", "correct": false}
+{"episode": "ac4834", "step": 4, "gt": "click(570, 929)", "raw": "Action: click on the add to cart button", "correct": false}
+{"episode": "ac4834", "step": 5, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac4875", "step": 0, "gt": "wait()", "raw": "Action: click(243, 578)", "correct": false}
+{"episode": "ac4875", "step": 1, "gt": "click(500, 518)", "raw": "Action: click(478, 2053)", "correct": false}
+{"episode": "ac4875", "step": 2, "gt": "done()", "raw": "Action: click(500, 2053)", "correct": false}
+{"episode": "ac4895", "step": 0, "gt": "click(292, 943)", "raw": "Action: click(856, 384)", "correct": false}
+{"episode": "ac4895", "step": 1, "gt": "done()", "raw": "click(856, 274)", "correct": false}
+{"episode": "ac4975", "step": 0, "gt": "press_back()", "raw": "Action: click on the plus icon at the bottom left corner of the screen", "correct": false}
+{"episode": "ac4975", "step": 1, "gt": "click(500, 397)", "raw": "Action: click(265, 948)", "correct": false}
+{"episode": "ac4975", "step": 2, "gt": "click(823, 91)", "raw": "Action: click(884, 216)", "correct": true}
+{"episode": "ac4975", "step": 3, "gt": "wait()", "raw": "click(500, 397)", "correct": false}
+{"episode": "ac4975", "step": 4, "gt": "done()", "raw": "Action: click(546, 2223)", "correct": false}
+{"episode": "ac4995", "step": 0, "gt": "open_app(\"Etsy\")", "raw": "Action: open app \"Etsy\"", "correct": false}
+{"episode": "ac4995", "step": 1, "gt": "click(754, 625)", "raw": "click on the mens casual sports shoes", "correct": false}
+{"episode": "ac4995", "step": 2, "gt": "wait()", "raw": "click(754, 625)", "correct": false}
+{"episode": "ac4995", "step": 3, "gt": "scroll(down)", "raw": "click(183, 1978)", "correct": false}
+{"episode": "ac4995", "step": 4, "gt": "scroll(down)", "raw": "click(389, 640)", "correct": false}
+{"episode": "ac4995", "step": 5, "gt": "click(206, 585)", "raw": "click(389, 714)", "correct": false}
+{"episode": "ac4995", "step": 6, "gt": "done()", "raw": "click(394, 712)", "correct": false}
+{"episode": "ac5015", "step": 0, "gt": "press_back()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac5015", "step": 1, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac5015", "step": 2, "gt": "click(367, 328)", "raw": "Action: click(358, 964)", "correct": true}
+{"episode": "ac5015", "step": 3, "gt": "click(72, 157)", "raw": "click(367, 328)", "correct": false}
+{"episode": "ac5015", "step": 4, "gt": "done()", "raw": "click(49, 157)", "correct": false}
+{"episode": "ac5035", "step": 0, "gt": "open_app(\"Keep Notes\")", "raw": "Action: click on Keep Notes icon", "correct": false}
+{"episode": "ac5035", "step": 1, "gt": "wait()", "raw": "Action: click on the plus icon at the bottom right corner of the screen", "correct": false}
+{"episode": "ac5035", "step": 2, "gt": "click(855, 908)", "raw": "Action: click on the plus icon at the bottom right corner of the screen", "correct": false}
+{"episode": "ac5035", "step": 3, "gt": "click(255, 163)", "raw": "type(\"Movies\")", "correct": false}
+{"episode": "ac5035", "step": 4, "gt": "type(\"Movies\")", "raw": "type(\"Movies\")", "correct": false}
+{"episode": "ac5035", "step": 5, "gt": "click(500, 219)", "raw": "Action: type(\"Kill Bill\")", "correct": false}
+{"episode": "ac5035", "step": 6, "gt": "type(\"Kill Bill\")", "raw": "type(\"Kill Bill\")", "correct": false}
+{"episode": "ac5035", "step": 7, "gt": "click(107, 91)", "raw": "Action: done()", "correct": false}
+{"episode": "ac5035", "step": 8, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac5055", "step": 0, "gt": "click(335, 570)", "raw": "click on the Saffola Masala Oats Classic Masala", "correct": false}
+{"episode": "ac5055", "step": 1, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5055", "step": 2, "gt": "scroll(down)", "raw": "click(335, 570)", "correct": false}
+{"episode": "ac5055", "step": 3, "gt": "click(133, 734)", "raw": "click(335, 570)", "correct": false}
+{"episode": "ac5055", "step": 4, "gt": "done()", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5075", "step": 0, "gt": "click(437, 945)", "raw": "Action: click on the search bar", "correct": false}
+{"episode": "ac5075", "step": 1, "gt": "click(752, 236)", "raw": "click(268, 500)", "correct": false}
+{"episode": "ac5075", "step": 2, "gt": "click(274, 159)", "raw": "click(437, 945)", "correct": false}
+{"episode": "ac5075", "step": 3, "gt": "click(845, 234)", "raw": "click(890, 558)", "correct": false}
+{"episode": "ac5075", "step": 4, "gt": "type(\"Sydney\")", "raw": "click(274, 159)", "correct": false}
+{"episode": "ac5075", "step": 5, "gt": "click(252, 249)", "raw": "Action: click(313, 540)", "correct": true}
+{"episode": "ac5075", "step": 6, "gt": "click(500, 862)", "raw": "click(882, 680)", "correct": false}
+{"episode": "ac5075", "step": 7, "gt": "wait()", "raw": "click(500, 862)", "correct": false}
+{"episode": "ac5075", "step": 8, "gt": "done()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac5095", "step": 0, "gt": "open_app(\"Etsy\")", "raw": "Action: open_app(Etsy)", "correct": true}
+{"episode": "ac5095", "step": 1, "gt": "click(151, 152)", "raw": "click(Filter)", "correct": false}
+{"episode": "ac5095", "step": 2, "gt": "click(78, 657)", "raw": "click(638, 1574)", "correct": false}
+{"episode": "ac5095", "step": 3, "gt": "click(848, 377)", "raw": "click(903, 894)", "correct": false}
+{"episode": "ac5095", "step": 4, "gt": "click(500, 925)", "raw": "click(848, 377)", "correct": false}
+{"episode": "ac5095", "step": 5, "gt": "wait()", "raw": "click(151, 152)", "correct": false}
+{"episode": "ac5095", "step": 6, "gt": "done()", "raw": "click(151, 152)", "correct": false}
+{"episode": "ac5115", "step": 0, "gt": "click(539, 559)", "raw": "Action: click on Add to shopping list", "correct": false}
+{"episode": "ac5115", "step": 1, "gt": "click(805, 430)", "raw": "click(842, 1026)", "correct": false}
+{"episode": "ac5115", "step": 2, "gt": "done()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac5135", "step": 0, "gt": "press_back()", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac5135", "step": 1, "gt": "scroll(down)", "raw": "Action: scroll(right)", "correct": false}
+{"episode": "ac5135", "step": 2, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5135", "step": 3, "gt": "done()", "raw": "click on the similar products section", "correct": false}
+{"episode": "ac5155", "step": 0, "gt": "click(149, 545)", "raw": "Action: wait()", "correct": false}
+{"episode": "ac5155", "step": 1, "gt": "click(500, 912)", "raw": "Action: click(532, 2187)", "correct": true}
+{"episode": "ac5155", "step": 2, "gt": "click(292, 567)", "raw": "Action: click(163, 1218)", "correct": false}
+{"episode": "ac5155", "step": 3, "gt": "type(\"Reminder to buy groceries\")", "raw": "type(milk)", "correct": false}
+{"episode": "ac5155", "step": 4, "gt": "click(64, 166)", "raw": "Action: click(38, 192)", "correct": true}
+{"episode": "ac5155", "step": 5, "gt": "click(500, 330)", "raw": "Action: type(\"Milk\")", "correct": false}
+{"episode": "ac5155", "step": 6, "gt": "type(\"Milk\")", "raw": "Action: type(\"Milk\")", "correct": true}
+{"episode": "ac5155", "step": 7, "gt": "click(827, 388)", "raw": "Action: click(168, 925)", "correct": false}
+{"episode": "ac5155", "step": 8, "gt": "click(58, 164)", "raw": "Action: click(64, 166)", "correct": true}
+{"episode": "ac5155", "step": 9, "gt": "type(\"Eggs\")", "raw": "Action: type(\"Eggs\")", "correct": true}
+{"episode": "ac5155", "step": 10, "gt": "click(827, 388)", "raw": "Action: click(500, 330), type(\"Chicken\")", "correct": false}
+{"episode": "ac5155", "step": 11, "gt": "click(567, 168)", "raw": "Action: click(500, 912)", "correct": false}
+{"episode": "ac5155", "step": 12, "gt": "type(\"Chicken\")", "raw": "click(567, 168)", "correct": false}
+{"episode": "ac5155", "step": 13, "gt": "click(827, 388)", "raw": "Action: click(888, 926)", "correct": true}
+{"episode": "ac5155", "step": 14, "gt": "click(58, 82)", "raw": "Action: done()", "correct": false}
+{"episode": "ac5155", "step": 15, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac5175", "step": 0, "gt": "open_app(\"Clock\")", "raw": "Action: open app drawer", "correct": false}
+{"episode": "ac5175", "step": 1, "gt": "click(500, 816)", "raw": "Action: click(+)\nThought: I need to add a new alarm by clicking the '+' button to proceed with setting up the alarm for Saturday at 12:30 PM. This aligns with the goal of creating a new alarm entry.\nAction: click(+)", "correct": false}
+{"episode": "ac5175", "step": 2, "gt": "click(500, 457)", "raw": "click(574, 1129)", "correct": false}
+{"episode": "ac5175", "step": 3, "gt": "click(500, 675)", "raw": "Action: click(500, 1619)", "correct": true}
+{"episode": "ac5175", "step": 4, "gt": "click(777, 368)", "raw": "Action: click(849, 863)", "correct": true}
+{"episode": "ac5175", "step": 5, "gt": "click(801, 760)", "raw": "Action: click(840, 869)", "correct": false}
+{"episode": "ac5175", "step": 6, "gt": "click(451, 267)", "raw": "click(945, 1066)", "correct": false}
+{"episode": "ac5175", "step": 7, "gt": "type(\" meeting\")", "raw": "type(\"Meeting\")", "correct": false}
+{"episode": "ac5175", "step": 8, "gt": "click(779, 382)", "raw": "Action: click(839, 913)", "correct": true}
+{"episode": "ac5175", "step": 9, "gt": "click(872, 449)", "raw": "click(125, 1068)", "correct": false}
+{"episode": "ac5175", "step": 10, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac5195", "step": 0, "gt": "open_app(\"REI Co-op\")", "raw": "Thought: To achieve the goal of searching for all mountain snowboards in the Snowboarding category on the REI Co-op app, I need to navigate back to the home screen or main menu where I can access the app's categories.\nAction: press_back()", "correct": false}
+{"episode": "ac5195", "step": 1, "gt": "click(300, 941)", "raw": "click on the search bar", "correct": false}
+{"episode": "ac5195", "step": 2, "gt": "click(480, 673)", "raw": "click(257, 1618)", "correct": false}
+{"episode": "ac5195", "step": 3, "gt": "click(480, 135)", "raw": "click(250, 1324)", "correct": false}
+{"episode": "ac5195", "step": 4, "gt": "click(480, 135)", "raw": "click(480, 135)", "correct": false}
+{"episode": "ac5195", "step": 5, "gt": "done()", "raw": "click(200, 1070)", "correct": false}
+{"episode": "ac5215", "step": 0, "gt": "open_app(\"Kobo Books\")", "raw": "Action: open app \"Kobo Books\"", "correct": false}
+{"episode": "ac5215", "step": 1, "gt": "click(375, 930)", "raw": "Action: click on the My Books icon at the bottom of the screen", "correct": false}
+{"episode": "ac5215", "step": 2, "gt": "click(546, 158)", "raw": "click(375, 930)", "correct": false}
+{"episode": "ac5215", "step": 3, "gt": "type(\"Prose books\")", "raw": "type(\"prose\")", "correct": false}
+{"episode": "ac5215", "step": 4, "gt": "click(920, 904)", "raw": "Action: click(1005, 2170)", "correct": true}
+{"episode": "ac5215", "step": 5, "gt": "done()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac5235", "step": 0, "gt": "click(868, 933)", "raw": "Action: click(926, 2238)", "correct": true}
+{"episode": "ac5235", "step": 1, "gt": "click(545, 395)", "raw": "click(942, 2257)", "correct": false}
+{"episode": "ac5235", "step": 2, "gt": "done()", "raw": "click(927, 2238)", "correct": false}
+{"episode": "ac5315", "step": 0, "gt": "open_app(\"Decathlon\")", "raw": "Action: open app(decathlon)", "correct": false}
+{"episode": "ac5315", "step": 1, "gt": "press_back()", "raw": "Action: click on the heart icon", "correct": false}
+{"episode": "ac5315", "step": 2, "gt": "click(935, 79)", "raw": "click(1024, 183)", "correct": false}
+{"episode": "ac5315", "step": 3, "gt": "click(905, 585)", "raw": "click(628, 2174)", "correct": false}
+{"episode": "ac5315", "step": 4, "gt": "click(695, 894)", "raw": "click(642, 2148)", "correct": false}
+{"episode": "ac5315", "step": 5, "gt": "press_back()", "raw": "Action: wait()", "correct": false}
+{"episode": "ac5315", "step": 6, "gt": "click(250, 208)", "raw": "click(200, 1276)", "correct": false}
+{"episode": "ac5315", "step": 7, "gt": "click(570, 929)", "raw": "click(505, 2230)", "correct": false}
+{"episode": "ac5315", "step": 8, "gt": "click(474, 927)", "raw": "Action: done()", "correct": false}
+{"episode": "ac5315", "step": 9, "gt": "done()", "raw": "click(570, 927)", "correct": false}
+{"episode": "ac5335", "step": 0, "gt": "open_app(\"Hamleys\")", "raw": "Action: Open the Hamleys app.", "correct": false}
+{"episode": "ac5335", "step": 1, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac5335", "step": 2, "gt": "click(500, 610)", "raw": "Action: click(382, 1465)", "correct": false}
+{"episode": "ac5335", "step": 3, "gt": "click(375, 943)", "raw": "click(428, 327)", "correct": false}
+{"episode": "ac5335", "step": 4, "gt": "click(199, 499)", "raw": "click(375, 943)", "correct": false}
+{"episode": "ac5335", "step": 5, "gt": "click(231, 642)", "raw": "click(280, 1543)", "correct": false}
+{"episode": "ac5335", "step": 6, "gt": "click(394, 869)", "raw": "click(280, 1990)", "correct": false}
+{"episode": "ac5335", "step": 7, "gt": "scroll(down)", "raw": "click(394, 869)", "correct": false}
+{"episode": "ac5335", "step": 8, "gt": "scroll(down)", "raw": "click(394, 869)", "correct": false}
+{"episode": "ac5335", "step": 9, "gt": "scroll(down)", "raw": "click(394, 869)", "correct": false}
+{"episode": "ac5335", "step": 10, "gt": "scroll(down)", "raw": "click(375, 943)", "correct": false}
+{"episode": "ac5335", "step": 11, "gt": "scroll(down)", "raw": "click(375, 943)", "correct": false}
+{"episode": "ac5335", "step": 12, "gt": "scroll(down)", "raw": "click(375, 943)", "correct": false}
+{"episode": "ac5335", "step": 13, "gt": "done()", "raw": "click(375, 943)", "correct": false}
+{"episode": "ac5355", "step": 0, "gt": "press_back()", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac5355", "step": 1, "gt": "press_back()", "raw": "click(253, 1060)", "correct": false}
+{"episode": "ac5355", "step": 2, "gt": "click(100, 943)", "raw": "Action: click(692, 543)", "correct": false}
+{"episode": "ac5355", "step": 3, "gt": "click(205, 257)", "raw": "click(265, 1547)", "correct": false}
+{"episode": "ac5355", "step": 4, "gt": "click(939, 83)", "raw": "click(1008, 1286)", "correct": false}
+{"episode": "ac5355", "step": 5, "gt": "click(104, 868)", "raw": "click(106, 2116)", "correct": false}
+{"episode": "ac5355", "step": 6, "gt": "type(\"evankramer@gmail.com\")", "raw": "Action: type(lucaskramer733@gmail.com)", "correct": false}
+{"episode": "ac5355", "step": 7, "gt": "click(387, 268)", "raw": "click(104, 868)", "correct": false}
+{"episode": "ac5355", "step": 8, "gt": "click(824, 91)", "raw": "Action: click(890, 213)", "correct": true}
+{"episode": "ac5355", "step": 9, "gt": "done()", "raw": "click(1024, 1288)", "correct": false}
+{"episode": "ac5395", "step": 0, "gt": "open_app(\"Trip.com\")", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac5395", "step": 1, "gt": "click(383, 230)", "raw": "click(394, 546)", "correct": false}
+{"episode": "ac5395", "step": 2, "gt": "click(244, 298)", "raw": "click(495, 607)", "correct": false}
+{"episode": "ac5395", "step": 3, "gt": "type(\"Sao Paulo - Guarulhos International Airport\")", "raw": "type(\"Sao Paulo\")", "correct": false}
+{"episode": "ac5395", "step": 4, "gt": "click(500, 217)", "raw": "click(567, 504)", "correct": false}
+{"episode": "ac5395", "step": 5, "gt": "click(755, 318)", "raw": "click(260, 770), click(244, 808), click(244, 840), click(244, 872), click(244, 904), click(244, 936), click(244, 968), click(244, 998), click(244, 1030), click(244, 1062), click(244, 1094), click(24", "correct": false}
+{"episode": "ac5395", "step": 6, "gt": "type(\"Jorge Chavez International Airport \")", "raw": "click(260, 298)", "correct": false}
+{"episode": "ac5395", "step": 7, "gt": "click(500, 217)", "raw": "click(260, 510)", "correct": false}
+{"episode": "ac5395", "step": 8, "gt": "click(500, 397)", "raw": "click(360, 1364)", "correct": false}
+{"episode": "ac5395", "step": 9, "gt": "click(882, 323)", "raw": "Action: click(600, 217)", "correct": false}
+{"episode": "ac5395", "step": 10, "gt": "click(500, 930)", "raw": "Action: click(500, 217)", "correct": false}
+{"episode": "ac5395", "step": 11, "gt": "click(279, 448)", "raw": "click(500, 1364)", "correct": false}
+{"episode": "ac5395", "step": 12, "gt": "click(500, 662)", "raw": "click(500, 1460)", "correct": false}
+{"episode": "ac5395", "step": 13, "gt": "click(499, 569)", "raw": "click(500, 1362)", "correct": false}
+{"episode": "ac5395", "step": 14, "gt": "done()", "raw": "click(500, 1080)", "correct": false}
+{"episode": "ac5436", "step": 0, "gt": "scroll(down)", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac5436", "step": 1, "gt": "scroll(down)", "raw": "click(456, 478)", "correct": false}
+{"episode": "ac5436", "step": 2, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5436", "step": 3, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5436", "step": 4, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5436", "step": 5, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5436", "step": 6, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5436", "step": 7, "gt": "click(820, 330)", "raw": "Action: scroll(down)", "correct": false}
+{"episode": "ac5436", "step": 8, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5436", "step": 9, "gt": "scroll(down)", "raw": "scroll(down)", "correct": false}
+{"episode": "ac5436", "step": 10, "gt": "done()", "raw": "click(745, 1096)", "correct": false}
+{"episode": "ac5456", "step": 0, "gt": "press_back()", "raw": "Action: click on the search icon at the right side of the screen", "correct": false}
+{"episode": "ac5456", "step": 1, "gt": "press_back()", "raw": "Action: press_back()", "correct": true}
+{"episode": "ac5456", "step": 2, "gt": "click(440, 91)", "raw": "Action: click on the search bar", "correct": false}
+{"episode": "ac5456", "step": 3, "gt": "type(\"Birla Temple\")", "raw": "Action: type(Birla Temple)", "correct": true}
+{"episode": "ac5456", "step": 4, "gt": "click(920, 899)", "raw": "Action: click(1005, 2163)", "correct": true}
+{"episode": "ac5456", "step": 5, "gt": "click(374, 546)", "raw": "click(756, 232)", "correct": false}
+{"episode": "ac5456", "step": 6, "gt": "click(781, 690)", "raw": "click(165, 642)", "correct": false}
+{"episode": "ac5456", "step": 7, "gt": "click(96, 943)", "raw": "click(374, 546)", "correct": false}
+{"episode": "ac5456", "step": 8, "gt": "done()", "raw": "Action: click(100, 2264)", "correct": false}
+{"episode": "ac5476", "step": 0, "gt": "click(485, 157)", "raw": "Action: click on the study session task", "correct": false}
+{"episode": "ac5476", "step": 1, "gt": "click(367, 143)", "raw": "click(485, 157)", "correct": false}
+{"episode": "ac5476", "step": 2, "gt": "click(631, 592)", "raw": "click(920, 194)", "correct": false}
+{"episode": "ac5476", "step": 3, "gt": "click(123, 379)", "raw": "click(143, 900)", "correct": false}
+{"episode": "ac5476", "step": 4, "gt": "click(844, 87)", "raw": "click(913, 197)", "correct": false}
+{"episode": "ac5476", "step": 5, "gt": "done()", "raw": "click(102, 100)", "correct": false}
+{"episode": "ac5496", "step": 0, "gt": "open_app(\"Trainline\")", "raw": "Action: open app(trainline)", "correct": false}
+{"episode": "ac5496", "step": 1, "gt": "click(480, 105)", "raw": "click(234, 396)", "correct": false}
+{"episode": "ac5496", "step": 2, "gt": "type(\"London Bridge\")", "raw": "click(263, 827)", "correct": false}
+{"episode": "ac5496", "step": 3, "gt": "click(548, 171)", "raw": "click(263, 407), type(\"Edinburgh Gateway\")", "correct": false}
+{"episode": "ac5496", "step": 4, "gt": "click(906, 168)", "raw": "click(236, 539)", "correct": false}
+{"episode": "ac5496", "step": 5, "gt": "type(\"Edinburgh Gateway\")", "raw": "type(\"Edinburgh Gateway\")", "correct": false}
+{"episode": "ac5496", "step": 6, "gt": "click(920, 899)", "raw": "click(230, 548)", "correct": false}
+{"episode": "ac5496", "step": 7, "gt": "click(457, 231)", "raw": "click(350, 550)", "correct": false}
+{"episode": "ac5496", "step": 8, "gt": "click(407, 357)", "raw": "click(457, 231)", "correct": false}
+{"episode": "ac5496", "step": 9, "gt": "scroll(down)", "raw": "click(407, 357)", "correct": false}
+{"episode": "ac5496", "step": 10, "gt": "scroll(down)", "raw": "click(407, 357)", "correct": false}
+{"episode": "ac5496", "step": 11, "gt": "scroll(down)", "raw": "click(407, 357)", "correct": false}
+{"episode": "ac5496", "step": 12, "gt": "scroll(up)", "raw": "click(630, 1100)", "correct": false}
+{"episode": "ac5496", "step": 13, "gt": "scroll(up)", "raw": "click(548, 1198)", "correct": false}
+{"episode": "ac5496", "step": 14, "gt": "scroll(down)", "raw": "click(407, 357)", "correct": false}
+{"episode": "ac5496", "step": 15, "gt": "click(500, 938)", "raw": "click(630, 1208)", "correct": false}
+{"episode": "ac5496", "step": 16, "gt": "click(500, 520)", "raw": "click(407, 1248)", "correct": false}
+{"episode": "ac5496", "step": 17, "gt": "wait()", "raw": "wait()", "correct": false}
+{"episode": "ac5496", "step": 18, "gt": "done()", "raw": "click(500, 520)", "correct": false}
+{"episode": "ac5516", "step": 0, "gt": "click(700, 930)", "raw": "Action: click on the + icon at the bottom of the screen", "correct": false}
+{"episode": "ac5516", "step": 1, "gt": "click(500, 816)", "raw": "Action: click(532, 1960)", "correct": true}
+{"episode": "ac5516", "step": 2, "gt": "click(500, 816)", "raw": "Action: click(200, 1954)", "correct": false}
+{"episode": "ac5516", "step": 3, "gt": "done()", "raw": "Action: click(532, 1958)", "correct": false}
+{"episode": "ac5556", "step": 0, "gt": "open_app(\"Plantum\")", "raw": "Thought: To achieve the goal of browsing common mistakes of plant care, I need to navigate away from this specific article and explore more content related to plant care.\nAction: scroll down", "correct": false}
+{"episode": "ac5556", "step": 1, "gt": "click(941, 97)", "raw": "Action: click(923, 224)", "correct": true}
+{"episode": "ac5556", "step": 2, "gt": "click(779, 545)", "raw": "click(852, 1306)", "correct": false}
+{"episode": "ac5556", "step": 3, "gt": "click(900, 944)", "raw": "click(638, 1182)", "correct": false}
+{"episode": "ac5556", "step": 4, "gt": "click(500, 430)", "raw": "click(382, 1716)", "correct": false}
+{"episode": "ac5556", "step": 5, "gt": "done()", "raw": "click(986, 200)", "correct": false}
+{"episode": "ac5596", "step": 0, "gt": "click(100, 930)", "raw": "Thought: The current screen shows a search for Adidas jogging shoes on eBay, which is unrelated to the goal of looking through the Wall Street Journal. To achieve the goal, I need to navigate away from this app and open a browser or a news app to access the Wall Street Journal.\nAction: press_back()", "correct": false}
+{"episode": "ac5596", "step": 1, "gt": "click(644, 224)", "raw": "wait()", "correct": false}
+{"episode": "ac5596", "step": 2, "gt": "click(691, 473)", "raw": "click(644, 224)", "correct": false}
+{"episode": "ac5596", "step": 3, "gt": "click(500, 515)", "raw": "click(185, 1230)", "correct": false}
+{"episode": "ac5596", "step": 4, "gt": "click(707, 84)", "raw": "wait()", "correct": false}
+{"episode": "ac5596", "step": 5, "gt": "type(\"the wall street journal\")", "raw": "type(\"the wall street journal\")", "correct": false}
+{"episode": "ac5596", "step": 6, "gt": "click(920, 904)", "raw": "Action: click(search icon)", "correct": false}
+{"episode": "ac5596", "step": 7, "gt": "scroll(down)", "raw": "click(100, 930)", "correct": false}
+{"episode": "ac5596", "step": 8, "gt": "done()", "raw": "click(500, 515)", "correct": false}
+{"episode": "ac5616", "step": 0, "gt": "press_back()", "raw": "Action: click on Files", "correct": false}
+{"episode": "ac5616", "step": 1, "gt": "click(750, 144)", "raw": "Action: click(532, 2196)", "correct": false}
+{"episode": "ac5616", "step": 2, "gt": "click(844, 263)", "raw": "click(896, 623)", "correct": false}
+{"episode": "ac5616", "step": 3, "gt": "type(\"Oye Como Va\")", "raw": "type(\"Oye Como Va\")", "correct": false}
+{"episode": "ac5616", "step": 4, "gt": "click(798, 402)", "raw": "Action: click(844, 263)", "correct": false}
+{"episode": "ac5616", "step": 5, "gt": "done()", "raw": "Action: done()", "correct": true}
+{"episode": "ac5636", "step": 0, "gt": "open_app(\"Cafeyn\")", "raw": "Action: open_app(Cafeyn)", "correct": true}
+{"episode": "ac5636", "step": 1, "gt": "click(918, 68)", "raw": "Action: skip ad", "correct": false}
+{"episode": "ac5636", "step": 2, "gt": "click(500, 943)", "raw": "Action: scroll(down)", "correct": false}
+{"episode": "ac5636", "step": 3, "gt": "scroll(down)", "raw": "click(270, 1000)", "correct": false}
+{"episode": "ac5636", "step": 4, "gt": "scroll(down)", "raw": "click(270, 194)", "correct": false}
+{"episode": "ac5636", "step": 5, "gt": "click(720, 618)", "raw": "click(270, 194)", "correct": false}
+{"episode": "ac5636", "step": 6, "gt": "click(296, 354)", "raw": "click(250, 730)", "correct": false}
+{"episode": "ac5636", "step": 7, "gt": "click(493, 338)", "raw": "Action: wait()", "correct": false}
+{"episode": "ac5636", "step": 8, "gt": "done()", "raw": "click(296, 338)", "correct": false}
+{"episode": "ac5656", "step": 0, "gt": "long_press(529, 379)", "raw": "Action: long_press(250, 874)", "correct": false}
+{"episode": "ac5656", "step": 1, "gt": "click(824, 91)", "raw": "Action: click(894, 216)", "correct": true}
+{"episode": "ac5656", "step": 2, "gt": "done()", "raw": "click(824, 91)", "correct": false}
+{"episode": "ac5677", "step": 0, "gt": "open_app(\"CNN\")", "raw": "Action: open_app(\"CNN News\")", "correct": false}
+{"episode": "ac5677", "step": 1, "gt": "click(499, 674)", "raw": "click(357, 1168)", "correct": false}
+{"episode": "ac5677", "step": 2, "gt": "scroll(down)", "raw": "wait()", "correct": false}
+{"episode": "ac5677", "step": 3, "gt": "done()", "raw": "Action: scroll(down)", "correct": false}
+{"episode": "ac5697", "step": 0, "gt": "press_back()", "raw": "Action: scroll up", "correct": false}
+{"episode": "ac5697", "step": 1, "gt": "press_back()", "raw": "Action: scroll(right)", "correct": false}
+{"episode": "ac5697", "step": 2, "gt": "click(497, 948)", "raw": "Action: press_back()", "correct": false}
+{"episode": "ac5697", "step": 3, "gt": "click(369, 874)", "raw": "click(526, 673)", "correct": false}
+{"episode": "ac5697", "step": 4, "gt": "click(499, 283)", "raw": "click(250, 650)", "correct": false}
+{"episode": "ac5697", "step": 5, "gt": "type(\"Hawaii\")", "raw": "Action: type(\"Hawaii\")", "correct": true}
+{"episode": "ac5697", "step": 6, "gt": "click(308, 267)", "raw": "click(501, 283)", "correct": false}
+{"episode": "ac5697", "step": 7, "gt": "click(128, 360)", "raw": "Action: click(250, 874)", "correct": false}
+{"episode": "ac5697", "step": 8, "gt": "click(749, 457)", "raw": "Action: click(815, 1094)", "correct": true}
+{"episode": "ac5697", "step": 9, "gt": "click(874, 457)", "raw": "Action: click(940, 1094)", "correct": true}
+{"episode": "ac5697", "step": 10, "gt": "click(500, 725)", "raw": "Action: click(546, 1742)", "correct": true}
+{"episode": "ac5697", "step": 11, "gt": "click(501, 917)", "raw": "Action: click(500, 725)", "correct": false}
+{"episode": "ac5697", "step": 12, "gt": "click(501, 917)", "raw": "Action: click(501, 917)", "correct": false}
+{"episode": "ac5697", "step": 13, "gt": "wait()", "raw": "click(501, 917)", "correct": false}
+{"episode": "ac5697", "step": 14, "gt": "click(897, 352)", "raw": "click(962, 860)", "correct": false}
+{"episode": "ac5697", "step": 15, "gt": "wait()", "raw": "click(1000, 352)", "correct": false}
+{"episode": "ac5697", "step": 16, "gt": "click(327, 332)", "raw": "click(100, 1900)", "correct": false}
+{"episode": "ac5697", "step": 17, "gt": "click(174, 470)", "raw": "click(1008, 1314)", "correct": false}
+{"episode": "ac5697", "step": 18, "gt": "press_back()", "raw": "click(174, 470)", "correct": false}
+{"episode": "ac5697", "step": 19, "gt": "click(224, 549)", "raw": "click(174, 470)", "correct": false}
+{"episode": "ac5697", "step": 20, "gt": "type(\"Hawaii\")", "raw": "click(224, 549)", "correct": false}
+{"episode": "ac5697", "step": 21, "gt": "click(554, 338)", "raw": "click(174, 470)", "correct": false}
+{"episode": "ac5697", "step": 22, "gt": "done()", "raw": "click(554, 338)", "correct": false}
+{"episode": "ac5717", "step": 0, "gt": "scroll(right)", "raw": "Action: scroll down", "correct": false}
+{"episode": "ac5717", "step": 1, "gt": "click(739, 638)", "raw": "Action: scroll(right)", "correct": false}
+{"episode": "ac5717", "step": 2, "gt": "scroll(down)", "raw": "scroll(right)", "correct": false}
+{"episode": "ac5717", "step": 3, "gt": "done()", "raw": "click(524, 1534)", "correct": false}
+{"episode": "ac5737", "step": 0, "gt": "open_app(\"PUMA\")", "raw": "Thought: To achieve the goal of reading the reviews for the White Mayze Classic Women's Sneakers, I need to navigate back to the main screen or home page where I can access the Puma app.\nAction: press_back()", "correct": false}
+{"episode": "ac5737", "step": 1, "gt": "scroll(up)", "raw": "wait()", "correct": false}
+{"episode": "ac5737", "step": 2, "gt": "scroll(up)", "raw": "wait()", "correct": false}
+{"episode": "ac5737", "step": 3, "gt": "click(179, 715)", "raw": "click(452, 1736)", "correct": false}
+{"episode": "ac5737", "step": 4, "gt": "scroll(down)", "raw": "click(423, 1860)", "correct": false}
+{"episode": "ac5737", "step": 5, "gt": "scroll(right)", "raw": "click(428, 1360)", "correct": false}
+{"episode": "ac5737", "step": 6, "gt": "scroll(right)", "raw": "click(362, 1480)", "correct": false}
+{"episode": "ac5737", "step": 7, "gt": "scroll(right)", "raw": "click(342, 1648)", "correct": false}
+{"episode": "ac5737", "step": 8, "gt": "click(534, 633)", "raw": "click(462, 1408)", "correct": false}
+{"episode": "ac5737", "step": 9, "gt": "scroll(down)", "raw": "click(534, 633)", "correct": false}
+{"episode": "ac5737", "step": 10, "gt": "scroll(down)", "raw": "click(280, 1146)", "correct": false}
+{"episode": "ac5737", "step": 11, "gt": "scroll(down)", "raw": "click(280, 1592)", "correct": false}
+{"episode": "ac5737", "step": 12, "gt": "done()", "raw": "Action: scroll(down)", "correct": false}

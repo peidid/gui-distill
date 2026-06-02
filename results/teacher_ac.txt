@@ -1,0 +1,12 @@
+[teacher=uitars] using parse_uitars + coord_space=norm
+
+AndroidControl-test step accuracy: 0.316  (421/1332)
+per action type:
+  click        0.448  (320/714)
+  done         0.005  (1/200)
+  long_press   0.000  (0/2)
+  open_app     0.000  (0/75)
+  press_back   0.370  (17/46)
+  scroll       0.243  (36/148)
+  type         0.494  (40/81)
+  wait         0.106  (7/66)
