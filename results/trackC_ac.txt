@@ -1,0 +1,11 @@
+
+AndroidControl-test step accuracy: 0.465  (619/1332)
+per action type:
+  click        0.461  (329/714)
+  done         0.430  (86/200)
+  long_press   0.000  (0/2)
+  open_app     0.133  (10/75)
+  press_back   0.522  (24/46)
+  scroll       0.568  (84/148)
+  type         0.667  (54/81)
+  wait         0.485  (32/66)

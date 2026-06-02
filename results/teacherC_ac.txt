@@ -1,0 +1,12 @@
+[teacher=gta1] using parse_gta1 + coord_space=pixel
+
+AndroidControl-test step accuracy: 0.514  (684/1332)
+per action type:
+  click        0.591  (422/714)
+  done         0.275  (55/200)
+  long_press   0.000  (0/2)
+  open_app     0.080  (6/75)
+  press_back   0.565  (26/46)
+  scroll       0.615  (91/148)
+  type         0.679  (55/81)
+  wait         0.439  (29/66)

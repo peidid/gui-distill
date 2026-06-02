@@ -1,0 +1,5 @@
+[teacher=gta1] using parse_gta1 + coord_space=pixel
+
+ScreenSpot-V2 grounding accuracy: 0.895  (358/400)
+  icon       0.815  (137/168)
+  text       0.953  (221/232)
